@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vademecum Ortopedia R1 - Angola (Didático & Expandido)</title>
+    <style>
+        :root {
+            --primary: #004e64;
+            --secondary: #00a896;
+            --danger: #d00000;
+            --warning: #f59f00;
+            --purple: #5f3dc4;
+            --brown: #795548;
+            --dark-blue: #1a237e;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #333;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        header {
+            background: linear-gradient(135deg, var(--dark-blue), #283593);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 1.6rem; text-transform: uppercase; }
+        header p { margin: 5px 0 0; font-size: 0.9rem; opacity: 0.9; }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        @media (min-width: 768px) { .grid-container { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 1100px) { .grid-container { grid-template-columns: 1fr 1fr 1fr; } }
+
+        .card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            border-left: 5px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card.nsaid { border-left-color: var(--danger); }
+        .card.cort { border-left-color: var(--warning); }
+        .card.infect { border-left-color: var(--brown); }
+        .card.mech { border-left-color: var(--primary); }
+        .card.bone { border-left-color: #fbc02d; }
+        .card.hemo { border-left-color: #b71c1c; }
+        .card.safe { border-left-color: var(--secondary); }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.5px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+        }
+
+        .card h3 { margin: 0; font-size: 1rem; color: #1a1a1a; }
+
+        .badge {
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .bg-red { background: #ffe3e3; color: #c92a2a; }
+        .bg-blue { background: #e7f5ff; color: #1864ab; }
+        .bg-brown { background: #efebe9; color: #5d4037; }
+        .bg-purple { background: #f3e5f5; color: #7b1fa2; }
+        .bg-green { background: #e6fcf5; color: #087f5b; }
+
+        .tech-info { font-size: 0.85rem; display: grid; grid-template-columns: 1fr; gap: 4px; }
+        .tech-item b { color: #555; font-size: 0.65rem; text-transform: uppercase; display: block; margin-bottom: 1px; }
+        
+        /* Didactic Note Style */
+        .didactic-note {
+            font-size: 0.75rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 2px;
+            display: block;
+        }
+
+        .warning-box {
+            background-color: #fff5f5;
+            border: 1px dashed #fa5252;
+            padding: 6px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            color: #c92a2a;
+            margin-top: 8px;
+        }
+
+        .value { font-family: monospace; font-weight: bold; color: #087f5b; }
+
+        .glossary-section {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+        }
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+        .glossary-item b { color: var(--primary); }
+
+        .footer-sig {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Vademecum Ortopedia</h1>
+        <p>Principais fármacos</p>
+    </header>
+
+    <h2>1. Antibióticos</h2>
+    <div class="grid-container">
+        <div class="card infect">
+            <div class="card-header">
+                <h3>Penicilina G Benzatina</h3>
+                <span class="badge bg-brown">Febre Reumática</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Apresentação:</b> Frasco-ampola 1.200.000 UI.</div>
+                <div class="tech-item"><b>Indicação:</b> Profilaxia secundária de Febre Reumática e tratamento de Sífilis.</div>
+                <div class="tech-item"><b>Dose:</b> 1.200.000 UI IM Profundo.</div>
+                <div class="tech-item"><b>Frequência:</b> A cada 21 dias.</div>
+                <div class="tech-item"><b>Alerta:</b> Risco de anafilaxia e dor local intensa.</div>
+                <span class="didactic-note">Nota: Essencial para evitar recorrência de cardite reumática.</span>
+            </div>
+        </div>
+
+        <div class="card infect">
+            <div class="card-header">
+                <h3>Esquema RHZE (Anti-TB)</h3>
+                <span class="badge bg-red">Mal de Pott</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Fármacos:</b> Rifampicina (R), Isoniazida (H), Pirazinamida (Z), Etambutol (E).</div>
+                <div class="tech-item"><b>Duração:</b> 12 meses para TB Óssea (2 meses fase intensiva + 10 meses manutenção).</div>
+                <div class="tech-item"><b>Adjuvante:</b> Associar <b>Piridoxina (Vit. B6) 40mg</b>.</div>
+                <span class="didactic-note">Nota: A B6 previne a neuropatia periférica causada pela Isoniazida.</span>
+                <div class="tech-item"><b>Efeitos:</b> Hepatotoxicidade (Monitorar TGO/TGP), Urina cor laranja (Rifampicina).</div>
+            </div>
+        </div>
+
+        <div class="card infect">
+            <div class="card-header">
+                <h3>Ceftriaxona</h3>
+                <span class="badge bg-red">Artrite Séptica</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Classe:</b> Cefalosporina de 3ª Geração.</div>
+                <div class="tech-item"><b>Dose:</b> 2g IV a cada 24h.</div>
+                <div class="tech-item"><b>Espectro:</b> Gram-negativos e *Neisseria gonorrhoeae*.</div>
+                <span class="didactic-note">Nota: Antibiótico de escolha empírica em infecções articulares até sair o antibiograma.</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>2. Anticoagulação & Profilaxia (TVP/TEP)</h2>
+    <div class="grid-container">
+        <div class="card mech">
+            <div class="card-header">
+                <h3>Enoxaparina (Clexane)</h3>
+                <span class="badge bg-blue">HBPM</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Tipo:</b> Heparina de Baixo Peso Molecular.</div>
+                <div class="tech-item"><b>Dose Padrão:</b> 40mg SC 1x/dia.</div>
+                <div class="tech-item"><b>Ajuste Renal:</b> Se ClCr < 30 ml/min, reduzir para 20mg.</div>
+                <div class="tech-item"><b>Tempo:</b> 10 a 35 dias (risco estendido em quadril/joelho).</div>
+                <span class="didactic-note">Nota: Não requer monitorização de TTPa.</span>
+            </div>
+        </div>
+
+        <div class="card mech">
+            <div class="card-header">
+                <h3>Heparina Sódica (HNF)</h3>
+                <span class="badge bg-red">HNF</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Tipo:</b> Heparina Não Fracionada.</div>
+                <div class="tech-item"><b>Indicação:</b> Pacientes com Insuficiência Renal Grave (ClCr < 15).</div>
+                <div class="tech-item"><b>Dose Profilática:</b> 5.000 UI SC 8/8h.</div>
+                <div class="tech-item"><b>Monitorização:</b> Requer controle de Plaquetas e TTPa.</div>
+            </div>
+        </div>
+
+        <div class="card mech">
+            <div class="card-header">
+                <h3>Fraxiparina (Nadroparina)</h3>
+                <span class="badge bg-blue">HBPM</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Apresentação:</b> Seringas pré-cheias.</div>
+                <div class="tech-item"><b>Dose Profilática:</b> 0.3 mL (2.850 UI) SC 1x/dia.</div>
+                <div class="tech-item"><b>Cuidado:</b> Risco de Trombocitopenia Induzida por Heparina (HIT).</div>
+                <span class="didactic-note">Nota: Alternar local da injeção no abdómen para evitar hematomas.</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>3. AINEs, Gota & Reumatologia</h2>
+    <div class="grid-container">
+        <div class="card nsaid">
+            <div class="card-header">
+                <h3>Indometacina</h3>
+                <span class="badge bg-red">Padrão Ouro</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Indicações:</b> Crise Aguda de Gota e Prevenção de OH.</div>
+                <div class="tech-item"><b>Dose Gota:</b> 50mg 8/8h (Máx 7 dias).</div>
+                <div class="tech-item"><b>Dose OH:</b> 25mg 8/8h por 14 dias (pós-cirurgia acetábulo/quadril).</div>
+                <div class="tech-item"><b>Contraindicação:</b> Úlcera gástrica ativa, Insuficiência renal.</div>
+            </div>
+        </div>
+
+        <div class="card nsaid">
+            <div class="card-header">
+                <h3>Etoricoxibe (Arcoxia)</h3>
+                <span class="badge bg-blue">COX-2 Seletivo</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Mecanismo:</b> Inibição seletiva da ciclooxigenase-2 (protege estômago).</div>
+                <div class="tech-item"><b>Dose:</b> 90mg (Analgesia Pós-Op) / 120mg (Gota Aguda).</div>
+                <div class="tech-item"><b>Risco Cardiovascular:</b> Contraindicado em Cardiopatia isquémica, AVC prévio ou Hipertensão descontrolada.</div>
+            </div>
+        </div>
+
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Alopurinol</h3>
+                <span class="badge bg-blue">Prevenção</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Ação:</b> Inibidor da Xantina Oxidase (reduz produção de ácido úrico).</div>
+                <div class="tech-item"><b>Uso:</b> Manutenção na Gota Crónica.</div>
+                <div class="warning-box">
+                    ATENÇÃO: Nunca iniciar durante a crise aguda (piora a inflamação). Esperar a crise passar.
+                </div>
+                <div class="tech-item"><b>Dose:</b> 100-300mg/dia. Uso contínuo.</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>4. Saúde Óssea, Cartilagem & Sangue</h2>
+    <div class="grid-container">
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Condetrim</h3>
+                <span class="badge bg-green">Condroprotetor</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Composição:</b> Glucosamina + Condroitina.</div>
+                <div class="tech-item"><b>Objetivo:</b> Retardar degeneração da cartilagem na Artrose.</div>
+                <div class="tech-item"><b>Posologia:</b> 1 sachê/dia diluído em água.</div>
+                <div class="tech-item"><b>Tempo:</b> Efeito lento, uso prolongado (> 3 meses).</div>
+            </div>
+        </div>
+
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Ferro IV (Noripurum)</h3>
+                <span class="badge bg-red">Antianêmico</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Indicação:</b> Anemia ferropriva perioperatória ou em Falciformes.</div>
+                <div class="tech-item"><b>Administração:</b> 100-200mg diluído em SF, correr lento.</div>
+                <div class="tech-item"><b>Efeitos:</b> Hipotensão se infusão rápida, gosto metálico na boca.</div>
+            </div>
+        </div>
+
+        <div class="card bone">
+            <div class="card-header">
+                <h3>Alendronato</h3>
+                <span class="badge bg-blue">Bisfosfonato</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Mecanismo:</b> Inibe os osteoclastos (reduz reabsorção óssea).</div>
+                <div class="tech-item"><b>Dose:</b> 70mg, 1 vez por SEMANA.</div>
+                <div class="tech-item"><b>Instrução Crítica:</b> Tomar em jejum, com água, e não deitar por 30 min (risco de esofagite erosiva).</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>5. Neurológico & Dor Neuropática</h2>
+    <div class="grid-container">
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Pregabalina (Lyrica)</h3>
+                <span class="badge bg-purple">Modulador</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Indicações:</b> Dor ciática crônica, Estenose de canal, Fibromialgia.</div>
+                <div class="tech-item"><b>Dose Inicial:</b> 75mg à noite (Titular até 300mg/dia conforme tolerância).</div>
+                <div class="tech-item"><b>Efeitos Adversos:</b> Sonolência, tontura e ganho de peso.</div>
+                <span class="didactic-note">Nota: Explicar ao paciente que não é um analgésico comum, leva dias para agir.</span>
+            </div>
+        </div>
+
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Amitriptilina</h3>
+                <span class="badge bg-purple">Tricíclico</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Classe:</b> Antidepressivo Tricíclico.</div>
+                <div class="tech-item"><b>Uso Ortopédico:</b> Dor neuropática com insónia associada.</div>
+                <div class="tech-item"><b>Dose:</b> 12.5mg a 25mg à noite (Dose menor que a psiquiátrica).</div>
+                <div class="tech-item"><b>Efeitos Anticolinérgicos:</b> Boca seca, constipação, retenção urinária.</div>
+                <div class="tech-item"><b>Cuidado:</b> Evitar em idosos (risco de queda e arritmia).</div>
+            </div>
+        </div>
+
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Gabapentina</h3>
+                <span class="badge bg-purple">Neuropática</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Dose:</b> Iniciar 300mg à noite. Aumentar progressivamente até 1800mg/dia.</div>
+                <div class="tech-item"><b>Comparação:</b> Mais barata que a Pregabalina, mas exige doses maiores e tomadas mais frequentes.</div>
+                <div class="tech-item"><b>Efeitos:</b> Tontura, Ataxia (dificuldade de coordenação).</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>6. Corticosteroides, Relaxantes & Suporte</h2>
+    <div class="grid-container">
+        <div class="card cort">
+            <div class="card-header">
+                <h3>Dexametasona</h3>
+                <span class="badge bg-blue">Potente</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Indicação:</b> Edema medular agudo, radiculopatias compressivas severas.</div>
+                <div class="tech-item"><b>Dose:</b> 4-10mg IV.</div>
+                <div class="tech-item"><b>Alerta:</b> Causa hiperglicemia aguda (cuidado em diabéticos).</div>
+            </div>
+        </div>
+
+        <div class="card cort">
+            <div class="card-header">
+                <h3>Triancinolona (Triancil)</h3>
+                <span class="badge bg-green">Infiltração</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Uso:</b> Exclusivo para infiltração Intra-articular (Sinovites, Bursites).</div>
+                <div class="tech-item"><b>Ação:</b> Anti-inflamatório local de depósito (liberação lenta).</div>
+                <div class="tech-item"><b>Limite:</b> Máximo 3-4 infiltrações por ano (risco de lesão tendinosa/cartilagem).</div>
+            </div>
+        </div>
+
+        <div class="card mech">
+            <div class="card-header">
+                <h3>Tiocolchicosideo (Relmus)</h3>
+                <span class="badge bg-purple">Relaxante</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Ação:</b> Relaxante muscular de ação central.</div>
+                <div class="tech-item"><b>Dose:</b> 4mg 12/12h. <span class="value">Máximo 7 dias</span>.</div>
+                <div class="tech-item"><b>Contraindicação Absoluta:</b> Pacientes com histórico de Epilepsia/Convulsões.</div>
+            </div>
+        </div>
+
+        <div class="card hemo">
+            <div class="card-header">
+                <h3>Ácido Tranexâmico</h3>
+                <span class="badge bg-red">Hemostasia</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Mecanismo:</b> Antifibrinolítico (impede que o coágulo se desfaça).</div>
+                <div class="tech-item"><b>Dose Cirúrgica:</b> 1g IV na indução + 1g IV no fechamento.</div>
+                <div class="tech-item"><b>Indicação:</b> Artroplastias (Próteses) e traumas com grande sangramento.</div>
+            </div>
+        </div>
+
+        <div class="card safe">
+            <div class="card-header">
+                <h3>Ondansetrona</h3>
+                <span class="badge bg-blue">Anti-emético</span>
+            </div>
+            <div class="tech-info">
+                <div class="tech-item"><b>Indicação:</b> Prevenção de náuseas causadas por opioides (Tramadol/Morfina).</div>
+                <div class="tech-item"><b>Dose:</b> 4-8mg IV ou VO a cada 8h.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="glossary-section">
+        <h3>Legenda & Glossário de Abreviações</h3>
+        <div class="glossary-grid">
+            <div class="glossary-item"><b>IM:</b> Intramuscular</div>
+            <div class="glossary-item"><b>IV:</b> Intravenosa (na veia)</div>
+            <div class="glossary-item"><b>SC:</b> Subcutânea (na gordura)</div>
+            <div class="glossary-item"><b>VO:</b> Via Oral</div>
+            <div class="glossary-item"><b>AINE:</b> Anti-inflamatório Não Esteroidal</div>
+            <div class="glossary-item"><b>TB:</b> Tuberculose</div>
+            <div class="glossary-item"><b>UI:</b> Unidades Internacionais</div>
+            <div class="glossary-item"><b>HBPM:</b> Heparina de Baixo Peso Molecular</div>
+            <div class="glossary-item"><b>HNF:</b> Heparina Não Fracionada</div>
+            <div class="glossary-item"><b>ClCr:</b> Clearance de Creatinina (Função Renal)</div>
+            <div class="glossary-item"><b>TVP:</b> Trombose Venosa Profunda</div>
+            <div class="glossary-item"><b>OH:</b> Ossificação Heterotópica</div>
+            <div class="glossary-item"><b>SF:</b> Soro Fisiológico</div>
+        </div>
+    </div>
+        <style>
+            :root {
+                /* Mantenha as cores originais de cada arquivo aqui */
+                --primary: #004e64;
+                --secondary: #00a896;
+                --danger: #d00000;
+                --warning: #f59f00;
+                --purple: #5f3dc4;
+                --brown: #795548;
+                --light-bg: #f8f9fa;
+                --white: #ffffff;
+            }
+
+            /* ESSENCIAL: Resolve o problema do botão "vazar" a tela */
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 13px;
+                line-height: 1.5;
+                color: #333;
+                background-color: #e9ecef;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                /* Garante que o conteúdo não ultrapasse a largura container */
+                width: 100%;
+            }
+
+            /* Imagens responsivas (não quebram o layout) */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* TABELAS: Removemos o 'display: block' que causava o erro.
+           Agora usamos ajustes suaves para mobile. */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            /* ... Mantenha o restante do CSS de cabeçalhos e listas original ... */
+
+            /* ESTILO DO BOTÃO VOLTAR */
+            .btn-voltar-container {
+                text-align: center;
+                margin: 40px 0 20px 0;
+                width: 100%;
+            }
+
+            .btn-voltar {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--secondary);
+                color: white;
+                padding: 12px 30px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+                max-width: 100%;
+            }
+
+            .btn-voltar:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+                filter: brightness(1.1);
+            }
+
+            .btn-voltar:active {
+                transform: scale(0.98);
+            }
+
+            /* AJUSTES PARA TELEMÓVEL */
+            @media (max-width: 600px) {
+                .btn-voltar-container {
+                    margin: 25px auto 40px auto;
+                    padding: 0 10px;
+                }
+
+                .btn-voltar {
+                    font-size: 14px;
+                    padding: 15px;
+                    width: 100%;
+                }
+
+                /* AJUSTE SEGURO PARA TABELAS EM MOBILE:
+               Reduz a fonte e o espaçamento para caber mais conteúdo,
+               mas mantendo a estrutura de linhas e colunas intacta. */
+                th,
+                td {
+                    padding: 4px 2px;
+                    /* Reduz padding lateral */
+                    font-size: 11px;
+                    /* Fonte ligeiramente menor */
+                    word-wrap: break-word;
+                    /* Quebra palavras longas se necessário */
+                }
+            }
+        </style>
+
+        <div class="btn-voltar-container">
+            <a href="index.html" onclick="sessionStorage.setItem('openProtocols', 'true')" class="btn-voltar">
+                <span style="margin-right: 8px; font-size: 1.4em; line-height: 1;">↩</span>
+                Voltar
+            </a>
+        </div>
+    <div class="footer-sig">
+        Omni Dev / Dr. Sebastião - 01/2026<br>
+        <span style="font-size:0.7rem; font-style:italic;">Material de Apoio à Residência Médica em Ortotraumatologia</span>
+    </div>
+</div>
+
+</body>
+</html>
