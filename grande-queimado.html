@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Compacto - Grande Queimado</title>
+    <style>
+        :root {
+            --primary: #004e64;
+            --secondary: #00a896;
+            --danger: #d00000;
+            --warning: #f59f00;
+            --purple: #5f3dc4;
+            --brown: #795548;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d64933, #7f2a1d);
+            /* Tons de vermelho/fogo */
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-left: 3px solid transparent;
+            position: relative;
+        }
+
+        .card.alert {
+            border-left-color: var(--danger);
+        }
+
+        .card.common {
+            border-left-color: var(--secondary);
+        }
+
+        .card.tip {
+            border-left-color: var(--warning);
+            background-color: #fffbf0;
+        }
+
+        .card.infect {
+            border-left-color: var(--purple);
+        }
+
+        .card.mech {
+            border-left-color: var(--brown);
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.95rem;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #eee;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        .badge.red {
+            background: #ffe3e3;
+            color: #c92a2a;
+        }
+
+        .badge.blue {
+            background: #e7f5ff;
+            color: #1c7ed6;
+        }
+
+        .badge.brown {
+            background: #efebe9;
+            color: #5d4037;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .gold-standard {
+            background-color: #f1f3f5;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            border: 1px dashed #ced4da;
+        }
+
+        .criteria-box {
+            background-color: #efebe9;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #3e2723;
+        }
+
+        .value {
+            color: #0ca678;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+        }
+
+        .footer-sig {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Grande Queimado (>20% SCQ)</h1>
+            <p>Urgência e Emergência</p>
+        </header>
+
+        <h2>1. Cálculo da Área (Escala de Wallace)</h2>
+        <div class="grid-container">
+            <div class="card common">
+                <h3>📏 Regra dos 9 (Adulto)</h3>
+                <ul style="font-size: 0.85rem;">
+                    <li><strong>Cabeça:</strong> 9%</li>
+                    <li><strong>Tronco Frente:</strong> 18%</li>
+                    <li><strong>Tronco Costas:</strong> 18%</li>
+                    <li><strong>Braço (cada):</strong> 9%</li>
+                    <li><strong>Perna (cada):</strong> 18%</li>
+                    <li><strong>Genitália:</strong> 1%</li>
+                </ul>
+            </div>
+
+            <div class="card tip">
+                <h3>👶 Crianças (Diferença)</h3>
+                <p style="font-size: 0.85rem; margin-top:0;">
+                    A proporção corporal muda com a idade.
+                </p>
+                <div class="gold-standard">
+                    <strong>Cabeça Maior:</strong> 18% (Bebê) ➝ 9% (Adulto).<br>
+                    <strong>Pernas Menores:</strong> 14% (Bebê) ➝ 18% (Adulto).
+                </div>
+                <p style="font-size: 0.8rem; margin-bottom:0;">
+                    <em>*Palma da mão do paciente ≈ 1% SCQ (para áreas pequenas).</em>
+                </p>
+            </div>
+        </div>
+
+        <h2>2. Reposição Volêmica (Fórmula ATLS 10)</h2>
+        <div class="grid-container">
+
+            <div class="card alert">
+                <h3>💧 Cálculo do Volume</h3>
+                <p style="font-size: 0.85rem; margin-top:0;">Uso exclusivo de <strong>Ringer Lactato</strong> nas
+                    primeiras 24h.</p>
+                <div class="gold-standard">
+                    <span class="value">2 mL</span> x Peso(kg) x %SCQ
+                </div>
+                <p style="font-size: 0.8rem; color:#666;">
+                    <em>Ex (70kg, 36%): 2 x 70 x 36 = 5.040 ml.</em><br>
+                    <small>Nota: Se Choque Elétrico, usar 4 mL.</small>
+                </p>
+            </div>
+
+            <div class="card common">
+                <h3>⏱️ Regra de Infusão</h3>
+                <p style="font-size: 0.85rem; margin-top:0;">
+                    O tempo conta a partir da <strong>HORA DO ACIDENTE</strong>.
+                </p>
+                <ul>
+                    <li><strong>1ª Metade (50%):</strong> Nas primeiras 8 horas.</li>
+                    <li><strong>2ª Metade (50%):</strong> Nas próximas 16 horas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card tip" style="margin-top: 10px;">
+            <h3>✅ Monitoramento (Meta)</h3>
+            <p style="font-size: 0.85rem; margin:0;">
+                Guiar volume pela diurese. Não "encharcar" nem deixar seco.
+            </p>
+            <div class="criteria-box">
+                <strong>Alvo:</strong> <span class="value">0.5 a 1.0 mL/kg/hora</span>.<br>
+                Urina escura? Aumenta soro. Clara demais? Reduz.
+            </div>
+        </div>
+
+        <h2>3. Medicamentos "Kit Padrão"</h2>
+        <div class="grid-container">
+
+            <div class="card common">
+                <h3>💊 Analgesia Escalonada</h3>
+                <ul>
+                    <li><strong>Dor Leve/Mod:</strong> Dipirona 1g IV (6/6h).</li>
+                    <li><strong>Dor Intensa:</strong> Tramadol 50-100mg IV.</li>
+                </ul>
+            </div>
+
+            <div class="card mech">
+                <h3>🛡️ Profilaxias Obrigatórias</h3>
+                <ul>
+                    <li><strong>Gástrica:</strong> Omeprazol 40mg IV (Evitar úlcera de stress).</li>
+                    <li><strong>Tétano:</strong> Vacina dT (Se incerto ou > 5 anos).</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>4. Cuidados Locais (Ferida)</h2>
+        <div class="grid-container">
+
+            <div class="card infect">
+                <h3>🧼 Limpeza e Tópico</h3>
+                <ul>
+                    <li><strong>Lavagem:</strong> Água corrente + Sabão ou Clorexidina degermante.</li>
+                    <li><strong>Curativo:</strong> Sulfadiazina de Prata 1% (troca 24h).</li>
+                </ul>
+            </div>
+
+            <div class="card mech">
+                <h3>🎈 Bolhas (Flictenas)</h3>
+                <div class="gold-standard" style="margin-top:0;">
+                    <strong>Íntegras/Pequenas:</strong><br> Manter (proteção biológica).<br><br>
+                    <strong>Rotas/Tensas:</strong><br> Desbridar (remover tecido).
+                </div>
+            </div>
+        </div>
+
+        <h2>5. Pecados Capitais (O que NÃO fazer)</h2>
+        <div class="grid-container">
+            <div class="card tip" style="border-left-color: var(--danger);">
+                <h3>🚫 Proibições Absolutas</h3>
+                <ul>
+                    <li><strong>NÃO usar Coloides/Plasma:</strong> Nas 1ªs 24h ocorre vazamento capilar (leak). Risco de
+                        Edema Pulmonar.</li>
+                    <li><strong>NÃO fazer ATB Profilático:</strong> Apenas se infecção comprovada. Induz resistência.
+                    </li>
+                    <li><strong>NÃO usar Corticoides:</strong> Aumentam mortalidade e risco de infecção.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>6. Resumo Terapêutico</h2>
+        <table>
+            <tr>
+                <th>Parâmetro</th>
+                <th>Valor / Ação</th>
+                <th>Obs</th>
+            </tr>
+            <tr>
+                <td>Fórmula Volume</td>
+                <td><span class="value">2 mL x kg x SCQ</span></td>
+                <td>Térmica (Padrão)</td>
+            </tr>
+            <tr>
+                <td>Tipo de Soro</td>
+                <td><span class="value">Ringer Lactato</span></td>
+                <td>1ªs 24 horas</td>
+            </tr>
+            <tr>
+                <td>Meta Diurese</td>
+                <td><span class="value">0.5 - 1.0 ml/kg/h</span></td>
+                <td>Ajustar gotejo</td>
+            </tr>
+            <tr>
+                <td>Curativo</td>
+                <td><span class="value">Sulfadiazina 1%</span></td>
+                <td>Troca diária</td>
+            </tr>
+            <tr>
+                <td>Profilaxia</td>
+                <td><span class="value">Tétano + Gástrica</span></td>
+                <td>Sempre checar</td>
+            </tr>
+        </table>
+        <style>
+            :root {
+                /* Mantenha as cores originais de cada arquivo aqui */
+                --primary: #004e64;
+                --secondary: #00a896;
+                --danger: #d00000;
+                --warning: #f59f00;
+                --purple: #5f3dc4;
+                --brown: #795548;
+                --light-bg: #f8f9fa;
+                --white: #ffffff;
+            }
+
+            /* ESSENCIAL: Resolve o problema do botão "vazar" a tela */
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 13px;
+                line-height: 1.5;
+                color: #333;
+                background-color: #e9ecef;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                /* Garante que o conteúdo não ultrapasse a largura container */
+                width: 100%;
+            }
+
+            /* Imagens responsivas (não quebram o layout) */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* TABELAS: Removemos o 'display: block' que causava o erro.
+           Agora usamos ajustes suaves para mobile. */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            /* ... Mantenha o restante do CSS de cabeçalhos e listas original ... */
+
+            /* ESTILO DO BOTÃO VOLTAR */
+            .btn-voltar-container {
+                text-align: center;
+                margin: 40px 0 20px 0;
+                width: 100%;
+            }
+
+            .btn-voltar {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--secondary);
+                color: white;
+                padding: 12px 30px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+                max-width: 100%;
+            }
+
+            .btn-voltar:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+                filter: brightness(1.1);
+            }
+
+            .btn-voltar:active {
+                transform: scale(0.98);
+            }
+
+            /* AJUSTES PARA TELEMÓVEL */
+            @media (max-width: 600px) {
+                .btn-voltar-container {
+                    margin: 25px auto 40px auto;
+                    padding: 0 10px;
+                }
+
+                .btn-voltar {
+                    font-size: 14px;
+                    padding: 15px;
+                    width: 100%;
+                }
+
+                /* AJUSTE SEGURO PARA TABELAS EM MOBILE:
+               Reduz a fonte e o espaçamento para caber mais conteúdo,
+               mas mantendo a estrutura de linhas e colunas intacta. */
+                th,
+                td {
+                    padding: 4px 2px;
+                    /* Reduz padding lateral */
+                    font-size: 11px;
+                    /* Fonte ligeiramente menor */
+                    word-wrap: break-word;
+                    /* Quebra palavras longas se necessário */
+                }
+            }
+        </style>
+
+        <div class="btn-voltar-container">
+            <a href="index.html" onclick="sessionStorage.setItem('openProtocols', 'true')" class="btn-voltar">
+                <span style="margin-right: 8px; font-size: 1.4em; line-height: 1;">↩</span>
+                Voltar
+            </a>
+        </div>
+        <div class="footer-sig">
+            Omni Dev / Dr. Sebastião - 01/2026<br>
+            <span style="font-size:0.7rem; font-style:italic;">Material de Apoio à Residência Médica em
+                Ortotraumatologia</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
