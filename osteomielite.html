@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo: Osteomielite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .course-nav {
+            background-color: white;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .course-nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .course-nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .course-nav a:hover, .course-nav a.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 992px) {
+            .course-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 100px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section h2 i {
+            color: var(--secondary-color);
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+        }
+
+        .section ul, .section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .side-panel {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            height: fit-content;
+        }
+
+        .side-panel h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        .progress-container {
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--success-color);
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .key-points {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .key-points h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study {
+            background-color: #fff8e1;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .case-study h4 {
+            color: #e6a700;
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz {
+            background-color: #e8f5e9;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--success-color);
+        }
+
+        .quiz h4 {
+            color: var(--success-color);
+            margin-bottom: 1rem;
+        }
+
+        .quiz-option {
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            background-color: white;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            background-color: #f1f8e9;
+        }
+
+        .quiz-option.selected {
+            background-color: #c8e6c9;
+            border: 2px solid var(--success-color);
+        }
+
+        .quiz-feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: var(--radius);
+            display: none;
+        }
+
+        .quiz-feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .quiz-feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-prev {
+            background-color: #7f8c8d;
+        }
+
+        .btn-prev:hover {
+            background-color: #636e72;
+        }
+
+        .btn-complete {
+            background-color: var(--success-color);
+        }
+
+        .btn-complete:hover {
+            background-color: #219653;
+        }
+
+        .completion-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h3 {
+            color: var(--success-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .close-modal {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .close-modal:hover {
+            background-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .course-nav a {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-bone"></i> Curso Completo: Osteomielite</h1>
+            <p>Um guia abrangente sobre infecção óssea: conceito, epidemiologia, etiologia, quadro clínico, prognóstico, tratamento e complicações</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="course-nav">
+            <ul id="nav-list">
+                <!-- Navegação será preenchida via JavaScript -->
+            </ul>
+        </nav>
+
+        <div class="course-content">
+            <main class="main-content">
+                <section id="conceito" class="section">
+                    <h2><i class="fas fa-book-medical"></i> Conceito</h2>
+                    <p>A osteomielite é uma infecção do osso, geralmente causada por bactérias, mas que também pode ser provocada por fungos ou outros microrganismos. A infecção pode atingir qualquer osso do corpo, sendo mais comum nos ossos longos das extremidades, vértebras e pélvis.</p>
+                    
+                    <div class="highlight">
+                        <p><strong>Definição:</strong> Processo infeccioso que envolve o tecido ósseo (osso compacto, esponjoso e medula óssea), caracterizado por inflamação, destruição óssea e, frequentemente, formação de sequestros (fragmentos ósseos desvitalizados).</p>
+                    </div>
+                    
+                    <p>Classifica-se em:</p>
+                    <ul>
+                        <li><strong>Aguda:</strong> Duração menor que 4 semanas, com sinais inflamatórios evidentes</li>
+                        <li><strong>Subaguda:</strong> Duração entre 4 semanas e 3 meses</li>
+                        <li><strong>Crônica:</strong> Duração superior a 3 meses, com períodos de exacerbação</li>
+                    </ul>
+                    
+                    <p>A infecção pode ocorrer por três vias principais:</p>
+                    <ol>
+                        <li>Hematogênica (disseminação pelo sangue)</li>
+                        <li>Contígua (extensão de infecção próxima)</li>
+                        <li>Direta (traumatismo ou procedimento cirúrgico)</li>
+                    </ol>
+                    
+                    <div class="case-study">
+                        <h4><i class="fas fa-stethoscope"></i> Caso Clínico - Parte 1</h4>
+                        <p>João, 12 anos, chega ao pronto-socorro com dor intensa na perna direita há 3 dias, febre de 39°C e dificuldade para caminhar. Relata queda durante jogo de futebol duas semanas antes, com escoriação no local. Exame físico mostra edema, calor, rubor e dor à palpação na região distal da tíbia direita.</p>
+                    </div>
+                </section>
+
+                <section id="epidemiologia" class="section">
+                    <h2><i class="fas fa-chart-bar"></i> Epidemiologia</h2>
+                    <p>A osteomielite possui distribuição mundial, afetando indivíduos de todas as idades, com predileção por certos grupos etários conforme a via de infecção.</p>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Grupo Etário</th>
+                                    <th>Prevalência</th>
+                                    <th>Ossos mais Afetados</th>
+                                    <th>Agente mais Comum</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Crianças (1-16 anos)</td>
+                                    <td>1-13 casos/100.000</td>
+                                    <td>Fêmur, tíbia, úmero</td>
+                                    <td><i>Staphylococcus aureus</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Adultos jovens</td>
+                                    <td>0,5-2 casos/100.000</td>
+                                    <td>Vértebras, ossos longos</td>
+                                    <td><i>Staphylococcus aureus</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Idosos (>50 anos)</td>
+                                    <td>2-5 casos/100.000</td>
+                                    <td>Vértebras, pélvis, pés (diabéticos)</td>
+                                    <td><i>Staphylococcus aureus</i> e Gram-negativos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <p>Fatores de risco importantes:</p>
+                    <ul>
+                        <li>Diabetes mellitus (principal causa de osteomielite do pé)</li>
+                        <li>Traumatismos com exposição óssea</li>
+                        <li>Procedimentos ortopédicos (próteses, fixações internas)</li>
+                        <li>Imunossupressão (HIV, quimioterapia, corticoterapia)</li>
+                        <li>Doença vascular periférica</li>
+                        <li>Uso de drogas intravenosas</li>
+                    </ul>
+                    
+                    <p>A osteomielite hematogênica é mais comum em crianças, enquanto a por contiguidade ou direta predomina em adultos e idosos. A infecção vertebral representa cerca de 3-5% de todas as osteomielites.</p>
+                </section>
+
+                <section id="etiologia" class="section">
+                    <h2><i class="fas fa-bacteria"></i> Etiologia</h2>
+                    <p>A etiologia da osteomielite varia conforme a idade, via de infecção e condições clínicas do paciente.</p>
+                    
+                    <div class="highlight">
+                        <p><strong>Agente mais comum:</strong> <i>Staphylococcus aureus</i> (70-80% dos casos), incluindo cepas meticilino-resistentes (MRSA) em ambientes hospitalares.</p>
+                    </div>
+                    
+                    <p>Outros agentes etiológicos importantes:</p>
+                    <ul>
+                        <li><strong>Bactérias Gram-positivas:</strong>
+                            <ul>
+                                <li>Estreptococos beta-hemolíticos (grupos A, B, C, G)</li>
+                                <li><i>Streptococcus pneumoniae</i> (em crianças e idosos)</li>
+                                <li><i>Enterococcus spp.</i></li>
+                            </ul>
+                        </li>
+                        <li><strong>Bactérias Gram-negativas:</strong>
+                            <ul>
+                                <li><i>Pseudomonas aeruginosa</i> (em viciados em drogas IV e feridas perfurantes)</li>
+                                <li><i>Escherichia coli</i></li>
+                                <li><i>Proteus spp.</i></li>
+                                <li><i>Klebsiella spp.</i></li>
+                            </ul>
+                        </li>
+                        <li><strong>Micobactérias:</strong> <i>Mycobacterium tuberculosis</i> (osteomielite tuberculosa)</li>
+                        <li><strong>Fungos:</strong> <i>Candida spp.</i>, <i>Aspergillus spp.</i> (em imunossuprimidos)</li>
+                    </ul>
+                    
+                    <p>Correlação entre via de infecção e agente etiológico:</p>
+                    <ol>
+                        <li><strong>Hematogênica:</strong> Predomínio de <i>Staphylococcus aureus</i>, estreptococos</li>
+                        <li><strong>Por contiguidade (feridas, úlceras):</strong> Polimicrobiana (aeróbios e anaeróbios)</li>
+                        <li><strong>Pós-cirúrgica:</strong> <i>Staphylococcus aureus</i> (incluindo MRSA), estafilococos coagulase-negativos</li>
+                        <li><strong>Pé diabético:</strong> Polimicrobiana (<i>Staphylococcus aureus</i>, estreptococos, enterobactérias, anaeróbios)</li>
+                    </ol>
+                    
+                    <div class="quiz">
+                        <h4><i class="fas fa-question-circle"></i> Questionário Interativo</h4>
+                        <p>Qual é o agente etiológico mais comum da osteomielite hematogênica em crianças?</p>
+                        <div class="quiz-option" data-correct="true">Staphylococcus aureus</div>
+                        <div class="quiz-option">Pseudomonas aeruginosa</div>
+                        <div class="quiz-option">Mycobacterium tuberculosis</div>
+                        <div class="quiz-option">Escherichia coli</div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </section>
+
+                <section id="quadro-clinico" class="section">
+                    <h2><i class="fas fa-user-injured"></i> Quadro Clínico</h2>
+                    <p>As manifestações clínicas variam conforme a forma (aguda ou crônica), localização e idade do paciente.</p>
+                    
+                    <p><strong>Osteomielite aguda:</strong></p>
+                    <ul>
+                        <li>Dor óssea intensa e localizada (pior à palpação e movimento)</li>
+                        <li>Febre (geralmente >38,5°C) e calafrios</li>
+                        <li>Edema, calor e rubor na região afetada</li>
+                        <li>Limitação funcional (dificuldade para deambular se membro inferior afetado)</li>
+                        <li>Sinais sistêmicos: mal-estar, prostração, taquicardia</li>
+                    </ul>
+                    
+                    <p><strong>Osteomielite crônica:</strong></p>
+                    <ul>
+                        <li>Dor óssea de menor intensidade, mas persistente</li>
+                        <li>Febre baixa ou ausente</li>
+                        <li>Fístulas cutâneas (orifícios que drenam secreção purulenta)</li>
+                        <li>Periódica drenagem espontânea de pus</li>
+                        <li>Deformações ósseas (em casos de longa evolução)</li>
+                        <li>Pode haver períodos de exacerbação com quadro similar à forma aguda</li>
+                    </ul>
+                    
+                    <div class="case-study">
+                        <h4><i class="fas fa-stethoscope"></i> Caso Clínico - Parte 2</h4>
+                        <p>No caso de João, o exame laboratorial revelou leucocitose (18.000 leucócitos/mm³) com desvio à esquerda, VHS elevado (65 mm/h) e PCR aumentado (12 mg/dL). A radiografia da tíbia direita mostra discreta periostite (elevação do periósteo). A ressonância magnética confirmou osteomielite aguda da tíbia distal com formação de abscesso subperiostal.</p>
+                    </div>
+                    
+                    <p>Localizações especiais:</p>
+                    <ul>
+                        <li><strong>Coluna vertebral (espondilodiscite):</strong> Dor localizada nas costas, rigidez, pode haver compressão medular com déficit neurológico</li>
+                        <li><strong>Pé diabético:</strong> Frequentemente associada a úlceras infectadas, pode haver pouca dor devido à neuropatia</li>
+                        <li><strong>Osteomielite mandibular:</strong> Dor facial, trismo (dificuldade para abrir a boca), drenagem intraoral</li>
+                    </ul>
+                </section>
+
+                <section id="prognostico" class="section">
+                    <h2><i class="fas fa-chart-line"></i> Prognóstico</h2>
+                    <p>O prognóstico da osteomielite depende de múltiplos fatores, incluindo tempo de diagnóstico, adequação do tratamento, condições do paciente e localização da infecção.</p>
+                    
+                    <div class="highlight">
+                        <p>Com tratamento adequado e precoce, a osteomielite aguda tem cura em 70-90% dos casos. Já a forma crônica apresenta taxas de recidiva de 20-30%, mesmo com tratamento apropriado.</p>
+                    </div>
+                    
+                    <p>Fatores que pioram o prognóstico:</p>
+                    <ul>
+                        <li>Diagnóstico tardio (>3 semanas de evolução)</li>
+                        <li>Presença de corpo estranho (prótese, material de osteossíntese)</li>
+                        <li>Doenças subjacentes (diabetes descompensado, imunossupressão, vasculopatia)</li>
+                        <li>Infecção por microrganismos multirresistentes</li>
+                        <li>Formação de sequestro ósseo extenso</li>
+                        <li>Má vascularização da região afetada</li>
+                    </ul>
+                    
+                    <p>Fatores que melhoram o prognóstico:</p>
+                    <ul>
+                        <li>Diagnóstico precoce (antes de 1 semana de sintomas)</li>
+                        <li>Boa condição clínica do paciente</li>
+                        <li>Ausência de corpo estranho</li>
+                        <li>Infecção por microrganismo sensível a antibióticos disponíveis</li>
+                        <li>Boa vascularização do local</li>
+                        <li>Adesão ao tratamento prolongado</li>
+                    </ul>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Osteomielite</th>
+                                    <th>Taxa de Cura</th>
+                                    <th>Fatores Críticos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aguda hematogênica (crianças)</td>
+                                    <td>85-95%</td>
+                                    <td>Diagnóstico precoce, S. aureus sensível</td>
+                                </tr>
+                                <tr>
+                                    <td>Crônica pós-traumática</td>
+                                    <td>60-80%</td>
+                                    <td>Desbridamento cirúrgico completo, antibioticoterapia prolongada</td>
+                                </tr>
+                                <tr>
+                                    <td>Associada a prótese</td>
+                                    <td>40-70%</td>
+                                    <td>Retirada do material, espaço morto mínimo</td>
+                                </tr>
+                                <tr>
+                                    <td>Pé diabético</td>
+                                    <td>50-75%</td>
+                                    <td>Controle glicêmico, cuidados com ferida, vascularização</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="tratamento" class="section">
+                    <h2><i class="fas fa-medkit"></i> Tratamento</h2>
+                    <p>O tratamento da osteomielite é multimodal, envolvendo antibioticoterapia, intervenção cirúrgica quando indicada e medidas de suporte.</p>
+                    
+                    <p><strong>Princípios do tratamento:</strong></p>
+                    <ol>
+                        <li>Identificação do agente etiológico (cultura e antibiograma)</li>
+                        <li>Desbridamento cirúrgico do tecido necrótico (quando necessário)</li>
+                        <li>Antibioticoterapia prolongada (4-6 semanas na forma aguda; 6-12 semanas na crônica)</li>
+                        <li>Imobilização da região afetada (para alívio da dor e prevenção de fraturas)</li>
+                        <li>Controle de doenças subjacentes (diabetes, vasculopatia)</li>
+                    </ol>
+                    
+                    <div class="highlight">
+                        <p><strong>Antibioticoterapia empírica inicial (após coleta de culturas):</strong></p>
+                        <ul>
+                            <li><strong>Osteomielite hematogênica (comunidade):</strong> Oxacilina ou cefazolina + opção para MRSA se risco elevado</li>
+                            <li><strong>Osteomielite pós-traumática/cirúrgica:</strong> Vancomicina + piperacilina-tazobactam (cobre Gram-positivos, Gram-negativos e anaeróbios)</li>
+                            <li><strong>Pé diabético:</strong> Ampicilina-sulbactam ou piperacilina-tazobactam (cobre polimicrobiana)</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Abordagem cirúrgica:</strong></p>
+                    <ul>
+                        <li><strong>Indicações:</strong> Abscesso (subperiostal ou intramedular), sequestro ósseo, corpo estranho, fístulas, falência do tratamento clínico</li>
+                        <li><strong>Procedimentos:</strong> Desbridamento, remoção de tecido necrótico, drenagem de abscesso, remoção de material de osteossíntese ou prótese, enxerto ósseo</li>
+                        <li><strong>Técnicas modernas:</strong> Sistemas de liberação local de antibióticos (esferas de PMMA com gentamicina ou vancomicina)</li>
+                    </ul>
+                    
+                    <div class="case-study">
+                        <h4><i class="fas fa-stethoscope"></i> Caso Clínico - Parte 3</h4>
+                        <p>João foi submetido à drenagem cirúrgica do abscesso subperiostal e biópsia óssea. A cultura isolou <i>Staphylococcus aureus</i> sensível à oxacilina. Iniciou tratamento com oxacilina IV por 4 semanas, com melhora progressiva dos sintomas. Após 2 semanas, recebeu alta para completar o tratamento com ceftriaxona intramuscular em casa, com acompanhamento ambulatorial.</p>
+                    </div>
+                    
+                    <div class="quiz">
+                        <h4><i class="fas fa-question-circle"></i> Questionário Interativo</h4>
+                        <p>Qual é a duração mínima recomendada de antibioticoterapia para osteomielite aguda?</p>
+                        <div class="quiz-option">1-2 semanas</div>
+                        <div class="quiz-option" data-correct="true">4-6 semanas</div>
+                        <div class="quiz-option">8-10 semanas</div>
+                        <div class="quiz-option">3-6 meses</div>
+                        <div class="quiz-feedback"></div>
+                    </div>
+                </section>
+
+                <section id="complicacoes" class="section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Complicações</h2>
+                    <p>A osteomielite pode evoluir com diversas complicações, especialmente quando o diagnóstico é tardio ou o tratamento inadequado.</p>
+                    
+                    <p><strong>Complicações locais:</strong></p>
+                    <ul>
+                        <li><strong>Formação de sequestro ósseo:</strong> Fragmento ósseo desvitalizado que serve como foco de persistência da infecção</li>
+                        <li><strong>Formação de abscesso:</strong> Subperiostal, intramedular ou em partes moles adjacentes</li>
+                        <li><strong>Fístulas cutâneas:</strong> Canais que drenam secreção purulenta da medula óssea até a pele</li>
+                        <li><strong>Fraturas patológicas:</strong> Enfraquecimento ósseo pela destruição infecciosa</li>
+                        <li><strong>Artrite séptica:</strong> Extensão da infecção para a articulação adjacente</li>
+                        <li><strong>Pseudartrose infecciosa:</strong> Falha na consolidação de fratura devido à infecção</li>
+                    </ul>
+                    
+                    <p><strong>Complicações sistêmicas:</strong></p>
+                    <ul>
+                        <li><strong>Sepse:</strong> Resposta inflamatória sistêmica à infecção</li>
+                        <li><strong>Endocardite:</strong> Especialmente por <i>Staphylococcus aureus</i></li>
+                        <li><strong>Amiloidose secundária:</strong> Em casos de infecção crônica de longa duração</li>
+                        <li><strong>Carcinoma espinocelular:</strong> Em fístulas crônicas (raro, ocorre após décadas)</li>
+                    </ul>
+                    
+                    <p><strong>Complicações específicas por localização:</strong></p>
+                    <ul>
+                        <li><strong>Coluna vertebral:</strong> Compressão medular, formação de abscesso epidural, instabilidade vertebral</li>
+                        <li><strong>Ossos longos em crianças:</strong> Lesão da fise (placa de crescimento) com consequente discrepância de comprimento dos membros ou deformidade angular</li>
+                        <li><strong>Articulações:</strong> Destruição cartilaginosa, anquilose (rigidez articular)</li>
+                        <li><strong>Mandíbula:</strong> Osteorradionecrose, fístulas orocutâneas</li>
+                    </ul>
+                    
+                    <div class="key-points">
+                        <h4><i class="fas fa-lightbulb"></i> Prevenção de Complicações</h4>
+                        <p>Para prevenir complicações da osteomielite, é essencial:</p>
+                        <ol>
+                            <li>Diagnóstico precoce através da suspeição clínica em pacientes com fatores de risco</li>
+                            <li>Tratamento antibiótico adequado e por tempo suficiente</li>
+                            <li>Intervenção cirúrgica precoce quando indicada</li>
+                            <li>Controle rigoroso de doenças de base (especialmente diabetes)</li>
+                            <li>Acompanhamento prolongado com exames de imagem e marcadores inflamatórios</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <div class="controls">
+                    <button id="prev-btn" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Tópico Anterior</button>
+                    <button id="complete-btn" class="btn btn-complete"><i class="fas fa-graduation-cap"></i> Completar Curso</button>
+                    <button id="next-btn" class="btn"><i class="fas fa-arrow-right"></i> Próximo Tópico</button>
+                </div>
+            </main>
+
+            <aside class="side-panel">
+                <div class="progress-container">
+                    <h3>Progresso do Curso</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progress-percent">0%</span>
+                        <span id="completed-sections">0/7 seções</span>
+                    </div>
+                </div>
+                
+                <h3>Resumo Rápido</h3>
+                <div class="key-points">
+                    <h4>Pontos-Chave</h4>
+                    <ul>
+                        <li>Infecção do tecido ósseo</li>
+                        <li><i>Staphylococcus aureus</i> é o agente mais comum</li>
+                        <li>Pode ser aguda ou crônica</li>
+                        <li>Tratamento: antibióticos + cirurgia (se necessário)</li>
+                        <li>Diagnóstico precoce melhora prognóstico</li>
+                    </ul>
+                </div>
+                
+                <h3>Glossário</h3>
+                <div class="key-points">
+                    <p><strong>Sequestro ósseo:</strong> Fragmento ósseo desvitalizado separado do osso saudável.</p>
+                    <p><strong>Periostite:</strong> Inflamação do periósteo (membrana que recobre o osso).</p>
+                    <p><strong>Fístula:</strong> Comunicação anormal entre dois órgãos ou entre um órgão e a pele.</p>
+                    <p><strong>Desbridamento:</strong> Remoção cirúrgica de tecido necrótico ou infectado.</p>
+                </div>
+                
+                <h3>Recursos Adicionais</h3>
+                <div class="key-points">
+                    <p><i class="fas fa-book"></i> Lew, D. P., & Waldvogel, F. A. (2004). Osteomyelitis. <em>The Lancet</em>.</p>
+                    <p><i class="fas fa-book"></i> Hatzenbuehler, J., & Pulling, T. J. (2011). Diagnosis and management of osteomyelitis. <em>American Family Physician</em>.</p>
+                    <p><i class="fas fa-globe"></i> IDSA Guidelines: Diagnosis and Management of Osteomyelitis</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="completion-modal" class="completion-modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-trophy"></i> Curso Concluído!</h3>
+            <p>Parabéns! Você completou o curso sobre Osteomielite.</p>
+            <p>Você dominou os conceitos fundamentais sobre essa importante infecção óssea, incluindo diagnóstico, tratamento e complicações.</p>
+            <p>Este conhecimento é essencial para profissionais da saúde que atuam em ortopedia, infectologia, clínica médica e pediatria.</p>
+            <button id="close-modal" class="close-modal">Continuar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Curso sobre Osteomielite - Desenvolvido para fins educacionais</p>
+            <p>As informações apresentadas têm caráter educativo e não substituem a avaliação médica profissional.</p>
+            <p><i class="fas fa-heartbeat"></i> Consulte sempre um profissional de saúde para diagnóstico e tratamento adequados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dados do curso
+        const sections = [
+            { id: 'conceito', title: 'Conceito', icon: 'book-medical' },
+            { id: 'epidemiologia', title: 'Epidemiologia', icon: 'chart-bar' },
+            { id: 'etiologia', title: 'Etiologia', icon: 'bacteria' },
+            { id: 'quadro-clinico', title: 'Quadro Clínico', icon: 'user-injured' },
+            { id: 'prognostico', title: 'Prognóstico', icon: 'chart-line' },
+            { id: 'tratamento', title: 'Tratamento', icon: 'medkit' },
+            { id: 'complicacoes', title: 'Complicações', icon: 'exclamation-triangle' }
+        ];
+
+        // Estado do curso
+        let currentSection = 0;
+        let completedSections = new Set();
+
+        // Inicializar navegação
+        function initNavigation() {
+            const navList = document.getElementById('nav-list');
+            
+            sections.forEach((section, index) => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${section.id}`;
+                a.innerHTML = `<i class="fas fa-${section.icon}"></i> ${section.title}`;
+                a.dataset.index = index;
+                
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    goToSection(index);
+                });
+                
+                li.appendChild(a);
+                navList.appendChild(li);
+            });
+            
+            updateNavigation();
+        }
+
+        // Atualizar navegação
+        function updateNavigation() {
+            const navLinks = document.querySelectorAll('.course-nav a');
+            
+            navLinks.forEach((link, index) => {
+                link.classList.remove('active');
+                if (index === currentSection) {
+                    link.classList.add('active');
+                    // Rolar para a seção ativa
+                    document.getElementById(sections[currentSection].id).scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // Marcar seções completas
+                if (completedSections.has(index)) {
+                    link.style.borderLeft = '4px solid var(--success-color)';
+                }
+            });
+            
+            updateProgress();
+        }
+
+        // Navegar para seção específica
+        function goToSection(index) {
+            if (index >= 0 && index < sections.length) {
+                currentSection = index;
+                updateNavigation();
+                
+                // Marcar como visualizada/completada
+                completedSections.add(index);
+                updateProgress();
+            }
+        }
+
+        // Atualizar progresso
+        function updateProgress() {
+            const progressFill = document.getElementById('progress-fill');
+            const progressPercent = document.getElementById('progress-percent');
+            const completedSectionsElement = document.getElementById('completed-sections');
+            
+            const progress = (completedSections.size / sections.length) * 100;
+            
+            progressFill.style.width = `${progress}%`;
+            progressPercent.textContent = `${Math.round(progress)}%`;
+            completedSectionsElement.textContent = `${completedSections.size}/${sections.length} seções`;
+        }
+
+        // Inicializar questionários
+        function initQuizzes() {
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const quiz = this.closest('.quiz');
+                    const feedback = quiz.querySelector('.quiz-feedback');
+                    const allOptions = quiz.querySelectorAll('.quiz-option');
+                    
+                    // Remover seleção anterior
+                    allOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Selecionar esta opção
+                    this.classList.add('selected');
+                    
+                    // Mostrar feedback
+                    if (this.dataset.correct === 'true') {
+                        feedback.textContent = 'Correto! Esta é a resposta certa.';
+                        feedback.classList.remove('incorrect');
+                        feedback.classList.add('correct');
+                    } else {
+                        feedback.textContent = 'Incorreto. Tente novamente ou revise a seção.';
+                        feedback.classList.remove('correct');
+                        feedback.classList.add('incorrect');
+                    }
+                    
+                    feedback.style.display = 'block';
+                    
+                    // Marcar a seção como completada
+                    const sectionId = quiz.closest('.section').id;
+                    const sectionIndex = sections.findIndex(s => s.id === sectionId);
+                    if (sectionIndex !== -1) {
+                        completedSections.add(sectionIndex);
+                        updateProgress();
+                    }
+                });
+            });
+        }
+
+        // Controles de navegação
+        function initControls() {
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                if (currentSection > 0) {
+                    goToSection(currentSection - 1);
+                }
+            });
+            
+            document.getElementById('next-btn').addEventListener('click', () => {
+                if (currentSection < sections.length - 1) {
+                    goToSection(currentSection + 1);
+                }
+            });
+            
+            document.getElementById('complete-btn').addEventListener('click', () => {
+                // Marcar todas as seções como completadas
+                sections.forEach((_, index) => completedSections.add(index));
+                updateProgress();
+                
+                // Mostrar modal de conclusão
+                document.getElementById('completion-modal').style.display = 'flex';
+            });
+            
+            document.getElementById('close-modal').addEventListener('click', () => {
+                document.getElementById('completion-modal').style.display = 'none';
+            });
+        }
+
+        // Inicializar curso quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavigation();
+            initQuizzes();
+            initControls();
+            
+            // Marcar primeira seção como visualizada
+            completedSections.add(0);
+            updateProgress();
+            
+            // Configurar observador de interseção para marcar seções visualizadas
+            const observerOptions = {
+                threshold: 0.5
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        const sectionIndex = sections.findIndex(s => s.id === sectionId);
+                        if (sectionIndex !== -1) {
+                            completedSections.add(sectionIndex);
+                            updateProgress();
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observar todas as seções
+            sections.forEach(section => {
+                const sectionElement = document.getElementById(section.id);
+                if (sectionElement) {
+                    observer.observe(sectionElement);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
