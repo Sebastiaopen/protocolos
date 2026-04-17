@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Clínico: Osteocondrite Esterno-Costal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            margin-bottom: 20px;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .section-title {
+            color: #1e40af;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight-red {
+            border-left-color: #ef4444;
+        }
+
+        .highlight-green {
+            border-left-color: #10b981;
+        }
+
+        .highlight-yellow {
+            border-left-color: #f59e0b;
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            .print-only {
+                display: block;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #e2e8f0;
+            }
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Cabeçalho -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800">Protocolo de Diagnóstico e Conduta</h1>
+            <p class="text-xl text-blue-600 font-semibold mt-2">Osteocondrite Esterno-Costal (Síndrome de Tietze / ARPE)
+            </p>
+        </header>
+
+        <!-- 1. Conceitos -->
+        <section class="card p-6">
+            <h2 class="section-title"><i class="fas fa-book-medical"></i> Conceitos Fundamentais</h2>
+            <div class="space-y-3">
+                <p><strong>Definição:</strong> A osteocondrite esterno-costal é uma condição inflamatória benigna, porém
+                    dolorosa, das cartilagens costais que ligam as costelas ao esterno.</p>
+                <p><strong>Síndrome de Tietze:</strong> Uma variante da osteocondrite caracterizada por edema (inchaço)
+                    visível na junção condrocostal.</p>
+                <p><strong>Relação Estreptocócica:</strong> No contexto de ASO elevado e amigdalite crônica, pode
+                    manifestar-se como uma <strong>Artrite Reativa Pós-Estreptocócica (ARPE)</strong>, onde o sistema
+                    imune ataca tecidos articulares após uma infecção bacteriana.</p>
+            </div>
+        </section>
+
+        <!-- 2. Fatores de Risco -->
+        <section class="card p-6 highlight-yellow">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Fatores de Risco</h2>
+            <ul class="list-disc ml-6 space-y-2">
+                <li>Infecções de repetição das vias aéreas superiores (Amigdalites estreptocócicas).</li>
+                <li>Trauma torácico direto ou microtraumas por esforço repetitivo.</li>
+                <li>Tosse crônica ou intensa (pressão mecânica nas cartilagens).</li>
+                <li>Idade: Frequente em adolescentes e adultos jovens.</li>
+                <li>Histórico familiar de doenças reumatológicas ou Febre Reumática.</li>
+            </ul>
+        </section>
+
+        <!-- 3. Sinais e Sintomas -->
+        <section class="card p-6 highlight-red">
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> Sinais e Sintomas Característicos</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-red-800 mb-2">Clínica Local</h3>
+                    <ul class="list-check space-y-1">
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Dor aguda ou lancinante no tórax anterior.
+                        </li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Piora ao respirar fundo, tossir ou espirrar.
+                        </li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Dor localizada à palpação (Ponto de Gatilho).
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-blue-800 mb-2">Manifestações Sistêmicas</h3>
+                    <ul class="list-check space-y-1">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Dores referidas na coluna dorsal/escápulas.
+                        </li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Histórico de febre baixa ou cansaço.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Queixas de amigdalite recorrente.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. Exames e Diagnóstico (ATUALIZADO) -->
+        <section class="card p-6">
+            <h2 class="section-title"><i class="fas fa-vial"></i> Investigação Diagnóstica</h2>
+            <div class="space-y-4">
+                <div class="border-l-4 border-blue-400 pl-4">
+                    <h3 class="font-bold text-lg">Laboratório e Valores de Referência</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                        <div class="text-sm">
+                            <p><strong>ASO:</strong> > 200 IU/mL (Indica exposição recente ao Estreptococo).</p>
+                            <p><strong>PCR (Proteína C Reativa):</strong> Normal < 0,5 mg/dL. Elevação indica inflamação aguda.</p>
+                            <p><strong>VHS (Velocidade de Hemossedimentação):</strong> Ref. Homem < 15mm / Mulher < 20mm (1ª hora).</p>
+                        </div>
+                        <div class="text-sm">
+                            <p><strong>Hemograma:</strong> 
+                                <br>- Leucocitose (> 11.000/mm³) sugere processo infeccioso ativo.
+                                <br>- Anemia de Doença Crônica (Hb baixa / VCM normal) sugere inflamação prolongada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-l-4 border-blue-400 pl-4">
+                    <h3 class="font-bold text-lg">Imagem e Funcional</h3>
+                    <ul class="list-disc ml-6 mt-2">
+                        <li><strong>Ecocardiograma:</strong> Obrigatório para descartar Cardite (se ASO alto + Artralgia).</li>
+                        <li><strong>RX de Tórax:</strong> Geralmente normal (útil para exclusão de pneumonia/pneumotórax).</li>
+                        <li><strong>Eletrocardiograma (ECG):</strong> Avaliar intervalo PR (Critério de Jones).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Diagnósticos Diferenciais (ATUALIZADO) -->
+        <section class="card p-6 bg-slate-50">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> Diagnósticos Diferenciais: Aspectos Clínicos
+            </h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-white border rounded-lg shadow-sm">
+                    <h3 class="font-bold text-blue-700">Fibromialgia</h3>
+                    <p class="text-sm text-slate-600 italic">Dor generalizada crônica (> 3 meses).</p>
+                    <ul class="list-disc ml-5 text-sm mt-1">
+                        <li>Ausência de marcadores inflamatórios (PCR/VHS normais).</li>
+                        <li>Presença de múltiplos "tender points" em outras regiões do corpo.</li>
+                        <li>Associada a fadiga, distúrbios do sono e sintomas cognitivos.</li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-white border rounded-lg shadow-sm border-l-red-500 border-l-4">
+                    <h3 class="font-bold text-red-700">Febre Reumática Aguda (FRA)</h3>
+                    <p class="text-sm text-slate-600 italic">Doença inflamatória multissistêmica pós-angina
+                        estreptocócica.</p>
+                    <ul class="list-disc ml-5 text-sm mt-1">
+                        <li><strong>Critérios de Jones:</strong> Poliartrite migratória (grandes articulações), Cardite,
+                            Coreia de Sydenham, Nódulos Subcutâneos ou Eritema Marginado.</li>
+                        <li>A dor articular na FRA costuma responder dramaticamente ao uso de AAS/Salicilatos em 24-48h.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-4 bg-white border rounded-lg shadow-sm border-l-orange-500 border-l-4">
+                    <h3 class="font-bold text-orange-700">Artrite Reativa Pós-Estreptocócica (ARPE)</h3>
+                    <p class="text-sm text-slate-600 italic">Quadro clínico que não preenche todos os critérios de
+                        Jones.</p>
+                    <ul class="list-disc ml-5 text-sm mt-1">
+                        <li>Período de latência curto (geralmente < 10 dias após a faringite).</li>
+                        <li>Artrite persistente, aditiva ou simétrica (pode envolver esqueleto axial/esterno).</li>
+                        <li>Resposta Pobre aos salicilatos e AINEs comparada à FRA.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+                    <div class="p-2 bg-slate-100 border rounded text-xs"><strong>Cardíacos:</strong> Isquemia miocárdica
+                        ou Pericardite.</div>
+                    <div class="p-2 bg-slate-100 border rounded text-xs"><strong>Gastro:</strong> Esofagite de refluxo
+                        ou Espasmo esofágico.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Tratamento e Prevenção (ATUALIZADO) -->
+        <section class="card p-6 highlight-green">
+            <h2 class="section-title"><i class="fas fa-pills"></i> Conduta e Tratamento: Tempos Recomendados</h2>
+            <div class="mb-6">
+                <h3 class="font-bold text-green-800"><i class="fas fa-capsules mr-2"></i>Tratamento Medicamentoso</h3>
+                <div class="bg-green-50 p-4 rounded-lg mt-2 space-y-4">
+                    <div>
+                        <p class="font-bold text-blue-800">1. Antimicrobianos / Profilaxia</p>
+                        <ul class="list-disc ml-6 mt-1 text-sm">
+                            <li><strong>Penicilina G Benzatina (Erradicação):</strong> Dose única de 1.200.000 UI (IM).</li>
+                            <li><strong>Profilaxia Secundária (ARPE/Suspeita de FRA):</strong> 1.200.000 UI a cada 21 dias.
+                                <br><span class="text-red-700 font-semibold">Tempo:</span> Mínimo de 1 ano (ARPE) ou até os 21 anos (FRA).</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <p class="font-bold text-blue-800">2. Anti-inflamatórios (AINEs e Inibidores COX-2)</p>
+                        <ul class="list-disc ml-6 mt-1 text-sm">
+                            <li><strong>Naproxeno (250-500mg 12/12h):</strong> Padrão ouro. 
+                                <br><span class="text-red-700 font-semibold">Tempo:</span> 2 a 4 semanas.</li>
+                            <li><strong>Arcoxia (Etoricoxibe 60-90mg/dia):</strong> Inibidor seletivo da COX-2, excelente para redução da inflamação local com menor impacto gástrico.
+                                <br><span class="text-red-700 font-semibold">Tempo:</span> 7 a 14 dias (fase aguda).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-blue-800">3. Corticoterapia (Se houver falha nos AINEs ou Cardite)</p>
+                        <ul class="list-disc ml-6 mt-1 text-sm">
+                            <li><strong>Prednisona (1-2mg/kg/dia):</strong> Indicada em casos de inflamação severa que não responde a AINEs ou se houver diagnóstico de Cardite Reumática.
+                                <br><span class="text-red-700 font-semibold">Tempo:</span> 2 a 4 semanas, com desmame lento (redução gradual da dose).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-green-800"><i class="fas fa-shield-alt mr-2"></i>Cuidados Preventivos</h3>
+                <ul class="list-check ml-6 space-y-1 mt-2 text-sm">
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Repouso relativo de atividades de
+                        impacto: <strong>Mínimo 30 dias</strong>.</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Higiene oral rigorosa e acompanhamento
+                        odontológico.</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Vigilância Cardíaca: Ecocardiograma a
+                        cada <strong>6 ou 12 meses</strong> conforme gravidade do ASO.</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Avaliação cirúrgica (Amigdalectomia): Se
+                        houver falha na profilaxia medicamentosa.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="text-center text-slate-500 text-sm mt-10 pb-10">
+            <p>Protocolo gerado para fins de auxílio clínico. A decisão final cabe ao médico assistente.</p>
+            <p>&copy; 2026 - Gestão Hospitalar Especializada</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
