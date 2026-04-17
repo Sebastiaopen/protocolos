@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Compacto - Ruptura Tendão Quadríceps (Omni Dev)</title>
+    <style>
+        :root {
+            --primary: #004e64;
+            --secondary: #00a896;
+            --danger: #d00000;
+            --warning: #f59f00;
+            --purple: #5f3dc4;
+            --brown: #795548;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-left: 3px solid transparent;
+            position: relative;
+        }
+
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .card.alert {
+            border-left-color: var(--danger);
+        }
+
+        .card.common {
+            border-left-color: var(--secondary);
+        }
+
+        .card.tip {
+            border-left-color: var(--warning);
+            background-color: #fffbf0;
+        }
+
+        .card.infect {
+            border-left-color: var(--purple);
+        }
+
+        .card.mech {
+            border-left-color: var(--brown);
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.95rem;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #eee;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        .badge.red {
+            background: #ffe3e3;
+            color: #c92a2a;
+        }
+
+        .badge.blue {
+            background: #e7f5ff;
+            color: #1c7ed6;
+        }
+
+        .badge.brown {
+            background: #efebe9;
+            color: #5d4037;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .gold-standard {
+            background-color: #f1f3f5;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            border: 1px dashed #ced4da;
+        }
+
+        .criteria-box {
+            background-color: #efebe9;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #3e2723;
+        }
+
+        .value {
+            color: #0ca678;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+        }
+
+        .drug-table td {
+            vertical-align: top;
+        }
+        .drug-table .drug-name {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .drug-table small {
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .footer-sig {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn-voltar-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            width: 100%;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            max-width: 100%;
+        }
+
+        .btn-voltar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            filter: brightness(1.1);
+        }
+
+        .btn-voltar:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 600px) {
+            .btn-voltar-container {
+                margin: 25px auto 40px auto;
+                padding: 0 10px;
+            }
+
+            .btn-voltar {
+                font-size: 14px;
+                padding: 15px;
+                width: 100%;
+            }
+
+            th, td {
+                padding: 4px 2px;
+                font-size: 11px;
+                word-wrap: break-word;
+            }
+            
+            .card.full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ruptura Tendão Quadríceps</h1>
+            <p>Protocolo Cirúrgico & Diagnóstico</p>
+        </header>
+
+        <h2>1. Diagnóstico Clínico (Triagem)</h2>
+        <div class="grid-container">
+
+            <div class="card alert">
+                <h3>Tríade Clássica <span class="badge red">Sinal de Alerta</span></h3>
+                <ul>
+                    <li>🦵 <strong>Gap Palpável:</strong> Depressão suprapatelar.</li>
+                    <li>🚫 <strong>Extensão:</strong> Incapacidade de extensão ativa do joelho.</li>
+                    <li>💥 <strong>Dor Súbita:</strong> Estalido audível após carga excêntrica.</li>
+                </ul>
+            </div>
+
+            <div class="card common">
+                <h3>Perfil Epidemiológico</h3>
+                <p style="font-size: 0.85rem; margin-top:0;">
+                    Mais comum em pacientes > 40 anos. Fatores de risco sistémicos:
+                </p>
+                <div class="gold-standard">
+                    Diabetes Mellitus.<br>
+                    Artrite Reumatoide.<br>
+                    Uso crônico de <span class="value">Corticoides</span>.<br>
+                    Insuficiência Renal Crônica (Hiperparatireoidismo).
+                </div>
+            </div>
+        </div>
+
+        <h2>2. Diagnóstico por Imagem</h2>
+        <div class="grid-container">
+
+            <div class="card infect">
+                <h3>☢️ Raio-X (Rotina)</h3>
+                <ul>
+                    <li><strong>Achado:</strong> Patela Baixa (Baja).</li>
+                    <li><strong>Sinal do Dente:</strong> Osteófitos por tração crônica.</li>
+                    <li><strong>Calcificações:</strong> Sugerem tendinopatia prévia.</li>
+                </ul>
+                <div class="criteria-box">
+                    ⚠️ <strong>Diferença:</strong> Na ruptura do tendão PATELAR a patela sobe (Alta). No QUADRÍCEPS ela desce ou normal.
+                </div>
+            </div>
+
+            <div class="card infect">
+                <h3>🧲 RM (Padrão Ouro)</h3>
+                <ul>
+                    <li><strong>Confirmação:</strong> Diferencia ruptura total vs parcial.</li>
+                    <li><strong>Planejamento:</strong> Avalia retração do coto tendíneo.</li>
+                </ul>
+                <div class="gold-standard">
+                    <strong>USG:</strong> Útil se RM indisponível, mas examinador-dependente.
+                </div>
+            </div>
+        </div>
+
+        <h2>3. Técnica Cirúrgica (Passo a Passo)</h2>
+        <div class="grid-container">
+
+            <div class="card mech full-width">
+                <h3>🔪 Reconstrução Transóssea (Técnica Clássica)</h3>
+                <p style="font-size: 0.85rem; margin-top:0;">
+                    Indicado para rupturas agudas (< 3 semanas).
+                </p>
+                <table class="drug-table" style="margin-top: 5px;">
+                    <tr>
+                        <th style="width: 25%;">Etapa</th>
+                        <th style="width: 75%;">Descrição Técnica</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="drug-name">1. Acesso</span>
+                        </td>
+                        <td>
+                            Incisão longitudinal mediana anterior. Dissecção por planos até expor o coto do tendão e a patela.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="drug-name">2. Preparo</span>
+                        </td>
+                        <td>
+                            Desbridamento das bordas necróticas do tendão.<br>
+                            Escarificação do polo superior da patela (criar leito sangrante).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="drug-name">3. Sutura</span>
+                        </td>
+                        <td>
+                            Ponto <span class="value">Krackow</span> ou <span class="value">Bunnell</span> no coto proximal.<br>
+                            Fios inabsorvíveis de alta resistência (Ethibond nº 5 ou FiberWire).
+                            
+                            <div style="background: #f8f9fa; border: 1px solid #dee2e6; padding: 8px; border-radius: 4px; margin-top: 10px;">
+                                <p style="margin: 0 0 5px 0; font-weight: bold; color: var(--brown); font-size: 0.75rem;">🔍 Detalhe Técnico da Sutura:</p>
+                                <ul style="margin: 0; padding-left: 15px; font-size: 0.75rem; color: #495057;">
+                                    <li style="margin-bottom: 6px;">
+                                        <strong>Krackow (Bloqueante):</strong> Ponto contínuo onde cada passada "trava" o fio (locking loop). Realizar <strong>3 a 5 laçadas</strong> em cada borda do tendão. Transforma tensão longitudinal em compressão transversal (Maior "pull-out strength").
+                                    </li>
+                                    <li>
+                                        <strong>Bunnell (Figura de 8):</strong> Ponto cruzado/entrecruzado (Criss-cross). Útil para alinhamento, mas mecanicamente inferior ao Krackow para grandes tendões.
+                                    </li>
+                                </ul>
+                            </div>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="drug-name">4. Túneis</span>
+                        </td>
+                        <td>
+                            Realizar 3 túneis longitudinais transpatelares (broca 2.0 ou 2.5mm).<br>
+                            Passar os fios pelos túneis (proximal para distal).
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <span class="drug-name">5. Fixação</span>
+                        </td>
+                        <td>
+                            Tensionar fios com joelho em extensão total.<br>
+                            Nó no polo inferior da patela (evitar proeminência).<br>
+                            Reforço com retináculo (pontos simples absorvíveis).
+                        </td>
+                    </tr>
+                </table>
+                 <div class="criteria-box" style="margin-top: 10px;">
+                    <strong>Alternativa Moderna:</strong> Uso de âncoras de sutura (2 ou 3) no polo superior, dispensa túneis transósseos.
+                </div>
+            </div>
+
+        </div>
+
+        <h2>4. Pós-Operatório & Reabilitação</h2>
+        <div class="grid-container">
+
+            <div class="card tip">
+                <h3>Imobilização</h3>
+                <ul>
+                    <li><strong>Imediato:</strong> Órtese longa (Brace) travada em <span class="value">Extensão</span>.</li>
+                    <li><strong>Carga:</strong> Permitida conforme tolerância (WBAT) COM a órtese travada.</li>
+                </ul>
+            </div>
+
+            <div class="card common">
+                <h3>Metas de ADM (Amplitude)</h3>
+                <ul>
+                    <li>📉 <strong>0-2 Semanas:</strong> Extensão total. Nenhuma flexão ativa.</li>
+                    <li>📉 <strong>2-6 Semanas:</strong> Iniciar flexão passiva controlada (0-45° e progredir).</li>
+                    <li>🩺 <strong>6 Semanas:</strong> Desmame da órtese se bom controle do quadríceps.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>5. Complicações & Cuidados (R2)</h2>
+        <div class="grid-container">
+            <div class="card tip" style="border-left-color: var(--danger);">
+                <h3>⚠️ O que vigiar</h3>
+                <ul>
+                    <li><strong>Perda de Extensão:</strong> Complicação mais comum (Lag extensor).</li>
+                    <li><strong>Re-ruptura:</strong> Risco alto nas primeiras 6 semanas (queda do paciente).</li>
+                    <li><strong>Infecção:</strong> Cuidado com diabéticos e tabagistas.</li>
+                    <li><strong>Ossificação Heterotópica:</strong> Comum, mas raramente sintomática.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>6. Resumo Numérico</h2>
+        <table>
+            <tr>
+                <th>Parâmetro</th>
+                <th>Alvo / Ação</th>
+                <th>Obs</th>
+            </tr>
+            <tr>
+                <td>Tempo Cirúrgico Ideal</td>
+                <td><span class="value">< 3 Semanas</span></td>
+                <td>Evita retração grave</td>
+            </tr>
+            <tr>
+                <td>Posição Patela</td>
+                <td><span class="value">Baja ou Normal</span></td>
+                <td>Diferente do tendão patelar</td>
+            </tr>
+             <tr>
+                <td>Fio de Sutura</td>
+                <td><span class="value">Nº 5 (Alta Resist.)</span></td>
+                <td>Krackow (bloqueante)</td>
+            </tr>
+             <tr>
+                <td>Imobilização</td>
+                <td><span class="value">6 Semanas</span></td>
+                <td>Brace em Extensão</td>
+            </tr>
+            <tr>
+                <td>Volta ao Esporte</td>
+                <td><span class="value">4 - 6 Meses</span></td>
+                <td>Avaliar força (>85%)</td>
+            </tr>
+        </table>
+
+        <div class="btn-voltar-container">
+            <a href="index.html" class="btn-voltar">
+                <span style="margin-right: 8px; font-size: 1.4em; line-height: 1;">↩</span>
+                Voltar
+            </a>
+        </div>
+        <div class="footer-sig">
+            Omni Dev / Dr. Sebastião - R2 Ortopedia - 01/2026<br>
+            <span style="font-size:0.7rem; font-style:italic;">Material de Apoio à Residência Médica em
+                Ortotraumatologia</span>
+            <div style="margin-top: 8px; border-top: 1px dashed #ddd; padding-top: 5px; opacity: 0.8;">
+                <span style="font-size: 0.65rem;">* <strong>Protocolo:</strong> Baseado em Campbell's Operative Orthopaedics & Rockwood and Green.</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
