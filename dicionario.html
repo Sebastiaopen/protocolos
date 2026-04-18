@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossário de Ortopedia - Omni Dev</title>
+    <style>
+        :root {
+            /* PALETA VERMELHA (MANTIDA) */
+            --primary: #c92a2a;
+            --secondary: #343a40;
+            --danger: #ff6b6b;
+            --warning: #fcc419;
+            --purple: #845ef7;
+            --light-bg: #fff5f5;
+            --white: #ffffff;
+            --border-color: #e9ecef;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a61e4d, var(--primary));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Estilo para o contador no header */
+        .term-count {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        h2 {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            border-left: 5px solid var(--primary);
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #e9ecef;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .term-group {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .term-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .term-item:last-child {
+            border-bottom: none;
+        }
+
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .term-name {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .term-tag {
+            font-size: 0.7rem;
+            background-color: #f1f3f5;
+            color: #495057;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Cores específicas para tags */
+        .tag-cirurgia {
+            color: #c92a2a;
+            background: #ffe3e3;
+        }
+
+        .tag-sintoma {
+            color: #d6336c;
+            background: #ffdeeb;
+        }
+
+        .tag-patologia {
+            color: #1098ad;
+            background: #e3fafc;
+        }
+
+        .tag-trauma {
+            color: #e8590c;
+            background: #fff4e6;
+        }
+
+        .tag-anatomia {
+            color: #5f3dc4;
+            background: #f3f0ff;
+        }
+
+        .tag-bio {
+            color: #2b8a3e;
+            background: #ebfbee;
+        }
+
+        .term-def {
+            color: #212529;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .term-context {
+            font-size: 0.8rem;
+            color: #868e96;
+            font-style: italic;
+            margin-top: 4px;
+            border-left: 2px solid #ced4da;
+            padding-left: 8px;
+        }
+
+        .footer-sig {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Dicionário de Ortopedia</h1>
+            <p><span class="term-count">com 127 Termos</span></p>
+        </header>
+
+        <h2>1. Métodos e Gestos Cirúrgicos</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteossíntese</span>
+                    <span class="term-tag tag-cirurgia">Fixação</span>
+                </div>
+                <div class="term-def">União mecânica de fragmentos ósseos fraturados utilizando implantes.</div>
+                <div class="term-context">Uso de placas, parafusos, hastes intramedulares ou fios de Kirschner.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fixador Externo</span>
+                    <span class="term-tag tag-cirurgia">Estabilização</span>
+                </div>
+                <div class="term-def">Estrutura metálica externa conectada ao osso por pinos percutâneos.</div>
+                <div class="term-context">Usado em fraturas expostas graves (controlo de danos).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fios de Kirschner (Fios K)</span>
+                    <span class="term-tag tag-cirurgia">Implante</span>
+                </div>
+                <div class="term-def">Fios metálicos finos usados para fixação temporária ou definitiva de pequenos
+                    fragmentos.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Haste Intramedular</span>
+                    <span class="term-tag tag-cirurgia">Implante</span>
+                </div>
+                <div class="term-def">Implante inserido dentro do canal medular para estabilizar fraturas de ossos
+                    longos (fémur, tíbia).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Tração Esquelética</span>
+                    <span class="term-tag tag-cirurgia">Pré-Op</span>
+                </div>
+                <div class="term-def">Aplicação de força contínua através de um pino no osso para alinhar a fratura
+                    antes da cirurgia definitiva.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Amputação</span>
+                    <span class="term-tag tag-cirurgia">Radical</span>
+                </div>
+                <div class="term-def">Remoção cirúrgica de um membro ou parte dele, cortando através do osso.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Desarticulação</span>
+                    <span class="term-tag tag-cirurgia">Radical</span>
+                </div>
+                <div class="term-def">Remoção de um membro através da articulação (sem cortar osso).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteotomia</span>
+                    <span class="term-tag tag-cirurgia">Correção</span>
+                </div>
+                <div class="term-def">Corte cirúrgico controlado do osso para corrigir deformidades angulares ou
+                    rotacionais.</div>
+                <div class="term-context">Ex: Osteotomia varizante/valgizante de tíbia.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artrodese</span>
+                    <span class="term-tag tag-cirurgia">Fusão</span>
+                </div>
+                <div class="term-def">Fusão cirúrgica intencional de uma articulação, eliminando o movimento para
+                    remover a dor.</div>
+                <div class="term-context">Indicado em artrose avançada ou instabilidade grave.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artroplastia</span>
+                    <span class="term-tag tag-cirurgia">Substituição</span>
+                </div>
+                <div class="term-def">Substituição (parcial ou total) da articulação por componentes protéticos.</div>
+                <div class="term-context">Ex: Prótese Total de Quadril (PTQ) ou Joelho (PTJ).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artroscopia</span>
+                    <span class="term-tag tag-cirurgia">Minimamente Invasivo</span>
+                </div>
+                <div class="term-def">Visualização e tratamento intra-articular através de pequenas incisões (portais) e
+                    câmara.</div>
+                <div class="term-context">Padrão ouro para lesões meniscais e ligamentares (LCA).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artrorrise</span>
+                    <span class="term-tag tag-cirurgia">Bloqueio</span>
+                </div>
+                <div class="term-def">Limitação cirúrgica do movimento articular (sem fusão total) usando um implante.
+                </div>
+                <div class="term-context">Ex: Artrorrise subtalar para pé plano valgo infantil.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Enxerto Ósseo (Injerto)</span>
+                    <span class="term-tag tag-cirurgia">Biológico</span>
+                </div>
+                <div class="term-def">Transplante de tecido ósseo para preencher falhas ou estimular consolidação.</div>
+                <div class="term-context">Autólogo (próprio paciente), Homólogo (banco) ou Sintético.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Tenotomia</span>
+                    <span class="term-tag tag-cirurgia">Tendão</span>
+                </div>
+                <div class="term-def">Seção (corte) cirúrgica de um tendão.</div>
+                <div class="term-context">Ex: Tenotomia de Aquiles no Pé Torto Congénito.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Tenodese</span>
+                    <span class="term-tag tag-cirurgia">Tendão</span>
+                </div>
+                <div class="term-def">Fixação cirúrgica de um tendão ao osso ou a outro tecido.</div>
+                <div class="term-context">Ex: Tenodese da cabeça longa do bíceps.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Neurorrafia</span>
+                    <span class="term-tag tag-cirurgia">Nervo</span>
+                </div>
+                <div class="term-def">Sutura (costura) de um nervo seccionado (microcirurgia).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Neurolise</span>
+                    <span class="term-tag tag-cirurgia">Nervo</span>
+                </div>
+                <div class="term-def">Liberação cirúrgica de um nervo comprimido por fibrose ou aderências.</div>
+                <div class="term-context">Ex: Neurolise do nervo mediano no Túnel do Carpo.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Desbridamento</span>
+                    <span class="term-tag tag-cirurgia">Limpeza</span>
+                </div>
+                <div class="term-def">Remoção de tecido desvitalizado, necrótico ou infectado e corpos estranhos.</div>
+                <div class="term-context">Essencial no tratamento de fraturas expostas e infecções.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Redução (Cruenta vs Incruenta)</span>
+                    <span class="term-tag tag-cirurgia">Manejo</span>
+                </div>
+                <div class="term-def"><strong>Incruenta:</strong> Realinhamento da fratura/luxação sem corte (manobras
+                    externas).<br>
+                    <strong>Cruenta:</strong> Realinhamento através de cirurgia aberta (acesso direto ao foco).
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Bursectomia</span>
+                    <span class="term-tag tag-cirurgia">Partes Moles</span>
+                </div>
+                <div class="term-def">Remoção cirúrgica de uma bursa (bolsa sinovial) inflamada ou infectada.</div>
+            </div>
+
+        </div>
+
+        <h2>2. Traumatologia e Tipos de Fratura</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Classificação de Salter-Harris</span>
+                    <span class="term-tag tag-trauma">Pediátrica</span>
+                </div>
+                <div class="term-def">Classificação das fraturas que envolvem a placa de crescimento (fise) em crianças
+                    (Tipos I a V).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura de Colles</span>
+                    <span class="term-tag tag-trauma">Epónimo</span>
+                </div>
+                <div class="term-def">Fratura distal do rádio com deslocamento dorsal ("em dorso de garfo"). Comum em
+                    idosos com osteoporose.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura de Smith</span>
+                    <span class="term-tag tag-trauma">Epónimo</span>
+                </div>
+                <div class="term-def">Fratura distal do rádio com deslocamento volar ("Colles invertida").</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura de Monteggia</span>
+                    <span class="term-tag tag-trauma">Complexa</span>
+                </div>
+                <div class="term-def">Fratura do terço proximal da ulna associada à luxação da cabeça do rádio.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura de Galeazzi</span>
+                    <span class="term-tag tag-trauma">Complexa</span>
+                </div>
+                <div class="term-def">Fratura do terço distal do rádio associada à luxação da articulação radioulnar
+                    distal.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura do Boxer</span>
+                    <span class="term-tag tag-trauma">Mão</span>
+                </div>
+                <div class="term-def">Fratura do colo do 5º metacarpo, geralmente causada por soco contra superfície
+                    dura.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura Oculta</span>
+                    <span class="term-tag tag-trauma">Diagnóstico</span>
+                </div>
+                <div class="term-def">Fratura que não aparece na radiografia inicial, mas apresenta dor clínica intensa.
+                </div>
+                <div class="term-context">Comum no escafóide e colo do fémur. Requer RM ou TC.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura Cominutiva</span>
+                    <span class="term-tag tag-trauma">Morfologia</span>
+                </div>
+                <div class="term-def">Fratura em que o osso se estilhaça em três ou mais fragmentos.</div>
+                <div class="term-context">Geralmente traumas de alta energia.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura em Galho Verde</span>
+                    <span class="term-tag tag-trauma">Pediátrica</span>
+                </div>
+                <div class="term-def">Fratura incompleta típica de crianças, onde o osso enverga e quebra apenas uma
+                    cortical.</div>
+                <div class="term-context">Semelhante a tentar quebrar um galho de árvore jovem/húmido.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura em Torus (Insuflação)</span>
+                    <span class="term-tag tag-trauma">Pediátrica</span>
+                </div>
+                <div class="term-def">Falha óssea compressiva na metáfise, criando uma "rugosidade" ou abaulamento
+                    cortical.</div>
+                <div class="term-context">Muito estável, comum no rádio distal infantil.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura Espiral (Helicoidal)</span>
+                    <span class="term-tag tag-trauma">Morfologia</span>
+                </div>
+                <div class="term-def">O traço de fratura percorre o osso em espiral.</div>
+                <div class="term-context">Causada por mecanismo de torção.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura por Avulsão</span>
+                    <span class="term-tag tag-trauma">Mecanismo</span>
+                </div>
+                <div class="term-def">Quando um tendão ou ligamento arranca um fragmento ósseo na sua inserção.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura Impactada</span>
+                    <span class="term-tag tag-trauma">Morfologia</span>
+                </div>
+                <div class="term-def">Os fragmentos ósseos são comprimidos um contra o outro, encurtando o osso.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura Exposta</span>
+                    <span class="term-tag tag-trauma">Emergência</span>
+                </div>
+                <div class="term-def">Comunicação do foco da fratura com o meio externo através de ferida na pele.</div>
+                <div class="term-context">Classificação de Gustilo-Anderson (I, II, III). Risco de infecção.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura Patológica</span>
+                    <span class="term-tag tag-trauma">Etiologia</span>
+                </div>
+                <div class="term-def">Ocorre em osso previamente enfraquecido por doença (tumor, infecção, osteoporose)
+                    com trauma mínimo.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fratura por Stress</span>
+                    <span class="term-tag tag-trauma">Etiologia</span>
+                </div>
+                <div class="term-def">Microfraturas causadas por sobrecarga repetitiva no osso, comum em atletas e
+                    militares.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Luxação</span>
+                    <span class="term-tag tag-trauma">Articulação</span>
+                </div>
+                <div class="term-def">Perda completa da congruência articular (o osso "sai do lugar").</div>
+                <div class="term-context">Emergência ortopédica. Requer redução imediata.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Subluxação</span>
+                    <span class="term-tag tag-trauma">Articulação</span>
+                </div>
+                <div class="term-def">Perda parcial do contato entre as superfícies articulares.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Entorse (Distensão)</span>
+                    <span class="term-tag tag-trauma">Ligamentar</span>
+                </div>
+                <div class="term-def">Lesão ligamentar traumática (estiramento ou ruptura) sem perda de contato
+                    articular.</div>
+                <div class="term-context">Graus: I (Estiramento), II (Ruptura Parcial), III (Ruptura Total).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Politraumatismo</span>
+                    <span class="term-tag tag-trauma">Sistêmico</span>
+                </div>
+                <div class="term-def">Lesões em múltiplos órgãos ou sistemas (ISS > 16), com risco iminente de vida.
+                </div>
+                <div class="term-context">Protocolo ATLS. Controle de danos (Damage Control).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Contusão</span>
+                    <span class="term-tag tag-trauma">Partes Moles</span>
+                </div>
+                <div class="term-def">Lesão traumática por impacto direto sem ruptura da pele, causando edema e
+                    hematoma.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Diástase</span>
+                    <span class="term-tag tag-trauma">Articulação</span>
+                </div>
+                <div class="term-def">Separação de uma articulação que normalmente tem pouco movimento (sínfise púbica
+                    ou sindesmose).</div>
+            </div>
+
+        </div>
+
+        <h2>3. Consolidação e Complicações</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Calo Ósseo</span>
+                    <span class="term-tag tag-bio">Cura</span>
+                </div>
+                <div class="term-def">Tecido de reparação formado na fratura. Inicialmente mole (fibrocartilagem),
+                    depois duro (osso).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Pseudoartrose</span>
+                    <span class="term-tag tag-bio">Complicação</span>
+                </div>
+                <div class="term-def">"Falsa articulação". Falha definitiva da consolidação óssea após o tempo esperado.
+                </div>
+                <div class="term-context">Tipos: Atrófica (falta de biologia) ou Hipertrófica (falta de estabilidade).
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Consolidação Viciosa</span>
+                    <span class="term-tag tag-bio">Complicação</span>
+                </div>
+                <div class="term-def">O osso consolida (cola), mas em posição deformada (angulado, rodado ou encurtado).
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Retardo de Consolidação</span>
+                    <span class="term-tag tag-bio">Evolução</span>
+                </div>
+                <div class="term-def">Quando a fratura demora mais que o tempo médio estatístico para colar, mas ainda
+                    há potencial de cura.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Síndrome Compartimental</span>
+                    <span class="term-tag tag-bio">Urgência</span>
+                </div>
+                <div class="term-def">Aumento da pressão dentro de um compartimento muscular fechado, bloqueando a
+                    circulação.</div>
+                <div class="term-context">Sintomas (5 Ps): Pain (Dor desproporcional), Palidez, Parestesia, Paralisia,
+                    Pulso ausente.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Necrose Avascular</span>
+                    <span class="term-tag tag-bio">Vascular</span>
+                </div>
+                <div class="term-def">Morte do tecido ósseo por interrupção do suprimento sanguíneo.</div>
+                <div class="term-context">Comum na cabeça do fémur, talus e escafóide.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Síndrome de Dor Regional Complexa (Sudeck)</span>
+                    <span class="term-tag tag-bio">Neurológico</span>
+                </div>
+                <div class="term-def">Resposta anormal do sistema nervoso simpático pós-trauma, causando dor intensa,
+                    edema e alterações na pele.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Embolia Gordurosa</span>
+                    <span class="term-tag tag-bio">Sistêmico</span>
+                </div>
+                <div class="term-def">Liberação de glóbulos de gordura da medula óssea na corrente sanguínea, obstruindo
+                    vasos pulmonares/cerebrais.</div>
+                <div class="term-context">Comum em fraturas de ossos longos (fémur).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteite</span>
+                    <span class="term-tag tag-bio">Inflamação</span>
+                </div>
+                <div class="term-def">Inflamação do tecido ósseo, geralmente associada a trauma ou infecção.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Miosite Ossificante</span>
+                    <span class="term-tag tag-bio">Complicação</span>
+                </div>
+                <div class="term-def">Formação de osso dentro do músculo (calcificação heterotópica) após um trauma
+                    direto ou contusão.</div>
+            </div>
+
+        </div>
+
+        <h2>4. Semiologia, Anatomia e Testes</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Sinal de Tinel</span>
+                    <span class="term-tag tag-sintoma">Neurológico</span>
+                </div>
+                <div class="term-def">Sensação de choque elétrico ao percutir sobre um nervo comprimido ou em
+                    regeneração.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Teste de Phalen</span>
+                    <span class="term-tag tag-sintoma">Neurológico</span>
+                </div>
+                <div class="term-def">Manobra de flexão forçada dos punhos para reproduzir sintomas da Síndrome do Túnel
+                    do Carpo.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Teste de Lachman</span>
+                    <span class="term-tag tag-sintoma">Joelho</span>
+                </div>
+                <div class="term-def">Teste clínico mais sensível para diagnosticar rotura do Ligamento Cruzado Anterior
+                    (LCA).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Sinal de Trendelenburg</span>
+                    <span class="term-tag tag-sintoma">Quadril</span>
+                </div>
+                <div class="term-def">Queda da bacia para o lado oposto ao apoio, indicando fraqueza do glúteo médio.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Marcha Claudicante</span>
+                    <span class="term-tag tag-sintoma">Sinal</span>
+                </div>
+                <div class="term-def">Ato de mancar. Pode ser antálgica (por dor) ou por discrepância de membros.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Dismetria</span>
+                    <span class="term-tag tag-anatomia">Medida</span>
+                </div>
+                <div class="term-def">Diferença de comprimento entre os membros inferiores.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Valgo</span>
+                    <span class="term-tag tag-anatomia">Alinhamento</span>
+                </div>
+                <div class="term-def">Desvio do segmento distal para <strong>fora</strong> (lateral) em relação à linha
+                    média.</div>
+                <div class="term-context">Ex: Genu Valgo ("Joelho em X").</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Varo</span>
+                    <span class="term-tag tag-anatomia">Alinhamento</span>
+                </div>
+                <div class="term-def">Desvio do segmento distal para <strong>dentro</strong> (medial) em relação à linha
+                    média.</div>
+                <div class="term-context">Ex: Genu Varo ("Pernas de cowboy/alicate").</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Recurvato (Recurvatum)</span>
+                    <span class="term-tag tag-anatomia">Alinhamento</span>
+                </div>
+                <div class="term-def">Hiperextensão de uma articulação além do neutro (0 graus).</div>
+                <div class="term-context">Comum no joelho e cotovelo em hipermobilidade.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Crepitação</span>
+                    <span class="term-tag tag-sintoma">Exame Físico</span>
+                </div>
+                <div class="term-def">Sensação tátil ou auditiva de atrito ("roçar") ao mover a articulação ou foco de
+                    fratura.</div>
+                <div class="term-context">Sinal clássico de artrose ou fratura instável.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Anquilose</span>
+                    <span class="term-tag tag-sintoma">Rigidez</span>
+                </div>
+                <div class="term-def">Perda completa e natural (patológica) do movimento articular (fusão espontânea).
+                </div>
+                <div class="term-context">Diferente de artrodese (cirúrgica).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Rigidez Articular</span>
+                    <span class="term-tag tag-sintoma">Movimento</span>
+                </div>
+                <div class="term-def">Limitação da amplitude de movimento (ADM), sem fusão total.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Tumefação</span>
+                    <span class="term-tag tag-sintoma">Sinal</span>
+                </div>
+                <div class="term-def">Aumento de volume (inchaço) localizado.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Derrame Articular</span>
+                    <span class="term-tag tag-sintoma">Sinal</span>
+                </div>
+                <div class="term-def">Acúmulo de líquido (sinovial, sangue ou pus) dentro da cavidade articular.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Hemartrose</span>
+                    <span class="term-tag tag-sintoma">Sinal</span>
+                </div>
+                <div class="term-def">Derrame de sangue dentro da articulação, comum após entorses de LCA ou fraturas
+                    intra-articulares.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Pronação vs Supinação</span>
+                    <span class="term-tag tag-anatomia">Movimento</span>
+                </div>
+                <div class="term-def">
+                    <strong>Pronação:</strong> Palma da mão para baixo (ou eversão do pé).<br>
+                    <strong>Supinação:</strong> Palma da mão para cima ("pedir súplica").
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Abdução vs Adução</span>
+                    <span class="term-tag tag-anatomia">Movimento</span>
+                </div>
+                <div class="term-def">
+                    <strong>Abdução:</strong> Afastar o membro da linha média do corpo (Abrir).<br>
+                    <strong>Adução:</strong> Aproximar o membro da linha média (Fechar).
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Laxitude (Frouxidão)</span>
+                    <span class="term-tag tag-sintoma">Instabilidade</span>
+                </div>
+                <div class="term-def">Elasticidade excessiva dos ligamentos, permitindo movimentos além do fisiológico.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Atrofia Muscular</span>
+                    <span class="term-tag tag-sintoma">Músculo</span>
+                </div>
+                <div class="term-def">Diminuição do volume e força muscular por desuso ou lesão nervosa.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Tónus Muscular</span>
+                    <span class="term-tag tag-sintoma">Neurológico</span>
+                </div>
+                <div class="term-def">Estado de tensão basal do músculo. Hipertonia (Espasticidade) ou Hipotonia
+                    (Flacidez).</div>
+            </div>
+
+        </div>
+
+        <h2>5. Coluna e Patologias Gerais</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Espondilite Anquilosante</span>
+                    <span class="term-tag tag-patologia">Reumatologia</span>
+                </div>
+                <div class="term-def">Doença inflamatória crónica que afeta a coluna e articulações sacroilíacas,
+                    levando à fusão vertebral ("Coluna em Bambu").</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Radiculopatia</span>
+                    <span class="term-tag tag-patologia">Neurológico</span>
+                </div>
+                <div class="term-def">Dor ou alteração sensitiva/motora causada pela compressão de uma raiz nervosa na
+                    coluna.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Mielopatia</span>
+                    <span class="term-tag tag-patologia">Neurológico</span>
+                </div>
+                <div class="term-def">Disfunção da medula espinhal por compressão severa (estenose), causando défice
+                    neurológico distal.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Escoliose</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">Desvio lateral da coluna vertebral com componente rotacional das vértebras.</div>
+                <div class="term-context">Teste de Adams positivo (giba costal).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Cifose vs Lordose</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">
+                    <strong>Cifose:</strong> Curvatura convexa posterior (Torácica/Sacral). Hipercifose =
+                    "Corcunda".<br>
+                    <strong>Lordose:</strong> Curvatura côncava posterior (Cervical/Lombar).
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Espondilólise</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">Defeito ou fratura por estresse na <em>pars interarticularis</em> da vértebra.
+                </div>
+                <div class="term-context">"Cão Scottie degolado" no RX oblíquo.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Espondilolistese</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">Escorregamento (deslizamento) anterior de uma vértebra sobre a outra.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Hérnia Discal</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">Extrusão do núcleo pulposo através do anel fibroso, comprimindo raízes nervosas.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Estenose de Canal</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">Estreitamento do canal vertebral comprimindo a medula ou cauda equina.</div>
+                <div class="term-context">Sintoma: Claudicação neurogénica (dor nas pernas ao andar).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Ciática</span>
+                    <span class="term-tag tag-patologia">Coluna</span>
+                </div>
+                <div class="term-def">Dor que irradia da lombar para a perna, seguindo o trajeto do nervo ciático.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artrose (Osteoartrite)</span>
+                    <span class="term-tag tag-patologia">Degenerativo</span>
+                </div>
+                <div class="term-def">Desgaste da cartilagem articular e formação de osteófitos.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artrite</span>
+                    <span class="term-tag tag-patologia">Inflamatório</span>
+                </div>
+                <div class="term-def">Inflamação da articulação (Dor, Calor, Rubor, Edema).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artrite Reativa</span>
+                    <span class="term-tag tag-patologia">Sistêmico</span>
+                </div>
+                <div class="term-def">Inflamação articular pós-infecção (urinária ou intestinal).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Artrite Séptica</span>
+                    <span class="term-tag tag-patologia">Infecção</span>
+                </div>
+                <div class="term-def">Infecção bacteriana dentro da articulação. Emergência cirúrgica (lavagem).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Gota</span>
+                    <span class="term-tag tag-patologia">Metabólico</span>
+                </div>
+                <div class="term-def">Artrite causada por depósito de cristais de ácido úrico (comum no hálux -
+                    podagra).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteomielite</span>
+                    <span class="term-tag tag-patologia">Infecção</span>
+                </div>
+                <div class="term-def">Infecção do tecido ósseo e medula, geralmente por bactérias (S. aureus).</div>
+                <div class="term-context">Aguda (hematogénica) ou Crónica.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Sequestro Ósseo</span>
+                    <span class="term-tag tag-patologia">Infecção</span>
+                </div>
+                <div class="term-def">Fragmento de osso morto (necrótico) e solto, cercado por pus/tecido infectado.
+                </div>
+                <div class="term-context">Sinal clássico de osteomielite crónica.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteossarcoma</span>
+                    <span class="term-tag tag-patologia">Tumor</span>
+                </div>
+                <div class="term-def">Tumor ósseo maligno primário mais comum em crianças/adolescentes.</div>
+                <div class="term-context">Imagem em "Raios de Sol" ou "Triângulo de Codman".</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Epifisiólise</span>
+                    <span class="term-tag tag-patologia">Pediátrica</span>
+                </div>
+                <div class="term-def">Escorregamento da epífise sobre a metáfise através da fise (placa de crescimento).
+                </div>
+                <div class="term-context">Comum no quadril de adolescentes obesos.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Displasia do Desenvolvimento do Quadril (DDQ)</span>
+                    <span class="term-tag tag-patologia">Pediátrica</span>
+                </div>
+                <div class="term-def">Anormalidade no encaixe entre a cabeça femoral e o acetábulo em recém-nascidos.
+                </div>
+                <div class="term-context">Testes de rastreio: Ortolani e Barlow.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Condromalácia</span>
+                    <span class="term-tag tag-patologia">Cartilagem</span>
+                </div>
+                <div class="term-def">Amolecimento e fissura da cartilagem articular, comum na patela.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Bursite</span>
+                    <span class="term-tag tag-patologia">Inflamatório</span>
+                </div>
+                <div class="term-def">Inflamação da bursa (bolsa sinovial) que amortece o atrito entre tendões e ossos.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteoporose</span>
+                    <span class="term-tag tag-patologia">Metabólico</span>
+                </div>
+                <div class="term-def">Doença sistémica caracterizada pela diminuição da massa óssea e deterioração da
+                    microarquitetura.</div>
+                <div class="term-context">Aumenta drasticamente o risco de fraturas.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Osteólise</span>
+                    <span class="term-tag tag-patologia">Osso</span>
+                </div>
+                <div class="term-def">Processo de reabsorção ou destruição óssea.</div>
+                <div class="term-context">Pode ocorrer por infecção, tumor ou soltura de próteses.</div>
+            </div>
+
+        </div>
+
+        <h2>6. Anatomia e Estruturas Ósseas</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Diáfise</span>
+                    <span class="term-tag tag-anatomia">Osso Longo</span>
+                </div>
+                <div class="term-def">Corpo central (haste) de um osso longo, composto por osso cortical duro.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Metáfise</span>
+                    <span class="term-tag tag-anatomia">Osso Longo</span>
+                </div>
+                <div class="term-def">Região alargada entre a diáfise e a epífise. Área de alta atividade metabólica.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Epífise</span>
+                    <span class="term-tag tag-anatomia">Osso Longo</span>
+                </div>
+                <div class="term-def">Extremidade articular de um osso longo, coberta por cartilagem.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fise (Cartilagem de Crescimento)</span>
+                    <span class="term-tag tag-anatomia">Pediátrica</span>
+                </div>
+                <div class="term-def">Placa cartilaginosa entre a epífise e a metáfise responsável pelo crescimento
+                    longitudinal do osso.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Periósteo</span>
+                    <span class="term-tag tag-anatomia">Tecido</span>
+                </div>
+                <div class="term-def">Membrana vascularizada que recobre o osso externamente. Vital para consolidação e
+                    sensibilidade.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Endósteo</span>
+                    <span class="term-tag tag-anatomia">Tecido</span>
+                </div>
+                <div class="term-def">Membrana fina que reveste o canal medular interno.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Sinóvia</span>
+                    <span class="term-tag tag-anatomia">Articulação</span>
+                </div>
+                <div class="term-def">Membrana que reveste a cápsula articular e produz o líquido sinovial para
+                    lubrificação.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Menisco</span>
+                    <span class="term-tag tag-anatomia">Estrutura</span>
+                </div>
+                <div class="term-def">Fibrocartilagem em forma de "C" no joelho que atua como amortecedor de carga.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Labrum (Lábio)</span>
+                    <span class="term-tag tag-anatomia">Estrutura</span>
+                </div>
+                <div class="term-def">Anel de fibrocartilagem que aumenta a profundidade e estabilidade do ombro
+                    (glenóide) e quadril (acetábulo).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Ligamento Cruzado Anterior (LCA)</span>
+                    <span class="term-tag tag-anatomia">Ligamento</span>
+                </div>
+                <div class="term-def">Principal estabilizador do joelho, impede a translação anterior da tíbia.
+                    Frequentemente lesado em desportos.</div>
+            </div>
+
+        </div>
+
+        <h2>7. Patologias Regionais Específicas</h2>
+        <div class="term-group">
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Coifa dos Rotadores (Manguito)</span>
+                    <span class="term-tag tag-patologia">Ombro</span>
+                </div>
+                <div class="term-def">Conjunto de 4 tendões (Supraespinhal, Infraespinhal, Redondo Menor, Subescapular)
+                    que estabilizam o ombro.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Epicondilite Lateral</span>
+                    <span class="term-tag tag-patologia">Cotovelo</span>
+                </div>
+                <div class="term-def">Inflamação dos tendões extensores no cotovelo ("Cotovelo de Tenista").</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Epicondilite Medial</span>
+                    <span class="term-tag tag-patologia">Cotovelo</span>
+                </div>
+                <div class="term-def">Inflamação dos tendões flexores no cotovelo ("Cotovelo de Golfista").</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Síndrome do Túnel do Carpo</span>
+                    <span class="term-tag tag-patologia">Mão</span>
+                </div>
+                <div class="term-def">Compressão do nervo mediano no punho, causando parestesia nos dedos polegar,
+                    indicador e médio.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Dedo em Gatilho</span>
+                    <span class="term-tag tag-patologia">Mão</span>
+                </div>
+                <div class="term-def">Travamento doloroso do dedo em flexão devido a um nódulo no tendão flexor.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Contratura de Dupuytren</span>
+                    <span class="term-tag tag-patologia">Mão</span>
+                </div>
+                <div class="term-def">Espessamento da fáscia palmar que causa flexão progressiva e fixa dos dedos.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Rizartrose</span>
+                    <span class="term-tag tag-patologia">Mão</span>
+                </div>
+                <div class="term-def">Artrose da base do polegar (articulação trapézio-metacarpiana).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Cisto Sinovial</span>
+                    <span class="term-tag tag-patologia">Tumoração</span>
+                </div>
+                <div class="term-def">Nódulo benigno preenchido com líquido sinovial, comum no dorso do punho.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Hallux Valgus (Joanete)</span>
+                    <span class="term-tag tag-patologia">Pé</span>
+                </div>
+                <div class="term-def">Desvio lateral do hálux (dedão) e medial do 1º metatarso.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Fascite Plantar</span>
+                    <span class="term-tag tag-patologia">Pé</span>
+                </div>
+                <div class="term-def">Inflamação da fáscia na sola do pé, causando dor intensa no calcanhar ao acordar.
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Esporão do Calcâneo</span>
+                    <span class="term-tag tag-patologia">Pé</span>
+                </div>
+                <div class="term-def">Calcificação óssea no calcanhar associada à fascite plantar crônica.</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Pé Boto (Torto Congénito)</span>
+                    <span class="term-tag tag-patologia">Pediátrica</span>
+                </div>
+                <div class="term-def">Deformidade complexa do pé ao nascimento (Cavo, Aduto, Varo e Equino).</div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Doença de Osgood-Schlatter</span>
+                    <span class="term-tag tag-patologia">Pediátrica</span>
+                </div>
+                <div class="term-def">Dor na tuberosidade da tíbia em adolescentes ativos (osteocondrite de tração).
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-header">
+                    <span class="term-name">Doença de Legg-Calvé-Perthes</span>
+                    <span class="term-tag tag-patologia">Pediátrica</span>
+                </div>
+                <div class="term-def">Necrose avascular idiopática da cabeça do fémur em crianças.</div>
+            </div>
+
+        </div>
+        <style>
+            :root {
+                /* Mantenha as cores originais de cada arquivo aqui */
+                --primary: #004e64;
+                --secondary: #00a896;
+                --danger: #d00000;
+                --warning: #f59f00;
+                --purple: #5f3dc4;
+                --brown: #795548;
+                --light-bg: #f8f9fa;
+                --white: #ffffff;
+            }
+
+            /* ESSENCIAL: Resolve o problema do botão "vazar" a tela */
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 13px;
+                line-height: 1.5;
+                color: #333;
+                background-color: #e9ecef;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                /* Garante que o conteúdo não ultrapasse a largura container */
+                width: 100%;
+            }
+
+            /* Imagens responsivas (não quebram o layout) */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* TABELAS: Removemos o 'display: block' que causava o erro.
+           Agora usamos ajustes suaves para mobile. */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            /* ... Mantenha o restante do CSS de cabeçalhos e listas original ... */
+
+            /* ESTILO DO BOTÃO VOLTAR */
+            .btn-voltar-container {
+                text-align: center;
+                margin: 40px 0 20px 0;
+                width: 100%;
+            }
+
+            .btn-voltar {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--secondary);
+                color: white;
+                padding: 12px 30px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+                max-width: 100%;
+            }
+
+            .btn-voltar:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+                filter: brightness(1.1);
+            }
+
+            .btn-voltar:active {
+                transform: scale(0.98);
+            }
+
+            /* AJUSTES PARA TELEMÓVEL */
+            @media (max-width: 600px) {
+                .btn-voltar-container {
+                    margin: 25px auto 40px auto;
+                    padding: 0 10px;
+                }
+
+                .btn-voltar {
+                    font-size: 14px;
+                    padding: 15px;
+                    width: 100%;
+                }
+
+                /* AJUSTE SEGURO PARA TABELAS EM MOBILE:
+               Reduz a fonte e o espaçamento para caber mais conteúdo,
+               mas mantendo a estrutura de linhas e colunas intacta. */
+                th,
+                td {
+                    padding: 4px 2px;
+                    /* Reduz padding lateral */
+                    font-size: 11px;
+                    /* Fonte ligeiramente menor */
+                    word-wrap: break-word;
+                    /* Quebra palavras longas se necessário */
+                }
+            }
+        </style>
+
+        <div class="btn-voltar-container">
+            <a href="index.html" onclick="sessionStorage.setItem('openProtocols', 'true')" class="btn-voltar">
+                <span style="margin-right: 8px; font-size: 1.4em; line-height: 1;">↩</span>
+                Voltar
+            </a>
+        </div>
+        <div class="footer-sig">
+            Omni Dev / Dr. Sebastião - 01/2026<br>
+            <span style="font-size:0.7rem; font-style:italic;">Material de Apoio à Residência Médica em
+                Ortotraumatologia</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
