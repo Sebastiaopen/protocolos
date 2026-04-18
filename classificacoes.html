@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Compacto - Classificações Ortopedia</title>
+    <style>
+        :root {
+            /* PALETA: Acadêmico/Estrutural (Roxo e Esmeralda) */
+            --primary: #5b21b6; /* Roxo Profundo (Royal Purple) */
+            --secondary: #059669; /* Esmeralda */
+            
+            /* Cores de Apoio */
+            --danger: #dc2626; /* Vermelho vivo */
+            --warning: #d97706; /* Laranja ambar */
+            --info: #2563eb; /* Azul Royal */
+            --dark: #1f2937; /* Cinza quase preto */
+            
+            --light-bg: #f3f4f6; /* Cinza muito claro */
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #374151;
+            background-color: #e5e7eb;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        header {
+            /* Degradê Roxo para Esmeralda */
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 0.85rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid transparent;
+            position: relative;
+        }
+
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .card.ao-structure {
+            border-left-color: var(--primary);
+            background: #fdfbff;
+        }
+
+        .card.open-fx {
+            border-left-color: var(--danger);
+        }
+
+        .card.closed-fx {
+            border-left-color: var(--warning);
+        }
+
+        .card.peds {
+            border-left-color: var(--info);
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.95rem;
+            color: #1f2937;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        .badge {
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #f3f4f6;
+            color: #4b5563;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .code-box {
+            display: inline-block;
+            background: #374151;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            margin-right: 5px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .mnemotecnica {
+            background-color: #ecfdf5; /* Verde muito claro */
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            border: 1px dashed #6ee7b7;
+            color: #065f46;
+        }
+        
+        .mnemotecnica strong {
+            color: var(--secondary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 10px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ao-diagram {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .ao-part {
+            flex: 1;
+            background: #eef2ff;
+            margin: 0 2px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #c7d2fe;
+        }
+        .ao-part span {
+            display: block;
+            font-size: 0.7rem;
+            color: #6b7280;
+            text-transform: uppercase;
+        }
+        .ao-part strong {
+            font-size: 1.2rem;
+            color: var(--primary);
+            display: block;
+        }
+
+        .def-box {
+            background-color: #f5f3ff;
+            border-left: 3px solid #7c3aed;
+            padding: 8px;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+            color: #4c1d95;
+        }
+
+        .footer-sig {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 30px;
+            border-top: 1px solid #d1d5db;
+            padding-top: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .btn-voltar-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            width: 100%;
+        }
+
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            max-width: 100%;
+        }
+
+        .btn-voltar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            background-color: #047857;
+        }
+
+        .btn-voltar:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 600px) {
+            .btn-voltar-container {
+                margin: 25px auto 40px auto;
+                padding: 0 10px;
+            }
+
+            .btn-voltar {
+                font-size: 14px;
+                padding: 15px;
+                width: 100%;
+            }
+
+            th, td {
+                padding: 4px 2px;
+                font-size: 11px;
+                word-wrap: break-word;
+            }
+            
+            .ao-diagram {
+                flex-direction: column;
+            }
+            .ao-part {
+                margin: 2px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 15px;
+            }
+            .ao-part strong {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Classificações Ortopédicas</h1>
+            <p>Guia Rápido: AO/OTA, Partes Moles e Pediátrica</p>
+        </header>
+
+        <h2>1. Sistema AO/OTA (Definição & Lógica)</h2>
+        
+        <div class="card full-width ao-structure">
+            <h3>🏛️ História e Significado das Siglas</h3>
+            <div class="grid-container">
+                <div>
+                    <div class="def-box">
+                        <strong>AO (1958, Suíça):</strong><br>
+                        <em>Arbeitsgemeinschaft für Osteosynthesefragen</em>.<br>
+                        Tradução: Associação para o Estudo da Fixação Interna (Osteossíntese). Focada nos princípios biológicos e mecânicos.
+                    </div>
+                </div>
+                <div>
+                    <div class="def-box" style="border-left-color: #059669; background-color: #ecfdf5; color: #064e3b;">
+                        <strong>OTA (1983, EUA):</strong><br>
+                        <em>Orthopaedic Trauma Association</em>.<br>
+                        Tradução: Associação de Trauma Ortopédico. Originalmente norte-americana.
+                    </div>
+                </div>
+            </div>
+            <p style="font-size: 0.8rem; margin: 5px 0 0 0; color: #555;">
+                <strong>A Unificação (Compêndio):</strong> As duas organizações uniram esforços para criar uma "Língua Universal". O código alfanumérico permite que um cirurgião em Angola e outro na Alemanha descrevam exatamente a mesma fratura sem subjetividade.
+            </p>
+        </div>
+
+        <div class="card full-width ao-structure" style="margin-top: 10px;">
+            <h3>A Lógica do Código <span class="badge">Alfanumérico</span></h3>
+            <p style="font-size: 0.85rem; margin-top:0;">
+                Toda fratura é descrita por 4 dígitos principais que respondem a: Onde? Onde no osso? Quão grave?
+            </p>
+            
+            <div class="ao-diagram">
+                <div class="ao-part">
+                    <span>1. Qual Osso?</span>
+                    <strong>1, 2, 3, 4</strong>
+                </div>
+                <div class="ao-part">
+                    <span>2. Segmento?</span>
+                    <strong>1, 2, 3</strong>
+                </div>
+                <div class="ao-part">
+                    <span>3. Tipo?</span>
+                    <strong>A, B, C</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="card ao-structure">
+                <h3>🦴 Dígito 1: O Osso</h3>
+                <table>
+                    <tr>
+                        <td width="20%"><span class="code-box">1</span></td>
+                        <td><strong>Úmero</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-box">2</span></td>
+                        <td><strong>Rádio / Ulna</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-box">3</span></td>
+                        <td><strong>Fémur</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-box">4</span></td>
+                        <td><strong>Tíbia / Fíbula</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card ao-structure">
+                <h3>📍 Dígito 2: O Segmento</h3>
+                <table>
+                    <tr>
+                        <td width="20%"><span class="code-box">1</span></td>
+                        <td><strong>Proximal</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-box">2</span></td>
+                        <td><strong>Diáfise</strong> (Meio)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-box">3</span></td>
+                        <td><strong>Distal</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code-box">4</span></td>
+                        <td><strong>Maléolo</strong> (Tíbia/Fíbula apenas)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card full-width ao-structure" style="margin-top:10px;">
+            <h3>📐 Dígito 3: A Morfologia (Gravidade)</h3>
+            <div class="grid-container">
+                <div>
+                    <strong style="color:var(--primary); font-size:0.9rem;">Se Diáfise (Segmento 2):</strong>
+                    <ul>
+                        <li><span class="code-box">A</span> <strong>Simples:</strong> Traço único (Espiral, Oblíquo, Transverso).</li>
+                        <li><span class="code-box">B</span> <strong>Cunha (Wedge):</strong> Fragmento em cunha, mas contato ósseo preservado (Multifragmentar Simples).</li>
+                        <li><span class="code-box">C</span> <strong>Complexa:</strong> Cominutiva, sem contato entre as pontas principais (Multifragmentar Complexa).</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong style="color:var(--primary); font-size:0.9rem;">Se Articular (Seg. 1 ou 3):</strong>
+                    <ul>
+                        <li><span class="code-box">A</span> <strong>Extra-articular:</strong> Não entra na articulação.</li>
+                        <li><span class="code-box">B</span> <strong>Parcial:</strong> Parte da superfície articular continua ligada à diáfise.</li>
+                        <li><span class="code-box">C</span> <strong>Completa:</strong> A superfície articular está separada da diáfise (flutuante).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>2. Partes Moles (Trauma)</h2>
+        <div class="grid-container">
+            
+            <div class="card open-fx full-width">
+                <h3>🩸 Gustilo-Anderson (Fraturas Expostas)</h3>
+                <p style="font-size: 0.8rem; margin-top:0; margin-bottom: 5px;">
+                    Define prognóstico, antibiótico e tempo de cobertura.
+                </p>
+                <table>
+                    <tr>
+                        <th width="15%">Tipo</th>
+                        <th>Ferida</th>
+                        <th>Energia / Contaminação</th>
+                    </tr>
+                    <tr>
+                        <td><strong>I</strong></td>
+                        <td>< 1 cm</td>
+                        <td>Baixa energia. Limpa.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>II</strong></td>
+                        <td>1 - 10 cm</td>
+                        <td>Moderada. Dano muscular leve.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IIIA</strong></td>
+                        <td>> 10 cm</td>
+                        <td>Grave, mas permite fechamento primário (tem cobertura).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IIIB</strong></td>
+                        <td>> 10 cm</td>
+                        <td>Perda de cobertura (osso exposto). <strong>Exige retalho.</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>IIIC</strong></td>
+                        <td>Qualquer</td>
+                        <td>Lesão arterial que exige reparo (Risco de amputação).</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card closed-fx full-width">
+                <h3>🥊 Tscherne (Fraturas Fechadas)</h3>
+                <p style="font-size: 0.8rem; margin-top:0; margin-bottom: 5px;">
+                    Fundamental para decidir "Fixação Imediata vs Fixador Externo".
+                </p>
+                <ul>
+                    <li><strong>Grau 0:</strong> Dano mínimo. Fratura simples.</li>
+                    <li><strong>Grau 1:</strong> Abrasão superficial ou contusão muscular leve.</li>
+                    <li><strong>Grau 2:</strong> Abrasão profunda, flictenas (bolhas), edema grave. Síndrome compartimental iminente.</li>
+                    <li><strong>Grau 3:</strong> Dano extenso, descolamento (degloving), esmagamento, síndrome compartimental estabelecida.</li>
+                </ul>
+                <div class="mnemotecnica" style="border-color: #f59e0b; background: #fffbeb; color: #92400e;">
+                    ⚠️ <strong>Regra:</strong> Tscherne 2 ou 3 em Tíbia/Pilão = Aguardar partes moles melhorarem (Fixador Externo temporário).
+                </div>
+            </div>
+        </div>
+
+        <h2>3. Fraturas Pediátricas (Fise)</h2>
+        <div class="card peds full-width">
+            <h3>👶 Salter-Harris (Placa de Crescimento)</h3>
+            <p style="font-size: 0.8rem; margin-top:0;">
+                Risco de paragem do crescimento ósseo (discrepância ou angulação).
+            </p>
+            <div class="grid-container">
+                <div>
+                    <ul>
+                        <li><strong>I - S (Same):</strong> Através da fise apenas (Separação). Bom prog.</li>
+                        <li><strong>II - A (Above):</strong> Fise + Metáfise (Acima). Mais comum.</li>
+                        <li><strong>III - L (Lower):</strong> Fise + Epífise (Abaixo). Articular.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong>IV - T (Through):</strong> Atravessa tudo (Metáfise + Fise + Epífise). Cirúrgico.</li>
+                        <li><strong>V - R (Ram/Ruined):</strong> Compressão/Esmagamento da fise. Pior prognóstico.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mnemotecnica">
+                <strong>Mnemónica SALTR:</strong><br>
+                S (Separated) • A (Above) • L (Lower) • T (Through) • R (Ram/Ruined)
+            </div>
+        </div>
+
+
+
+        <div class="btn-voltar-container">
+            <a href="index.html" onclick="sessionStorage.setItem('openProtocols', 'true')" class="btn-voltar">
+                <span style="margin-right: 8px; font-size: 1.4em; line-height: 1;">↩</span>
+                Voltar
+            </a>
+        </div>
+        <div class="footer-sig">
+            Omni Dev / Dr. Sebastião - 01/2026<br>
+            <span style="font-size:0.7rem; font-style:italic;">Manual de Bolso - Classificações Essenciais</span>
+            <div style="margin-top: 8px; border-top: 1px dashed #ddd; padding-top: 5px; opacity: 0.8;">
+                <span style="font-size: 0.65rem;">* Maurice Müller (Pai da AO) criou a base desta classificação na década de 60.</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
