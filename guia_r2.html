@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo R2 Ortopedia e Traumatologia | Angola & Europa</title>
+    <style>
+        :root {
+            --primary-color: #cc0000;
+            --secondary-color: #ffcc00;
+            --accent-color: #0066cc;
+            --dark-color: #003366;
+            --light-color: #f5f5f5;
+            --success-color: #009933;
+            --warning-color: #ff9900;
+            --text-color: #333333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header melhorado */
+        header {
+            background: linear-gradient(135deg, var(--dark-color) 0%, #002244 50%, var(--primary-color) 100%);
+            color: white;
+            padding: 2.5rem 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><path d="M0,0 L100,0 L100,100 Z" fill="white"/></svg>');
+            background-size: cover;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-text {
+            text-align: left;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .header-stats {
+            display: flex;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(5px);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .header-main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header-main h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .header-main p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        
+        .header-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 1.5rem;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        /* Layout principal melhorado */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+            padding: 30px 0;
+            position: relative;
+        }
+        
+        /* Sidebar/Navegação melhorada */
+        .sidebar {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px 20px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .nav-title {
+            color: var(--dark-color);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-title i {
+            color: var(--primary-color);
+        }
+        
+        .nav-list {
+            list-style: none;
+        }
+        
+        .nav-list li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .nav-list a {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .nav-list a i {
+            width: 25px;
+            text-align: center;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .nav-list a:hover, .nav-list a.active {
+            background: linear-gradient(to right, rgba(0, 102, 204, 0.1), transparent);
+            border-left-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 500;
+            padding-left: 20px;
+        }
+        
+        .nav-list a.active::after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        /* Progresso de estudo */
+        .study-progress {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f7ff;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .progress-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--accent-color), var(--success-color));
+            width: 45%;
+            border-radius: 5px;
+            transition: width 1s ease;
+        }
+        
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Conteúdo principal melhorado */
+        .content {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--accent-color);
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            scroll-margin-top: 20px;
+            position: relative;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+            opacity: 0.7;
+        }
+        
+        h2 {
+            color: var(--dark-color);
+            font-size: 1.9rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        h2 i {
+            color: var(--primary-color);
+            background: rgba(204, 0, 0, 0.1);
+            padding: 12px;
+            border-radius: 50%;
+        }
+        
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin: 30px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        h3 i {
+            color: var(--primary-color);
+        }
+        
+        h4 {
+            color: var(--dark-color);
+            font-size: 1.2rem;
+            margin: 20px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        h4 i {
+            color: var(--warning-color);
+        }
+        
+        .priority-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 15px;
+            margin-left: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .priority-high {
+            background-color: #ffe6e6;
+            color: #cc0000;
+            border: 1px solid #ffcccc;
+        }
+        
+        .priority-medium {
+            background-color: #fff0cc;
+            color: #cc7a00;
+            border: 1px solid #ffe6b3;
+        }
+        
+        .priority-low {
+            background-color: #e6f7ff;
+            color: var(--accent-color);
+            border: 1px solid #cce6ff;
+        }
+        
+        .topic-card {
+            background: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 6px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .topic-card.angola {
+            border-left-color: var(--primary-color);
+            background: linear-gradient(to right, #fff5f5, #fff);
+        }
+        
+        .topic-card.europa {
+            border-left-color: var(--success-color);
+            background: linear-gradient(to right, #f5fff5, #fff);
+        }
+        
+        .topic-card.integracao {
+            border-left-color: var(--warning-color);
+            background: linear-gradient(to right, #fff9e6, #fff);
+        }
+        
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        ul li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -18px;
+        }
+        
+        ol {
+            counter-reset: item;
+        }
+        
+        ol li {
+            counter-increment: item;
+        }
+        
+        ol li::before {
+            content: counter(item) ". ";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -25px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 204, 0, 0.3) 0%, rgba(255, 204, 0, 0.1) 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #b35900;
+        }
+        
+        .subtopic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .subtopic-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .subtopic-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .subtopic-card h5 i {
+            color: var(--accent-color);
+        }
+        
+        /* Tabelas de detalhamento */
+        .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .detail-table th {
+            background: var(--dark-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .detail-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .detail-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .detail-table tr:hover {
+            background: #f0f7ff;
+        }
+        
+        /* Recursos expandidos */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            border-top: 5px solid var(--accent-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .resource-card h4 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .resource-card ul {
+            padding-left: 20px;
+        }
+        
+        .resource-card li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        
+        .resource-card li::before {
+            content: '→';
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: -18px;
+        }
+        
+        /* Linha do tempo expandida */
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+        
+        .timeline {
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--accent-color), var(--success-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 25px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            border-top-color: var(--success-color);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border: 4px solid white;
+            border-radius: 50%;
+            top: 20px;
+            right: -10px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+            right: auto;
+        }
+        
+        .timeline-month {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer expandido */
+        footer {
+            background: linear-gradient(135deg, var(--dark-color) 0%, #001a33 100%);
+            color: white;
+            padding: 50px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-links a i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .copyright p {
+            margin-bottom: 10px;
+        }
+        
+        /* Botões interativos */
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 102, 204, 0.4);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(204, 0, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #b30000;
+            box-shadow: 0 6px 15px rgba(204, 0, 0, 0.4);
+        }
+        
+        /* Botão voltar ao topo */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.3s ease;
+            border: 3px solid white;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        
+        .back-to-top:hover {
+            background: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsividade melhorada */
+        @media (max-width: 1100px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-bottom: 30px;
+            }
+            
+            .header-top {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header-stats {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-main h2 {
+                font-size: 1.8rem;
+            }
+            
+            .header-main p {
+                font-size: 1.1rem;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .section::before {
+                left: -10px;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            h3 {
+                font-size: 1.4rem;
+            }
+            
+            .timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 80px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .subtopic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .stat-item {
+                width: 100%;
+            }
+            
+            .topic-card {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho Expandido -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="logo-container">
+                        <div class="logo">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Ortopedia R2</h1>
+                            <div class="subtitle">Guia Completo de Estudos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Meses</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">85+</div>
+                            <div class="stat-label">Tópicos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">24</div>
+                            <div class="stat-label">Casos Clínicos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">2024</div>
+                            <div class="stat-label">Atualizado</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="header-main">
+                    <h2>Guia Completo R2 - Ortopedia e Traumatologia</h2>
+                    <p>Programa de Residência Médica de Angola • Integrando as Novas Recomendações Europeias EFORT 2023-2024</p>
+                    
+                    <div class="header-badges">
+                        <span class="badge"><i class="fas fa-user-md"></i> Nível R2</span>
+                        <span class="badge"><i class="fas fa-flag"></i> Contexto Angolano</span>
+                        <span class="badge"><i class="fas fa-star"></i> Recomendações EFORT 2024</span>
+                        <span class="badge"><i class="fas fa-bone-break"></i> Traumatologia</span>
+                        <span class="badge"><i class="fas fa-bone"></i> Ortopedia Geral</span>
+                        <span class="badge"><i class="fas fa-graduation-cap"></i> Colégio de Especialidade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout principal -->
+    <div class="container">
+        <div class="main-layout">
+            <!-- Barra de navegação expandida -->
+            <nav class="sidebar">
+                <h2 class="nav-title"><i class="fas fa-compass"></i> Navegação</h2>
+                <ul class="nav-list">
+                    <li><a href="#introducao" class="active"><i class="fas fa-home"></i> Introdução</a></li>
+                    <li><a href="#temas-angola"><i class="fas fa-flag"></i> Temas Angola</a></li>
+                    <li><a href="#recomendacoes-europa"><i class="fas fa-flag-eu"></i> Recomendações Europa</a></li>
+                    <li><a href="#traumatologia"><i class="fas fa-bone-break"></i> Traumatologia Essencial</a></li>
+                    <li><a href="#ortopedia"><i class="fas fa-bone"></i> Ortopedia Geral</a></li>
+                    <li><a href="#tecnicas-cirurgicas"><i class="fas fa-scalpel"></i> Técnicas Cirúrgicas</a></li>
+                    <li><a href="#casos-clinicos"><i class="fas fa-stethoscope"></i> Casos Clínicos</a></li>
+                    <li><a href="#integracao"><i class="fas fa-handshake"></i> Integração Angola-Europa</a></li>
+                    <li><a href="#protocolos"><i class="fas fa-clipboard-list"></i> Protocolos</a></li>
+                    <li><a href="#recursos"><i class="fas fa-book-open"></i> Recursos de Estudo</a></li>
+                    <li><a href="#cronograma"><i class="fas fa-calendar-alt"></i> Cronograma</a></li>
+                    <li><a href="#avaliacao"><i class="fas fa-chart-line"></i> Avaliação</a></li>
+                </ul>
+                
+                <div class="study-progress">
+                    <h3 class="progress-title"><i class="fas fa-tasks"></i> Progresso de Estudo</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="progressPercentage">45%</span>
+                        <span id="progressTime">6/12 meses</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: #f9f9f9; border-radius: var(--border-radius);">
+                    <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--dark-color);"><i class="fas fa-lightbulb"></i> Dicas Rápidas</h4>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px; font-size: 0.9rem;">Estude 2-3h por dia, 5 dias/semana</li>
+                        <li style="margin-bottom: 10px; font-size: 0.9rem;">Revise 1 caso clínico por semana</li>
+                        <li style="margin-bottom: 10px; font-size: 0.9rem;">Participe ativamente das sessões</li>
+                        <li style="margin-bottom: 10px; font-size: 0.9rem;">Faça anotações dos procedimentos</li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- Conteúdo principal expandido -->
+            <main class="content">
+                <!-- Introdução expandida -->
+                <section id="introducao" class="section">
+                    <h2><i class="fas fa-star-of-life"></i> Introdução ao Programa R2</h2>
+                    <p>Este guia foi desenvolvido especificamente para residentes R2 de Ortopedia e Traumatologia em Angola, considerando as particularidades do contexto clínico nacional e integrando as mais recentes recomendações europeias da EFORT (European Federation of National Associations of Orthopaedics and Traumatology).</p>
+                    
+                    <div class="topic-card">
+                        <h3>Objetivos Específicos do Ano R2</h3>
+                        <div class="subtopic-grid">
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-diagnoses"></i> Diagnóstico Avançado</h5>
+                                <p>Capacidade de diagnosticar corretamente patologias complexas e emergências ortopédicas com os recursos disponíveis no contexto angolano.</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-procedures"></i> Planeamento Cirúrgico</h5>
+                                <p>Desenvolver habilidades de planeamento cirúrgico detalhado, considerando alternativas técnicas quando recursos específicos não estão disponíveis.</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-clinic-medical"></i> Gestão Pós-operatória</h5>
+                                <p>Domínio das complicações pós-operatórias mais comuns e sua gestão no contexto dos recursos limitados.</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-globe-africa"></i> Adaptação ao Contexto</h5>
+                                <p>Capacidade de adaptar protocolos internacionais às realidades epidemiológicas e socioeconômicas angolanas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>Competências Técnicas Esperadas</h3>
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Competência</th>
+                                    <th>Nível Esperado R2</th>
+                                    <th>Contexto Angola</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Osteossíntese de fraturas fechadas</td>
+                                    <td>Independente com supervisão</td>
+                                    <td>Com recursos disponíveis</td>
+                                </tr>
+                                <tr>
+                                    <td>Tratamento de fraturas expostas</td>
+                                    <td>Independente com supervisão</td>
+                                    <td>Prioridade nacional</td>
+                                </tr>
+                                <tr>
+                                    <td>Artroplastia total da anca</td>
+                                    <td>Assistente principal</td>
+                                    <td>Centros de referência</td>
+                                </tr>
+                                <tr>
+                                    <td>Fixadores externos</td>
+                                    <td>Independente</td>
+                                    <td>Amplamente disponível</td>
+                                </tr>
+                                <tr>
+                                    <td>Artroscopia diagnóstica</td>
+                                    <td>Assistente avançado</td>
+                                    <td>Centros especializados</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Temas Angola expandido -->
+                <section id="temas-angola" class="section">
+                    <h2><i class="fas fa-flag"></i> Temas Prioritários - Contexto Angolano</h2>
+                    <p>Baseado nas diretrizes do Colégio de Especialidade de Ortopedia e Traumatologia de Angola e na experiência clínica nacional. Dados epidemiológicos atualizados de 2023.</p>
+                    
+                    <div class="topic-card angola">
+                        <h3>Patologias Infecciosas Prevalentes <span class="priority-tag priority-high">ALTA PRIORIDADE</span></h3>
+                        
+                        <h4><i class="fas fa-bacteria"></i> Osteomielite Hematogénica</h4>
+                        <ul>
+                            <li><span class="highlight">Epidemiologia:</span> Principalmente em crianças (2-12 anos), pico de incidência entre 5-7 anos</li>
+                            <li><span class="highlight">Agentes mais comuns:</span> S. aureus (60%), Streptococcus (20%), Salmonella (10% em crianças com anemia falciforme)</li>
+                            <li><span class="highlight">Locais mais afetados:</span> Fémur distal (35%), tíbia proximal (25%), úmero (15%)</li>
+                            <li><span class="highlight">Diagnóstico:</span> Clínico + radiologia + PCR elevada + hemoculturas (positivas em 50-70% dos casos)</li>
+                            <li><span class="highlight">Tratamento:</span> Antibioticoterapia IV (cloxacilina + gentamicina) por 2-4 semanas, seguida de oral por 4-6 semanas</li>
+                            <li><span class="highlight">Cirurgia:</span> Desbridamento cirúrgico urgente se abscesso ou falha clínica em 48h</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-lungs-virus"></i> Tuberculose Osteoarticular</h4>
+                        <ul>
+                            <li><span class="highlight">Prevalência:</span> 10-15% das formas extra-pulmonares em Angola</li>
+                            <li><span class="highlight">Locais mais comuns:</span> Coluna vertebral (40%), anca (15%), joelho (10%)</li>
+                            <li><span class="highlight">Diagnóstico:</span> Clínico (dor, rigidez, tumefação), radiologia (destruição óssea), biópsia (granuloma caseoso), PCR</li>
+                            <li><span class="highlight">Tratamento médico:</span> RHZE por 2 meses + RH por 10-16 meses (esquema angolano adaptado)</li>
+                            <li><span class="highlight">Indicações cirúrgicas:</span> Abscesso, deformidade, déficit neurológico, falha do tratamento médico</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card angola">
+                        <h3>Traumatologia Rodoviária <span class="priority-tag priority-high">ALTA PRIORIDADE</span></h3>
+                        
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Fratura</th>
+                                    <th>Prevalência</th>
+                                    <th>Abordagem Inicial</th>
+                                    <th>Complicações Comuns</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fémur (diáfise)</td>
+                                    <td>25%</td>
+                                    <td>Tração transesquelética, fixador externo temporário</td>
+                                    <td>Embolia gordurosa, infeção, não-união</td>
+                                </tr>
+                                <tr>
+                                    <td>Tíbia (aberta)</td>
+                                    <td>20%</td>
+                                    <td>Desbridamento urgente, antibióticos, fixação</td>
+                                    <td>Osteomielite, não-união, pseudoartrose</td>
+                                </tr>
+                                <tr>
+                                    <td>Pélvis instável</td>
+                                    <td>15%</td>
+                                    <td>Reanimação, fixador externo pélvico</td>
+                                    <td>Hemorragia, lesões urológicas</td>
+                                </tr>
+                                <tr>
+                                    <td>Coluna toracolombar</td>
+                                    <td>12%</td>
+                                    <td>Imobilização, avaliação neurológica</td>
+                                    <td>Deficit neurológico, deformidade</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4><i class="fas fa-car-crash"></i> Abordagem do Politraumatizado em Angola</h4>
+                        <ul>
+                            <li><span class="highlight">Fase 1 (0-5 min):</span> ABCDE, controle de hemorragias externas, imobilização da coluna</li>
+                            <li><span class="highlight">Fase 2 (5-30 min):</span> Reavaliação, acesso venoso, analgesia, radiografias essenciais (tórax, pélvis)</li>
+                            <li><span class="highlight">Fase 3 (30 min - 2h):</span> Estabilização cirúrgica de fraturas instáveis (DCO - Damage Control Orthopedics)</li>
+                            <li><span class="highlight">Recursos limitados:</span> Priorizar estabilização com fixadores externos, tração esquelética</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card angola">
+                        <h3>Deformidades Ósseas Prevalentes <span class="priority-tag priority-medium">PRIORIDADE MÉDIA</span></h3>
+                        
+                        <div class="subtopic-grid">
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-wheelchair"></i> Sequelas de Poliomielite</h5>
+                                <p><strong>Prevalência:</strong> 2-3/1000 em algumas regiões<br>
+                                <strong>Deformidades comuns:</strong> Pé equino, discrepância de MMII, instabilidade do joelho<br>
+                                <strong>Tratamento:</strong> Alongamentos tendinosos, osteotomias, artrodese</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-baby"></i> Pé Torto Congénito</h5>
+                                <p><strong>Prevalência:</strong> 1-2/1000 nascimentos<br>
+                                <strong>Tratamento padrão ouro:</strong> Método de Ponseti (correção serial)<br>
+                                <strong>Sucesso:</strong> 90% com tratamento precoce<br>
+                                <strong>Recorrência:</strong> 20% sem uso adequado de órteses</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-child"></i> Displasia da Anca</h5>
+                                <p><strong>Prevalência:</strong> 5-20/1000 nascimentos<br>
+                                <strong>Diagnóstico:</span> Rastreio clínico (Ortolani/Barlow), ultrassom<br>
+                                <strong>Tratamento:</strong> Arnes de Pavlik (0-6 meses), redução fechada (6-18 meses)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Recomendações Europa expandido -->
+                <section id="recomendacoes-europa" class="section">
+                    <h2><i class="fas fa-flag-eu"></i> Novas Recomendações Europeias (EFORT/AO 2023-2024)</h2>
+                    <p>Atualizações baseadas em evidência científica recente da European Federation of National Associations of Orthopaedics and Traumatology (EFORT) e da AO Foundation. Dados dos congressos EFORT 2023 e 2024.</p>
+                    
+                    <div class="topic-card europa">
+                        <h3>Gestão de Fraturas na População Idosa <span class="priority-tag priority-high">ATUALIZAÇÃO 2024</span></h3>
+                        
+                        <h4><i class="fas fa-user-injured"></i> Fraturas do Colo do Fémur</h4>
+                        <ul>
+                            <li><span class="highlight">Timing cirúrgico:</span> Dentro de 36 horas (redução de mortalidade em 30%)</li>
+                            <li><span class="highlight">Avaliação geriátrica:</span> Escala de fragilidade clínica (CFS) obrigatória</li>
+                            <li><span class="highlight">Hipótese:</span> Artroplastia total vs hemiartroplastia - novos critérios:
+                                <ul>
+                                    <li>Idade < 75 anos, ativo → artroplastia total</li>
+                                    <li>Idade > 75 anos, pouco ativo → hemiartroplastia</li>
+                                    <li>Comorbilidades significativas → osteossíntese (em casos selecionados)</li>
+                                </ul>
+                            </li>
+                            <li><span class="highlight">Anestesia:</span> Raquianestesia preferível (menos delirium pós-operatório)</li>
+                            <li><span class="highlight">Prevenção secundária:</span> Iniciar tratamento para osteoporose na primeira semana pós-operatória</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-prescription-bottle"></i> Tratamento da Osteoporose Pós-fratura</h4>
+                        <ul>
+                            <li><span class="highlight">Avaliação:</span> DEXA obrigatória para todos os pacientes com fratura por fragilidade</li>
+                            <li><span class="highlight">Tratamento de primeira linha:</span> Bifosfonatos orais (alendronato, risedronato)</li>
+                            <li><span class="highlight">Alternativas:</span> Denosumab (SC a cada 6 meses) para intolerância a bifosfonatos</li>
+                            <li><span class="highlight">Duração:</span> 3-5 anos, seguido de "drug holiday" com reavaliação anual</li>
+                            <li><span class="highlight">Suplementação:</span> Vitamina D 800-1000 UI/dia + Cálcio 1000-1200 mg/dia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card europa">
+                        <h3>Infeções em Ortopedia <span class="priority-tag priority-high">ATUALIZAÇÃO 2024</span></h3>
+                        
+                        <h4><i class="fas fa-shield-virus"></i> Antibioticoprofilaxia em Cirurgia Ortopédica</h4>
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Cirurgia</th>
+                                    <th>Antibiótico de Escolha</th>
+                                    <th>Dose</th>
+                                    <th>Duração</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Artroplastia</td>
+                                    <td>Cefazolina 2g</td>
+                                    <td>30-60 min antes do incision</td>
+                                    <td>Até 24h pós-operatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Fraturas (fechadas)</td>
+                                    <td>Cefazolina 2g</td>
+                                    <td>30-60 min antes do incision</td>
+                                    <td>Até 24h pós-operatório</td>
+                                </tr>
+                                <tr>
+                                    <td>Fraturas (abertas)</td>
+                                    <td>Cefazolina 2g + Gentamicina 5mg/kg</td>
+                                    <td>Imediatamente após trauma</td>
+                                    <td>3-5 dias (até cobertura cutânea)</td>
+                                </tr>
+                                <tr>
+                                    <td>Alergia à penicilina</td>
+                                    <td>Clindamicina 900mg</td>
+                                    <td>30-60 min antes do incision</td>
+                                    <td>Até 24h pós-operatório</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4><i class="fas fa-biohazard"></i> Gestão de Infeções de Implantes</h4>
+                        <ul>
+                            <li><span class="highlight">Classificação de Zimmerli:</span> Aguda (< 3 semanas) vs crônica (> 3 semanas)</li>
+                            <li><span class="highlight">Tratamento agudo:</span> Desbridamento, troca de polietileno, antibióticos 6 semanas</li>
+                            <li><span class="highlight">Tratamento crônico:</span> Remoção do implante, espaçador de antibiótico, antibióticos 6 semanas, reimplante em 2ª fase</li>
+                            <li><span class="highlight">Novos agentes:</span> Daptomicina para MRSA, Linezolida para infeções resistentes</li>
+                            <li><span class="highlight">Terapia adjuvante:</span> Bacteriófagos para biofilmes resistentes (estudos fase III)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card europa">
+                        <h3>Ortopedia Regenerativa <span class="priority-tag priority-medium">TENDÊNCIA EUROPEIA</span></h3>
+                        
+                        <div class="subtopic-grid">
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-dna"></i> Células-Tronco Mesenquimais</h5>
+                                <p><strong>Fonte:</strong> Medula óssea, tecido adiposo<br>
+                                <strong>Aplicações:</strong> Defeitos ósseos >2cm, não-uniões atróficas<br>
+                                <strong>Eficácia:</strong> Taxa de consolidação 85-90% vs 60-70% padrão</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-tint"></i> Plasma Rico em Plaquetas (PRP)</h5>
+                                <p><strong>Indicações:</strong> Epicondilite, tendinopatias, osteoartrose inicial<br>
+                                <strong>Preparação:</strong> Dupla centrifugação, concentração 3-5x<br>
+                                <strong>Administração:</strong> US-guiada, 1-3 injeções mensais</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-cube"></i> Substitutos Ósseos</h5>
+                                <p><strong>Hidroxiapatita porosa:</strong> Integração óssea 6-12 meses<br>
+                                <strong>Sulfato de cálcio:</strong> Reabsorção em 3-6 meses<br>
+                                <strong>Combinados:</strong> BMP-2 + substituto ósseo (defeitos críticos)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Traumatologia Essencial expandido -->
+                <section id="traumatologia" class="section">
+                    <h2><i class="fas fa-bone-break"></i> Traumatologia Essencial para R2</h2>
+                    
+                    <div class="topic-card">
+                        <h3>Membro Inferior <span class="priority-tag priority-high">ALTA PRIORIDADE</span></h3>
+                        
+                        <h4><i class="fas fa-bone"></i> Fraturas do Fémur Proximal</h4>
+                        <ul>
+                            <li><span class="highlight">Classificação de Garden:</span> I-IV (estabilidade e desvio)</li>
+                            <li><span class="highlight">Tratamento R2:</span> 
+                                <ul>
+                                    <li>Garden I/II: Osteossíntese com parafusos canulados (6.5mm)</li>
+                                    <li>Garden III/IV: Artroplastia (hemi ou total conforme idade/atividade)</li>
+                                    <li>Via de acesso: Lateral para osteossíntese, posterior para artroplastia</li>
+                                </ul>
+                            </li>
+                            <li><span class="highlight">Complicações:</span> Necrose avascular (15-30%), não-união (5-10%), infeção (1-3%)</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-walking"></i> Fraturas do Planalto Tibial</h4>
+                        <ul>
+                            <li><span class="highlight">Classificação de Schatzker:</span> I-VI (simples a complexas)</li>
+                            <li><span class="highlight">Abordagem cirúrgica:</span>
+                                <ul>
+                                    <li>Schatzker I-III: Via anterolateral, redução aberta, placa LISS</li>
+                                    <li>Schatzker IV: Via póstero-medial, placa 3.5mm</li>
+                                    <li>Schatzker V-VI: Dupla via, fixadores externos temporários</li>
+                                </ul>
+                            </li>
+                            <li><span class="highlight">Reabilitação:</span> Mobilização precoce (0-6 semanas: 20kg carga), carga total a partir de 12 semanas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>Membro Superior <span class="priority-tag priority-medium">PRIORIDADE MÉDIA</span></h3>
+                        
+                        <h4><i class="fas fa-hand-paper"></i> Fraturas do Úmero Proximal</h4>
+                        <ul>
+                            <li><span class="highlight">Classificação de Neer:</span> Baseada em 4 fragmentos (cabeça, tuberosidades, diáfise)</li>
+                            <li><span class="highlight">Tratamento conservador:</span> Tipo 1 e 2 partes (férula, início mobilização em 2-3 semanas)</li>
+                            <li><span class="highlight">Tratamento cirúrgico:</span>
+                                <ul>
+                                    <li>2 partes desviadas: Osteossíntese com placa bloqueada</li>
+                                    <li>3-4 partes jovens: Osteossíntese com placa bloqueada</li>
+                                    <li>3-4 partes idosos: Artroplastia reversa (melhores resultados funcionais)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-hand-rock"></i> Fraturas do Rádio Distal</h4>
+                        <ul>
+                            <li><span class="highlight">Classificação de Frykman:</span> I-VIII (inclui envolvimento da ulna)</li>
+                            <li><span class="highlight">Indicações cirúrgicas:</span> Encurtamento >5mm, inclinação dorsal >10°, intra-articular >2mm</li>
+                            <li><span class="highlight">Técnicas:</span> Redução fechada + fixação percutânea (K-wires) vs placa volar bloqueada</li>
+                            <li><span class="highlight">Complicações:</span> Síndrome do túnel cárpico, tenossinovite, rigidez</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Técnicas Cirúrgicas expandido -->
+                <section id="tecnicas-cirurgicas" class="section">
+                    <h2><i class="fas fa-scalpel"></i> Técnicas Cirúrgicas Essenciais</h2>
+                    
+                    <div class="topic-card">
+                        <h3>Princípios AO para R2 <span class="priority-tag priority-high">ALTA PRIORIDADE</span></h3>
+                        
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Princípio</th>
+                                    <th>Descrição</th>
+                                    <th>Aplicação Prática</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Redução anatómica</td>
+                                    <td>Restaurar a anatomia normal do osso</td>
+                                    <td>Especialmente importante em fraturas articulares</td>
+                                </tr>
+                                <tr>
+                                    <td>Fixação estável</td>
+                                    <td>Rigidez suficiente para permitir mobilização precoce</td>
+                                    <td>Placas bloqueadas, hastes intramedulares bloqueadas</td>
+                                </tr>
+                                <tr>
+                                    <td>Preservação vascular</td>
+                                    <td>Minimizar danos aos tecidos moles e suprimento sanguíneo</td>
+                                    <td>Técnica minimamente invasiva, períostio preservado</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobilização precoce</td>
+                                    <td>Iniciar movimento articular o mais cedo possível</td>
+                                    <td>Nas primeiras 24-48h pós-operatórias</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4><i class="fas fa-tools"></i> Técnicas Específicas</h4>
+                        <div class="subtopic-grid">
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-plate-wheat"></i> Osteossíntese com Placa</h5>
+                                <p><strong>Placas DCP:</strong> Compressão por excentricidade dos parafusos<br>
+                                <strong>Placas LCP:</strong> Fixação angular estável, menor necessidade de redução anatómica<br>
+                                <strong>Placas de reconstrução:</strong> Moldáveis para pélvis e acetábulo</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-dumbbell"></i> Fixação Intramedular</h5>
+                                <p><strong>Fêmur:</strong> Haste bloqueada (antegrado/retrógrado)<br>
+                                <strong>Tíbia:</strong> Haste bloqueada (transpatelar/parapatelar)<br>
+                                <strong>Úmero:</strong> Haste bloqueada (antegrada)</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-th-large"></i> Fixadores Externos</h5>
+                                <p><strong>Monolateral:</strong> Fraturas diafisárias simples<br>
+                                <strong>Circular (Ilizarov):</strong> Deformidades complexas, alongamentos<br>
+                                <strong>Híbrido:</strong> Fraturas metafisárias</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Casos Clínicos expandido -->
+                <section id="casos-clinicos" class="section">
+                    <h2><i class="fas fa-stethoscope"></i> Casos Clínicos Detalhados</h2>
+                    
+                    <div class="topic-card integracao">
+                        <h3>Caso 1: Fratura Exposta da Tíbia (Gustilo IIIB)</h3>
+                        
+                        <h4><i class="fas fa-user-injured"></i> Apresentação</h4>
+                        <ul>
+                            <li><span class="highlight">Paciente:</span> Homem, 32 anos, acidente moto vs carro</li>
+                            <li><span class="highlight">Lesão:</span> Fratura exposta tíbia média 1/3, perda óssea 4cm, lesão arterial (ausência de pulsos pediosos)</li>
+                            <li><span class="highlight">Tempo:</span> 2 horas desde o acidente</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-procedures"></i> Abordagem Inicial (Pronto-Socorro)</h4>
+                        <ol>
+                            <li>ABCDE primário - estabilização hemodinâmica</li>
+                            <li>Controle de hemorragia - compressão manual</li>
+                            <li>Antibióticos: Cefazolina 2g IV + Gentamicina 5mg/kg IV</li>
+                            <li>Analgesia: Morfina IV titulada</li>
+                            <li>Imobilização: Talas de gesso bivalvadas</li>
+                            <li>Tétano: Imunoglobulina antitetânica + toxóide</li>
+                            <li>Documentação: Fotografias da lesão, descrição detalhada</li>
+                        </ol>
+                        
+                        <h4><i class="fas fa-cut"></i> Abordagem Cirúrgica (Angola vs Europa)</h4>
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Fase</th>
+                                    <th>Abordagem Angola (Recursos Limitados)</th>
+                                    <th>Abordagem Europa (Recursos Ideais)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Desbridamento</td>
+                                    <td>Urgente (dentro de 6h), excisão radical, lavagem com SF</td>
+                                    <td>Urgente (dentro de 3h), excisão radical, lavagem pulsátil</td>
+                                </tr>
+                                <tr>
+                                    <td>Revascularização</td>
+                                    <td>Ponte safena reversa (se vascularização disponível)</td>
+                                    <td>Ponte venosa + microcirurgia</td>
+                                </tr>
+                                <tr>
+                                    <td>Estabilização óssea</td>
+                                    <td>Fixador externo monolateral temporário</td>
+                                    <td>Fixador externo circular ou intramedular bloqueado</td>
+                                </tr>
+                                <tr>
+                                    <td>Cobertura cutânea</td>
+                                    <td>Retalho local (se possível), enxerto de pele em 5-7 dias</td>
+                                    <td>Retalho livre microvascularizado em 72h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4><i class="fas fa-prescription"></i> Pós-operatório e Reabilitação</h4>
+                        <ul>
+                            <li><span class="highlight">Antibióticos:</span> 72h se tecidos viáveis, 5-7 dias se contaminação significativa</li>
+                            <li><span class="highlight">Carga:</span> Não suportar peso por 12 semanas</li>
+                            <li><span class="highlight">Reconstrução óssea:</span> Enxerto ósseo autólogo (crista ilíaca) em 6-8 semanas</li>
+                            <li><span class="highlight">Complicações esperadas:</span> Infeção (20-30%), não-união (15-25%), osteomielite (10-15%)</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Protocolos expandido -->
+                <section id="protocolos" class="section">
+                    <h2><i class="fas fa-clipboard-list"></i> Protocolos Clínicos e Cirúrgicos</h2>
+                    
+                    <div class="topic-card">
+                        <h3>Protocolo de Antibioticoprofilaxia</h3>
+                        
+                        <h4><i class="fas fa-syringe"></i> Administração e Duração</h4>
+                        <ul>
+                            <li><span class="highlight">Timing:</span> 30-60 minutos antes da incisão (60 minutos para vancomicina)</li>
+                            <li><span class="highlight">Redose:</span> A cada 2-3 meias-vidas do antibiótico ou perda sanguínea >1500ml</li>
+                            <li><span class="highlight">Duração:</span> Máximo 24 horas pós-operatório (48 horas para artroplastias)</li>
+                            <li><span class="highlight">Exceções:</span> Fraturas abertas - até cobertura cutânea (3-5 dias)</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-allergies"></i> Pacientes Alérgicos</h4>
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Alergia</th>
+                                    <th>Alternativa</th>
+                                    <th>Dose</th>
+                                    <th>Considerações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Penicilina leve (rash)</td>
+                                    <td>Cefazolina</td>
+                                    <td>2g IV</td>
+                                    <td>Baixo risco de reação cruzada (<5%)</td>
+                                </tr>
+                                <tr>
+                                    <td>Penicilina grave (anafilaxia)</td>
+                                    <td>Clindamicina</td>
+                                    <td>900mg IV</td>
+                                    <td>Cobrir Gram+; adicionar gentamicina se preocupação com Gram-</td>
+                                </tr>
+                                <tr>
+                                    <td>Cefalosporina</td>
+                                    <td>Vancomicina</td>
+                                    <td>15mg/kg IV</td>
+                                    <td>Infundir lentamente (60-90 min)</td>
+                                </tr>
+                                <tr>
+                                    <td>Múltiplas alergias</td>
+                                    <td>Vancomicina + Gentamicina</td>
+                                    <td>15mg/kg + 5mg/kg</td>
+                                    <td>Cobertura ampla Gram+ e Gram-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>Protocolo de Tromboprofilaxia</h3>
+                        
+                        <h4><i class="fas fa-heartbeat"></i> Risco Tromboembólico em Ortopedia</h4>
+                        <ul>
+                            <li><span class="highlight">Alto risco:</span> Artroplastia de anca/joelho, fratura de anca, politraumatismo</li>
+                            <li><span class="highlight">Risco moderado:</span> Cirurgias longas (>45 min), imobilização prolongada</li>
+                            <li><span class="highlight">Risco baixo:</span> Cirurgias curtas, mobilização precoce</li>
+                        </ul>
+                        
+                        <h4><i class="fas fa-prescription-bottle-alt"></i> Esquemas de Profilaxia</h4>
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Cirurgia</th>
+                                    <th>Profilaxia Padrão</th>
+                                    <th>Alternativa</th>
+                                    <th>Duração</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Artroplastia anca</td>
+                                    <td>Enoxaparina 40mg SC/dia</td>
+                                    <td>Rivaroxaban 10mg/dia oral</td>
+                                    <td>35 dias</td>
+                                </tr>
+                                <tr>
+                                    <td>Artroplastia joelho</td>
+                                    <td>Enoxaparina 40mg SC/dia</td>
+                                    <td>Apixaban 2.5mg 2x/dia</td>
+                                    <td>14 dias</td>
+                                </tr>
+                                <tr>
+                                    <td>Fratura de anca</td>
+                                    <td>Enoxaparina 40mg SC/dia</td>
+                                    <td>Fondaparinux 2.5mg SC/dia</td>
+                                    <td>35 dias</td>
+                                </tr>
+                                <tr>
+                                    <td>Fraturas outras</td>
+                                    <td>Enoxaparina 40mg SC/dia</td>
+                                    <td>Heparina não fracionada 5000U 2-3x/dia</td>
+                                    <td>Até mobilização completa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Recursos expandido -->
+                <section id="recursos" class="section">
+                    <h2><i class="fas fa-book-open"></i> Recursos de Estudo Recomendados</h2>
+                    
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <h4><i class="fas fa-book-medical"></i> Livros Essenciais</h4>
+                            <ul>
+                                <li><strong>Rockwood and Green's Fractures (9ª ed.)</strong> - Referência absoluta em traumatologia</li>
+                                <li><strong>Campbell's Operative Orthopaedics (14ª ed.)</strong> - Técnicas cirúrgicas detalhadas</li>
+                                <li><strong>AO Principles of Fracture Management</strong> - Princípios fundamentais AO</li>
+                                <li><strong>Manual de Ortopedia e Traumatologia (SBA)</strong> - Adaptado à realidade lusófona</li>
+                                <li><strong>EFORT White Books</strong> - Diretrizes europeias por tema</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <h4><i class="fas fa-laptop-medical"></i> Plataformas Online</h4>
+                            <ul>
+                                <li><strong>EFORT Education Platform</strong> - Cursos, guidelines, webinars</li>
+                                <li><strong>AOTrauma Surgery Reference</strong> - Atlas cirúrgico interativo</li>
+                                <li><strong>Orthobullets.com</strong> - Resumos, questões, flashcards</li>
+                                <li><strong>Journal of Bone & Joint Surgery (JBJS)</strong> - Artigos de alta qualidade</li>
+                                <li><strong>Portal do Colégio de Ortopedia de Angola</strong> - Informações locais</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <h4><i class="fas fa-newspaper"></i> Revistas Científicas</h4>
+                            <ul>
+                                <li><strong>Injury</strong> - Foco em traumatologia</li>
+                                <li><strong>Journal of Orthopaedic Trauma</strong> - Especializada em trauma</li>
+                                <li><strong>Bone & Joint Journal</strong> - Artigos clínicos e pesquisa</li>
+                                <li><strong>Clinical Orthopaedics and Related Research</strong> - Pesquisa translacional</li>
+                                <li><strong>Revista Angolana de Ortopedia</strong> - Casos e realidades locais</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <h4><i class="fas fa-users"></i> Associações e Congressos</h4>
+                            <ul>
+                                <li><strong>Colégio de Ortopedia de Angola</strong> - Congresso anual</li>
+                                <li><strong>Sociedade Angolana de Ortopedia e Traumatologia</strong> - Eventos locais</li>
+                                <li><strong>EFORT Annual Congress</strong> - Maior congresso europeu</li>
+                                <li><strong>AOTrauma Courses</strong> - Cursos práticos regionais</li>
+                                <li><strong>SICOT World Congress</strong> - Congresso internacional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Cronograma expandido -->
+                <section id="cronograma" class="section">
+                    <h2><i class="fas fa-calendar-alt"></i> Cronograma Detalhado - 12 Meses</h2>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-month">Meses 1-3</div>
+                                    <h4>Trimestre 1: Fundamentos</h4>
+                                    <ul>
+                                        <li><strong>Traumatologia básica:</strong> Princípios AO, abordagem ao traumatizado</li>
+                                        <li><strong>Infeções osteoarticulares:</strong> Osteomielite, artrite séptica, abordagem Angola</li>
+                                        <li><strong>Radiologia ortopédica:</strong> Interpretação de RX, TC, RMN básica</li>
+                                        <li><strong>Fracturas simples:</strong> Redução e imobilização conservadora</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-month">Meses 4-6</div>
+                                    <h4>Trimestre 2: Membros Inferiores</h4>
+                                    <ul>
+                                        <li><strong>Fémur:</strong> Fraturas proximais, diafisárias, distais</li>
+                                        <li><strong>Tíbia e pé:</strong> Planalto tibial, pilão, tornozelo, calcâneo</li>
+                                        <li><strong>Artroplastia:</strong> Princípios, anca total, joelho total</li>
+                                        <li><strong>Ortopedia pediátrica:</strong> DDA, pé torto, fraturas na criança</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-month">Meses 7-9</div>
+                                    <h4>Trimestre 3: Membros Superiores</h4>
+                                    <ul>
+                                        <li><strong>Ombro e úmero:</strong> Fraturas, luxações, patologias do manguito</li>
+                                        <li><strong>Cotovelo e antebraço:</strong> Fraturas, luxações, estabilidade</li>
+                                        <li><strong>Punho e mão:</strong> Fraturas do rádio distal, escafoide, metacarpianos</li>
+                                        <li><strong>Técnicas avançadas:</strong> Artroscopia básica, fixação percutânea</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <div class="timeline-month">Meses 10-12</div>
+                                    <h4>Trimestre 4: Integração e Consolidação</h4>
+                                    <ul>
+                                        <li><strong>Casos complexos:</strong> Politraumatizado, fraturas abertas, não-uniões</li>
+                                        <li><strong>Integração Angola-Europa:</strong> Aplicação das guidelines ao contexto local</li>
+                                        <li><strong>Preparação para avaliação:</strong> Simulação de casos, revisão geral</li>
+                                        <li><strong>Projeto final:</strong> Apresentação de caso clínico complexo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Avaliação expandido -->
+                <section id="avaliacao" class="section">
+                    <h2><i class="fas fa-chart-line"></i> Avaliação e Competências R2</h2>
+                    
+                    <div class="topic-card">
+                        <h3>Sistema de Avaliação do Programa</h3>
+                        
+                        <h4><i class="fas fa-clipboard-check"></i> Componentes da Avaliação</h4>
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>Componente</th>
+                                    <th>Peso</th>
+                                    <th>Frequência</th>
+                                    <th>Objetivo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Avaliação teórica</td>
+                                    <td>30%</td>
+                                    <td>Trimestral</td>
+                                    <td>Conhecimento teórico atualizado</td>
+                                </tr>
+                                <tr>
+                                    <td>Avaliação prática (OSCE)</td>
+                                    <td>40%</td>
+                                    <td>Semestral</td>
+                                    <td>Habilidades clínicas e técnicas</td>
+                                </tr>
+                                <tr>
+                                    <td>Apresentação de casos</td>
+                                    <td>15%</td>
+                                    <td>Mensal</td>
+                                    <td>Raciocínio clínico e comunicação</td>
+                                </tr>
+                                <tr>
+                                    <td>Participação cirúrgica</td>
+                                    <td>15%</td>
+                                    <td>Contínua</td>
+                                    <td>Competência técnica progressiva</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4><i class="fas fa-bullseye"></i> Objetivos de Competência por Trimestre</h4>
+                        <div class="subtopic-grid">
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-check-circle"></i> Trimestre 1</h5>
+                                <p>• Realizar desbridamento de fratura exposta simples<br>
+                                • Aplicar fixador externo monolateral básico<br>
+                                • Reduzir e imobilizar fraturas fechadas simples</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-check-double"></i> Trimestre 2</h5>
+                                <p>• Auxiliar em artroplastia total da anca<br>
+                                • Realizar osteossíntese de fratura femoral com haste<br>
+                                • Aplicar placa DCP/LCP em fraturas diafisárias</p>
+                            </div>
+                            <div class="subtopic-card">
+                                <h5><i class="fas fa-award"></i> Trimestre 3-4</h5>
+                                <p>• Realizar artroscopia diagnóstica do joelho<br>
+                                • Realizar osteossíntese de fratura do rádio distal<br>
+                                • Planejar tratamento de politraumatizado</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Rodapé expandido -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Colégio de Especialidade</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Ortopedia e Traumatologia de Angola</p>
+                    <p><i class="fas fa-book"></i> Diretrizes para Formação de Especialistas</p>
+                    <p><i class="fas fa-user-md"></i> Programa de Residência Médica R2</p>
+                    <p><i class="fas fa-calendar"></i> Revisado em: Junho 2024</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Fontes Internacionais</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-external-link-alt"></i> EFORT Guidelines 2024</a></li>
+                        <li><a href="#"><i class="fas fa-external-link-alt"></i> AO Foundation Resources</a></li>
+                        <li><a href="#"><i class="fas fa-external-link-alt"></i> WHO Trauma Care Systems</a></li>
+                        <li><a href="#"><i class="fas fa-external-link-alt"></i> Journal of Orthopaedic Trauma</a></li>
+                        <li><a href="#"><i class="fas fa-external-link-alt"></i> Global Surgery Reference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato e Suporte</h3>
+                    <p>Para sugestões e atualizações deste guia:</p>
+                    <p><i class="fas fa-envelope"></i> ortopedia.angola@exemplo.co.ao</p>
+                    <p><i class="fas fa-phone"></i> +244 123 456 789</p>
+                    <p><i class="fas fa-hospital"></i> Hospital Central de Referência</p>
+                    <p><i class="fas fa-city"></i> Luanda, Angola</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-download"></i> Download deste Guia (PDF)</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ - Dúvidas Comuns</a></li>
+                        <li><a href="#"><i class="fas fa-video"></i> Vídeo-aulas Complementares</a></li>
+                        <li><a href="#"><i class="fas fa-file-pdf"></i> Protocolos em PDF</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-check"></i> Calendário de Eventos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Guia de Estudos R2 - Ortopedia e Traumatologia | Desenvolvido para o contexto angolano | Atualizado com recomendações europeias 2023-2024</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">Este material é para uso educativo dos residentes de Ortopedia e Traumatologia de Angola. Não substitui a orientação do supervisor e a prática clínica supervisionada.</p>
+                <p style="margin-top: 5px; font-size: 0.8rem; color: rgba(255, 255, 255, 0.6);">Versão 2.1 | Última atualização: 15 de Junho de 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Atualizar navegação ativa
+                    document.querySelectorAll('.nav-list a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll suave
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Botão voltar ao topo
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+            
+            // Atualizar progresso de estudo baseado na posição de scroll
+            updateStudyProgress();
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Destacar seção ativa durante scroll
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-list a');
+        
+        function updateActiveSection() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Simular progresso de estudo
+        function updateStudyProgress() {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            const percentage = Math.min(Math.round((scrolled / totalHeight) * 100), 100);
+            
+            document.getElementById('progressFill').style.width = `${percentage}%`;
+            document.getElementById('progressPercentage').textContent = `${percentage}%`;
+            
+            // Calcular meses baseado no progresso
+            const months = Math.min(Math.round(percentage / 8.33) + 1, 12);
+            document.getElementById('progressTime').textContent = `${months}/12 meses`;
+        }
+        
+        window.addEventListener('scroll', () => {
+            updateActiveSection();
+        });
+        
+        // Inicializar progresso
+        updateStudyProgress();
+        
+        // Adicionar interatividade aos cards
+        document.querySelectorAll('.topic-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('expanded');
+            });
+        });
+        
+        // Simular marcar tópico como estudado
+        document.querySelectorAll('li').forEach(item => {
+            item.addEventListener('dblclick', function() {
+                this.classList.toggle('studied');
+                if(this.classList.contains('studied')) {
+                    this.style.textDecoration = 'line-through';
+                    this.style.opacity = '0.7';
+                } else {
+                    this.style.textDecoration = 'none';
+                    this.style.opacity = '1';
+                }
+            });
+        });
+        
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            // Marcar introdução como ativa inicialmente
+            document.querySelector('.nav-list a[href="#introducao"]').classList.add('active');
+            
+            // Animar progresso na entrada
+            setTimeout(() => {
+                document.getElementById('progressFill').style.transition = 'width 2s ease';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
