@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo: Fixadores Externos em Ortopedia - Teoria e Prática</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f9fc;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: white;
+            padding: 40px 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+        
+        .course-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .info-item {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .disclaimer {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            max-width: 800px;
+            margin: 25px auto 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 5px;
+        }
+        
+        .nav-list li {
+            margin: 0;
+        }
+        
+        .nav-list a {
+            text-decoration: none;
+            color: #1a2980;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .nav-list a:hover {
+            background-color: #e8f4fc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(26, 41, 128, 0.15);
+        }
+        
+        .nav-list a.active {
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            color: white;
+            box-shadow: 0 4px 10px rgba(26, 41, 128, 0.3);
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #1a2980, #26d0ce);
+        }
+        
+        h2 {
+            color: #1a2980;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #e8f4fc;
+        }
+        
+        h2 i {
+            margin-right: 15px;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h3 {
+            color: #1a2980;
+            margin: 30px 0 18px;
+            padding-left: 15px;
+            border-left: 5px solid #26d0ce;
+            background-color: #f8fafc;
+            padding: 12px 20px;
+            border-radius: 8px 0 0 8px;
+        }
+        
+        h4 {
+            color: #1a2980;
+            margin: 25px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e8f4fc;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 12px;
+            text-align: center;
+            padding: 5px 10px;
+            background-color: #f0f7ff;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .svg-container {
+            width: 100%;
+            overflow: auto;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e8f4fc;
+        }
+        
+        .svg-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .svg-diagram {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+        }
+        
+        .learning-objectives {
+            background-color: #e8f7ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 5px solid #1a2980;
+        }
+        
+        .learning-objectives h4 {
+            color: #1a2980;
+            margin-top: 0;
+            border-bottom: none;
+        }
+        
+        .treatment-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .step {
+            background-color: #f0f9ff;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #26d0ce;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(38, 208, 206, 0.2);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .clinical-case {
+            background-color: #fff8e6;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #ff9900;
+        }
+        
+        .clinical-case h4 {
+            color: #e67e22;
+            border-bottom: none;
+        }
+        
+        .case-question {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .case-answer {
+            background-color: #e8f7ef;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+            display: none;
+        }
+        
+        .show-answer {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .show-answer:hover {
+            background-color: #2980b9;
+        }
+        
+        .reference-item {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 18px;
+            border-left: 4px solid #1a2980;
+            transition: all 0.3s;
+        }
+        
+        .reference-item:hover {
+            background-color: #f0f7ff;
+            transform: translateX(5px);
+        }
+        
+        .reference-title {
+            font-weight: bold;
+            color: #1a2980;
+            margin-bottom: 5px;
+        }
+        
+        .highlight-box {
+            background-color: #e8f7ff;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #3498db;
+        }
+        
+        .warning-box {
+            background-color: #fff4e6;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ff9900;
+        }
+        
+        .success-box {
+            background-color: #e8f8ef;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #27ae60;
+        }
+        
+        .key-concept {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px dashed #3498db;
+        }
+        
+        .key-concept h4 {
+            color: #1a2980;
+            margin-top: 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e8f4fc;
+            vertical-align: top;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f0f7ff;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .comparison-box {
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #f8fafc;
+            border: 1px solid #e8f4fc;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .comparison-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+        
+        .comparison-box h4 {
+            color: #1a2980;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #26d0ce;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 50px;
+            background-color: #f8fafc;
+            border-radius: 15px;
+        }
+        
+        .stat-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f7ff;
+            border-radius: 10px;
+            min-width: 170px;
+            flex: 1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #1a2980;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        .quiz-container {
+            background-color: #f8fafc;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px solid #e8f4fc;
+        }
+        
+        .quiz-question {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .quiz-options {
+            margin-left: 20px;
+        }
+        
+        .quiz-option {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .quiz-option:hover {
+            background-color: #e8f4fc;
+        }
+        
+        .quiz-option.selected {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .quiz-option.correct {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .quiz-option.incorrect {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .quiz-feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .quiz-feedback.correct {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .quiz-feedback.incorrect {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .quiz-submit {
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .quiz-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(26, 41, 128, 0.3);
+        }
+        
+        .quiz-results {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            width: 0%;
+            transition: width 1s ease;
+        }
+        
+        .practical-tip {
+            background-color: #fff8e6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid #ff9900;
+            position: relative;
+        }
+        
+        .practical-tip::before {
+            content: '💡';
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            background-color: #ff9900;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .anatomy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .anatomy-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .anatomy-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+        
+        .anatomy-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 15px;
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .checklist {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #27ae60;
+        }
+        
+        .checklist-item {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section {
+                padding: 25px 20px;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-list a {
+                justify-content: center;
+            }
+            
+            .stat-box {
+                flex-direction: column;
+            }
+            
+            .stat {
+                width: 100%;
+            }
+            
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .treatment-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .animated-section {
+            opacity: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1><i class="fas fa-bone"></i> Curso Completo: Fixadores Externos em Ortopedia</h1>
+                <p class="subtitle">Aprenda princípios, técnicas, aplicações clínicas e cuidados com dispositivos de fixação externa - Teoria e Prática</p>
+                
+                <div class="course-info">
+                    <div class="info-item"><i class="fas fa-clock"></i> Tempo estimado: 8 horas</div>
+                    <div class="info-item"><i class="fas fa-chart-line"></i> Nível: Intermediário/Avançado</div>
+                    <div class="info-item"><i class="fas fa-book"></i> 10 módulos completos</div>
+                    <div class="info-item"><i class="fas fa-check-circle"></i> Certificado ao concluir</div>
+                </div>
+                
+                <div class="disclaimer">
+                    <i class="fas fa-info-circle"></i> Material educativo para profissionais de saúde. Para procedimentos clínicos, siga os protocolos institucionais e consulte especialistas.
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#introducao" class="active"><i class="fas fa-home"></i> Introdução</a></li>
+                <li><a href="#principios"><i class="fas fa-cogs"></i> Princípios</a></li>
+                <li><a href="#tipos"><i class="fas fa-th"></i> Tipos</a></li>
+                <li><a href="#componentes"><i class="fas fa-puzzle-piece"></i> Componentes</a></li>
+                <li><a href="#tecnicas"><i class="fas fa-user-md"></i> Técnicas</a></li>
+                <li><a href="#cuidados"><i class="fas fa-hands-helping"></i> Cuidados</a></li>
+                <li><a href="#complicacoes"><i class="fas fa-exclamation-triangle"></i> Complicações</a></li>
+                <li><a href="#casos"><i class="fas fa-stethoscope"></i> Casos Clínicos</a></li>
+                <li><a href="#quiz"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="#referencias"><i class="fas fa-bookmark"></i> Referências</a></li>
+            </ul>
+        </nav>
+        
+        <section id="introducao" class="section animated-section">
+            <h2><i class="fas fa-home"></i> Introdução aos Fixadores Externos</h2>
+            
+            <div class="learning-objectives">
+                <h4><i class="fas fa-bullseye"></i> Objetivos de Aprendizagem</h4>
+                <p>Ao final desta seção, você será capaz de:</p>
+                <ul>
+                    <li>Definir o que são fixadores externos e seu papel na ortopedia</li>
+                    <li>Compreender o desenvolvimento histórico desses dispositivos</li>
+                    <li>Identificar as vantagens e desvantagens em relação a outros métodos de fixação</li>
+                    <li>Reconhecer as principais indicações clínicas para seu uso</li>
+                </ul>
+            </div>
+            
+            <p>Os <strong>fixadores externos</strong> são dispositivos ortopédicos que proporcionam estabilização esquelética através de pinos ou fios que atravessam o osso, conectados a uma estrutura externa. Eles atuam como uma "ponte" que mantém os fragmentos ósseos na posição correta enquanto ocorre o processo de consolidação.</p>
+            
+            <div class="image-container">
+                <div class="image-caption">Figura 1: Representação esquemática de um fixador externo unilateral aplicado na tíbia</div>
+                <div class="svg-container">
+                    <svg class="svg-diagram" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="boneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#d7ccc8;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#a1887f;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="pinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+                            </linearGradient>
+                            <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+                            </marker>
+                        </defs>
+                        
+                        <rect width="600" height="400" fill="#f8f9fa"/>
+                        
+                        <!-- Título -->
+                        <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a2980">Fixador Externo Unilateral - Princípio Básico</text>
+                        
+                        <!-- Osso (tíbia) -->
+                        <g transform="translate(300, 180)">
+                            <!-- Diáfise da tíbia -->
+                            <path d="M-40,-120 L-40,120 L40,120 L40,-120 Z" fill="url(#boneGradient)" stroke="#8d6e63" stroke-width="4"/>
+                            
+                            <!-- Fratura (linha irregular) -->
+                            <path d="M-40,0 Q-20,15 0,-10 Q20,10 40,0" fill="none" stroke="#e74c3c" stroke-width="4" stroke-dasharray="6,6"/>
+                            
+                            <!-- Marcadores ósseos -->
+                            <circle cx="0" cy="-100" r="6" fill="#2c3e50"/>
+                            <circle cx="0" cy="-50" r="6" fill="#2c3e50"/>
+                            <circle cx="0" cy="0" r="6" fill="#e74c3c"/>
+                            <circle cx="0" cy="50" r="6" fill="#2c3e50"/>
+                            <circle cx="0" cy="100" r="6" fill="#2c3e50"/>
+                            
+                            <!-- Texto -->
+                            <text x="0" y="-140" text-anchor="middle" font-size="16" fill="#2c3e50" font-weight="bold">Tíbia</text>
+                            <text x="50" y="10" font-size="14" fill="#e74c3c" font-weight="bold">Foco de Fratura</text>
+                            
+                            <!-- Setas indicando forças compressivas -->
+                            <line x1="-60" y1="-80" x2="-60" y2="-60" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowHead)"/>
+                            <line x1="-60" y1="-20" x2="-60" y2="-40" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowHead)"/>
+                            <text x="-80" y="-50" font-size="12" fill="#e74c3c">Compressão</text>
+                        </g>
+                        
+                        <!-- Fixador externo -->
+                        <g transform="translate(300, 180)">
+                            <!-- Barra principal -->
+                            <rect x="60" y="-140" width="20" height="280" fill="#7f8c8d" rx="5"/>
+                            
+                            <!-- Efeito 3D na barra -->
+                            <rect x="60" y="-140" width="5" height="280" fill="#95a5a6"/>
+                            
+                            <!-- Pinças/pinos -->
+                            <!-- Pino proximal -->
+                            <line x1="60" y1="-100" x2="0" y2="-100" stroke="url(#pinGradient)" stroke-width="6"/>
+                            <circle cx="0" cy="-100" r="8" fill="#3498db"/>
+                            
+                            <!-- Pino medial proximal -->
+                            <line x1="60" y1="-50" x2="0" y2="-50" stroke="url(#pinGradient)" stroke-width="6"/>
+                            <circle cx="0" cy="-50" r="8" fill="#3498db"/>
+                            
+                            <!-- Pino medial distal -->
+                            <line x1="60" y1="50" x2="0" y2="50" stroke="url(#pinGradient)" stroke-width="6"/>
+                            <circle cx="0" cy="50" r="8" fill="#3498db"/>
+                            
+                            <!-- Pino distal -->
+                            <line x1="60" y1="100" x2="0" y2="100" stroke="url(#pinGradient)" stroke-width="6"/>
+                            <circle cx="0" cy="100" r="8" fill="#3498db"/>
+                            
+                            <!-- Conexões da barra aos pinos -->
+                            <rect x="60" y="-108" width="15" height="16" fill="#2c3e50" rx="3"/>
+                            <rect x="60" y="-58" width="15" height="16" fill="#2c3e50" rx="3"/>
+                            <rect x="60" y="42" width="15" height="16" fill="#2c3e50" rx="3"/>
+                            <rect x="60" y="92" width="15" height="16" fill="#2c3e50" rx="3"/>
+                            
+                            <!-- Porcas de fixação -->
+                            <rect x="72" y="-108" width="8" height="16" fill="#e67e22" rx="2"/>
+                            <rect x="72" y="-58" width="8" height="16" fill="#e67e22" rx="2"/>
+                            <rect x="72" y="42" width="8" height="16" fill="#e67e22" rx="2"/>
+                            <rect x="72" y="92" width="8" height="16" fill="#e67e22" rx="2"/>
+                        </g>
+                        
+                        <!-- Legenda detalhada -->
+                        <g transform="translate(100, 350)">
+                            <g transform="translate(0, 0)">
+                                <rect x="-20" y="-15" width="16" height="16" fill="url(#boneGradient)" stroke="#8d6e63" stroke-width="1"/>
+                                <text x="5" y="0" font-size="13" fill="#2c3e50" font-weight="bold">Osso (tíbia)</text>
+                            </g>
+                            
+                            <g transform="translate(150, 0)">
+                                <line x1="-20" y1="0" x2="0" y2="0" stroke="url(#pinGradient)" stroke-width="4"/>
+                                <circle cx="0" cy="0" r="6" fill="#3498db"/>
+                                <text x="15" y="5" font-size="13" fill="#2c3e50" font-weight="bold">Pinos de fixação</text>
+                            </g>
+                            
+                            <g transform="translate(320, 0)">
+                                <rect x="-20" y="-8" width="20" height="16" fill="#7f8c8d" rx="3"/>
+                                <text x="10" y="5" font-size="13" fill="#2c3e50" font-weight="bold">Barra externa</text>
+                            </g>
+                        </g>
+                        
+                        <!-- Fluxo de forças -->
+                        <g transform="translate(500, 100)">
+                            <text x="0" y="0" text-anchor="start" font-size="14" fill="#2c3e50" font-weight="bold">Fluxo de Forças:</text>
+                            <path d="M0,20 Q30,20 40,40 Q50,60 40,80 Q30,100 0,100" fill="none" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,5"/>
+                            <text x="20" y="120" font-size="12" fill="#27ae60">Carga transferida pelo fixador</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="key-concept">
+                <h4><i class="fas fa-lightbulb"></i> Conceito-Chave: Princípio da Ponte Estabilizadora</h4>
+                <p>O fixador externo atua como uma <strong>ponte estável</strong> que conecta os segmentos ósseos acima e abaixo da fratura, desviando as forças do foco de fratura e permitindo a consolidação óssea em condições controladas.</p>
+            </div>
+            
+            <h3>Evolução Histórica: Da Simplicidade à Complexidade</h3>
+            <p>A história dos fixadores externos é uma jornada fascinante que acompanha o desenvolvimento da ortopedia moderna:</p>
+            
+            <div class="stat-box">
+                <div class="stat fade-in">
+                    <div class="stat-value">1840</div>
+                    <div class="stat-label">Malgaigne - Primeiro fixador documentado</div>
+                </div>
+                <div class="stat fade-in">
+                    <div class="stat-value">1902</div>
+                    <div class="stat-label">Lambotte - Fixador monolateral moderno</div>
+                </div>
+                <div class="stat fade-in">
+                    <div class="stat-value">1938</div>
+                    <div class="stat-label">Hoffmann - Sistema modular revolucionário</div>
+                </div>
+                <div class="stat fade-in">
+                    <div class="stat-value">1951</div>
+                    <div class="stat-label">Ilizarov - Método circular inovador</div>
+                </div>
+            </div>
+            
+            <div class="practical-tip">
+                <h4>Dica Prática: Quando Considerar um Fixador Externo?</h4>
+                <p>Considere fixadores externos em situações onde: (1) os tecidos moles estão comprometidos (fraturas expostas), (2) há infecção óssea ativa, (3) é necessário acesso a feridas, (4) a fixação é temporária ("damage control"), ou (5) há necessidade de correção progressiva de deformidades.</p>
+            </div>
+            
+            <h3>Por Que Escolher um Fixador Externo? Análise Crítica</h3>
+            <div class="comparison">
+                <div class="comparison-box">
+                    <h4><i class="fas fa-thumbs-up" style="color: #27ae60;"></i> Vantagens Principais</h4>
+                    <ul>
+                        <li><strong>Preservação da vascularização:</strong> Minimamente invasivo ao foco de fratura</li>
+                        <li><strong>Acesso para cuidados com feridas:</strong> Ideal para fraturas expostas</li>
+                        <li><strong>Ajustabilidade pós-operatória:</strong> Correção de alinhamento possível após cirurgia</li>
+                        <li><strong>Versatilidade:</strong> Adaptável a múltiplas situações clínicas</li>
+                        <li><strong>Carga progressiva:</strong> Permite estimulação óssea controlada</li>
+                    </ul>
+                </div>
+                <div class="comparison-box">
+                    <h4><i class="fas fa-thumbs-down" style="color: #e74c3c;"></i> Limitações a Considerar</h4>
+                    <ul>
+                        <li><strong>Risco de infecção nos pinos:</strong> Até 50% em algumas séries</li>
+                        <li><strong>Dispositivo volumoso:</strong> Pode limitar atividades e vestimenta</li>
+                        <li><strong>Cuidados específicos:</strong> Exige comprometimento do paciente</li>
+                        <li><strong>Possível limitação articular:</strong> Especialmente se próximo a articulações</li>
+                        <li><strong>Fatores psicológicos:</strong> Aceitação do dispositivo visível</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="clinical-case">
+                <h4><i class="fas fa-stethoscope"></i> Caso Clínico 1: Tomada de Decisão</h4>
+                <p><strong>Paciente:</strong> Homem, 35 anos, acidente motociclístico, fratura exposta grau IIIA de tíbia direita com perda de substância cutânea de 5x8cm.</p>
+                <p><strong>Questão:</strong> Por que um fixador externo seria preferível à fixação interna neste caso?</p>
+                
+                <div class="case-question">
+                    <p><strong>Analise as opções abaixo e selecione a resposta correta:</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">A) Permite acesso para cuidados com o ferimento e enxertia cutânea</div>
+                        <div class="quiz-option">B) É mais barato que outros métodos de fixação</div>
+                        <div class="quiz-option">C) Elimina completamente o risco de infecção</div>
+                        <div class="quiz-option">D) Não requer acompanhamento pós-operatório</div>
+                    </div>
+                    <button class="show-answer">Mostrar Resposta</button>
+                    <div class="case-answer">
+                        <p><strong>Resposta Correta: A)</strong> Em fraturas expostas com comprometimento de tecidos moles, o fixador externo é ideal porque permite acesso ao ferimento para desbridamentos seriados, enxertia cutânea e acompanhamento da viabilidade tecidual, sem interferir com o foco de fratura.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Indicações Clínicas: Quando Usar?</h3>
+            <div class="checklist">
+                <h4>Indicações Primárias para Fixação Externa</h4>
+                <div class="checklist-item">Fraturas expostas (especialmente Grau II e III de Gustilo)</div>
+                <div class="checklist-item">Trauma com comprometimento grave de tecidos moles</div>
+                <div class="checklist-item">Osteomielite aguda ou crônica com necessidade de estabilização</div>
+                <div class="checklist-item">Pseudoatroses infectadas ou não infectadas</div>
+                <div class="checklist-item">Alongamentos ósseos e correções de deformidades</div>
+                <div class="checklist-item">Fraturas pélvicas instáveis (fixador externo pélvico)</div>
+                <div class="checklist-item">"Damage control" em politraumatizados instáveis</div>
+                <div class="checklist-item">Artrodese de grandes articulações</div>
+            </div>
+        </section>
+        
+        <section id="principios" class="section animated-section">
+            <h2><i class="fas fa-cogs"></i> Princípios Biomecânicos da Fixação Externa</h2>
+            
+            <div class="learning-objectives">
+                <h4><i class="fas fa-bullseye"></i> Objetivos de Aprendizagem</h4>
+                <p>Ao final desta seção, você será capaz de:</p>
+                <ul>
+                    <li>Explicar os princípios biomecânicos que regem a estabilidade dos fixadores externos</li>
+                    <li>Identificar os fatores que influenciam a rigidez do sistema</li>
+                    <li>Diferenciar entre fixação rígida e fixação dinâmica</li>
+                    <li>Aplicar princípios biomecânicos na montagem de fixadores</li>
+                </ul>
+            </div>
+            
+            <p>A <strong>biomecânica dos fixadores externos</strong> é fundamental para entender como esses dispositivos funcionam e como otimizar sua aplicação clínica. A estabilidade não é uma propriedade intrínseca do dispositivo, mas sim o resultado da interação entre múltiplos fatores.</p>
+            
+            <div class="image-container">
+                <div class="image-caption">Figura 2: Fatores biomecânicos que influenciam a estabilidade do fixador</div>
+                <div class="svg-container">
+                    <svg class="svg-diagram" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="stabilityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+                            </linearGradient>
+                            <marker id="forceArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+                            </marker>
+                        </defs>
+                        
+                        <rect width="600" height="500" fill="#f8f9fa"/>
+                        
+                        <!-- Título -->
+                        <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a2980">Fatores Biomecânicos da Estabilidade</text>
+                        
+                        <!-- Representação do fixador com fatores biomecânicos -->
+                        <g transform="translate(300, 200)">
+                            <!-- Osso -->
+                            <rect x="-25" y="-100" width="50" height="200" fill="#d7ccc8" stroke="#8d6e63" stroke-width="3"/>
+                            
+                            <!-- Fratura central -->
+                            <path d="M-25,0 Q0,15 25,0" fill="none" stroke="#e74c3c" stroke-width="4" stroke-dasharray="6,6"/>
+                            
+                            <!-- Fixador -->
+                            <rect x="35" y="-120" width="15" height="240" fill="#7f8c8d" rx="4"/>
+                            
+                            <!-- Pinos -->
+                            <line x1="35" y1="-80" x2="0" y2="-80" stroke="url(#stabilityGradient)" stroke-width="5"/>
+                            <line x1="35" y1="-30" x2="0" y2="-30" stroke="url(#stabilityGradient)" stroke-width="5"/>
+                            <line x1="35" y1="30" x2="0" y2="30" stroke="url(#stabilityGradient)" stroke-width="5"/>
+                            <line x1="35" y1="80" x2="0" y2="80" stroke="url(#stabilityGradient)" stroke-width="5"/>
+                            
+                            <!-- Fator 1: Diâmetro dos pinos -->
+                            <g transform="translate(0, -80)">
+                                <circle cx="0" cy="0" r="10" fill="none" stroke="#e67e22" stroke-width="3"/>
+                                <text x="15" y="5" font-size="11" fill="#e67e22" font-weight="bold">Diâmetro ↑</text>
+                                <text x="15" y="20" font-size="10" fill="#e67e22">Rigidez ↑</text>
+                            </g>
+                            
+                            <!-- Fator 2: Distância da barra -->
+                            <g transform="translate(50, -50)">
+                                <line x1="-30" y1="0" x2="-10" y2="0" stroke="#27ae60" stroke-width="2" stroke-dasharray="3,3"/>
+                                <text x="10" y="5" font-size="11" fill="#27ae60" font-weight="bold">Distância ↓</text>
+                                <text x="10" y="20" font-size="10" fill="#27ae60">Rigidez ↑ 8x</text>
+                            </g>
+                            
+                            <!-- Fator 3: Número de pinos -->
+                            <g transform="translate(0, 100)">
+                                <text x="-40" y="10" font-size="11" fill="#9b59b6" font-weight="bold">Número de pinos ↑</text>
+                                <text x="-40" y="25" font-size="10" fill="#9b59b6">Estabilidade ↑</text>
+                            </g>
+                            
+                            <!-- Fator 4: Espaçamento entre pinos -->
+                            <g transform="translate(0, -120)">
+                                <line x1="-15" y1="0" x2="15" y2="0" stroke="#e74c3c" stroke-width="2"/>
+                                <text x="-40" y="10" font-size="11" fill="#e74c3c" font-weight="bold">Espaçamento ↑</text>
+                                <text x="-40" y="25" font-size="10" fill="#e74c3c">Estabilidade ↑</text>
+                            </g>
+                            
+                            <!-- Forças atuantes -->
+                            <!-- Força compressiva -->
+                            <line x1="-60" y1="-40" x2="-60" y2="-20" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                            <line x1="-60" y1="20" x2="-60" y2="40" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                            
+                            <!-- Força de cisalhamento -->
+                            <line x1="-40" y1="-60" x2="-20" y2="-60" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                            <line x1="20" y1="60" x2="40" y2="60" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                            
+                            <!-- Força rotacional -->
+                            <path d="M60,-40 Q70,-30 60,-20 Q50,-10 60,0" fill="none" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                        </g>
+                        
+                        <!-- Legenda das forças -->
+                        <g transform="translate(100, 380)">
+                            <g transform="translate(0, 0)">
+                                <line x1="0" y1="0" x2="20" y2="0" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                                <text x="30" y="5" font-size="12" fill="#2c3e50">Forças compressivas</text>
+                            </g>
+                            
+                            <g transform="translate(0, 30)">
+                                <line x1="0" y1="0" x2="20" y2="0" stroke="#e74c3c" stroke-width="3"/>
+                                <text x="30" y="5" font-size="12" fill="#2c3e50">Forças de cisalhamento</text>
+                            </g>
+                            
+                            <g transform="translate(0, 60)">
+                                <path d="M0,0 Q10,5 0,10" fill="none" stroke="#e74c3c" stroke-width="3" marker-end="url(#forceArrow)"/>
+                                <text x="20" y="10" font-size="12" fill="#2c3e50">Forças rotacionais</text>
+                            </g>
+                        </g>
+                        
+                        <!-- Diagrama de rigidez vs tempo -->
+                        <g transform="translate(300, 420)">
+                            <text x="0" y="-20" text-anchor="middle" font-size="16" fill="#1a2980" font-weight="bold">Evolução da Rigidez Durante o Tratamento</text>
+                            
+                            <!-- Eixo X -->
+                            <line x1="-150" y1="0" x2="150" y2="0" stroke="#2c3e50" stroke-width="2"/>
+                            
+                            <!-- Eixo Y -->
+                            <line x1="-150" y1="0" x2="-150" y2="-80" stroke="#2c3e50" stroke-width="2"/>
+                            
+                            <!-- Marcadores de tempo -->
+                            <text x="-150" y="20" text-anchor="middle" font-size="12" fill="#666">0 semanas</text>
+                            <text x="-50" y="20" text-anchor="middle" font-size="12" fill="#666">4 semanas</text>
+                            <text x="50" y="20" text-anchor="middle" font-size="12" fill="#666">8 semanas</text>
+                            <text x="150" y="20" text-anchor="middle" font-size="12" fill="#666">12 semanas</text>
+                            
+                            <!-- Curva de rigidez do fixador -->
+                            <path d="M-150,0 Q-100,-30 -50,-40 Q0,-50 50,-30 Q100,-10 150,0" fill="none" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+                            
+                            <!-- Curva de rigidez do osso -->
+                            <path d="M-150,0 Q-100,0 -50,-10 Q0,-20 50,-40 Q100,-60 150,-80" fill="none" stroke="#27ae60" stroke-width="3"/>
+                            
+                            <!-- Legenda -->
+                            <g transform="translate(100, -100)">
+                                <line x1="0" y1="0" x2="30" y2="0" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+                                <text x="40" y="5" font-size="12" fill="#3498db">Rigidez do fixador</text>
+                                
+                                <line x1="0" y1="20" x2="30" y2="20" stroke="#27ae60" stroke-width="3"/>
+                                <text x="40" y="25" font-size="12" fill="#27ae60">Rigidez do osso (consolidação)</text>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="key-concept">
+                <h4><i class="fas fa-lightbulb"></i> Conceito-Chave: Princípio da Rigidez Dinâmica</h4>
+                <p>Durante o tratamento, a <strong>rigidez necessária evolui</strong>: inicialmente alta para estabilizar a fratura, depois progressivamente diminuída para permitir estímulo mecânico à consolidação óssea (conceito de "rigidez dinâmica").</p>
+            </div>
+            
+            <h3>Os 4 Pilares da Estabilidade Biomecânica</h3>
+            
+            <div class="treatment-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h4><i class="fas fa-ruler-combined" style="color: #e67e22;"></i> Diâmetro dos Pinos</h4>
+                    <p><strong>Princípio:</strong> A rigidez do pino é proporcional à quarta potência do seu diâmetro (∝ d⁴).</p>
+                    <p><strong>Recomendação prática:</strong> Use pinos com 20-30% do diâmetro ósseo. Pinos muito finos dobram, muito grossos fraturam o osso.</p>
+                    <p><strong>Fórmula:</strong> Rigidez do pino ∝ (diâmetro)⁴</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h4><i class="fas fa-expand-arrows-alt" style="color: #27ae60;"></i> Distância da Barra</h4>
+                    <p><strong>Princípio:</strong> A rigidez diminui com o cubo da distância entre barra e osso (∝ 1/d³).</p>
+                    <p><strong>Recomendação prática:</strong> Mantenha a barra a 2-3 cm da pele. Dobrar a distância reduz a rigidez em 8 vezes!</p>
+                    <p><strong>Fórmula:</strong> Rigidez ∝ 1/(distância)³</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h4><i class="fas fa-layer-group" style="color: #9b59b6;"></i> Número de Pinos</h4>
+                    <p><strong>Princípio:</strong> Cada pino adicional aumenta a estabilidade, especialmente em diferentes planos.</p>
+                    <p><strong>Recomendação prática:</strong> Use pelo menos 2 pinos por segmento ósseo. Em fraturas instáveis, use 3 ou mais.</p>
+                    <p><strong>Regra:</strong> Mais pinos = maior estabilidade, mas maior risco de infecção.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <h4><i class="fas fa-arrows-alt-h" style="color: #e74c3c;"></i> Espaçamento entre Pinos</h4>
+                    <p><strong>Princípio:</strong> A estabilidade aumenta com a distância entre pinos no mesmo segmento.</p>
+                    <p><strong>Recomendação prática:</strong> Separe os pinos pelo menos 2-3 cm no mesmo segmento. Máxima separação possível.</p>
+                    <p><strong>Regra:</strong> Distribua os pinos uniformemente ao longo do segmento ósseo.</p>
+                </div>
+            </div>
+            
+            <div class="practical-tip">
+                <h4>Dica Prática: A "Regra do Meio" para Colocação de Pinos</h4>
+                <p>Para máxima estabilidade, coloque os pinos <strong>no terço médio do segmento ósseo</strong>. Evite extremidades onde o osso é mais fino e a cortical menos espessa. Pinos muito próximos a articulações aumentam o risco de rigidez e artrose.</p>
+            </div>
+            
+            <h3>Rigidez vs. Elasticidade: Encontrando o Equilíbrio</h3>
+            
+            <div class="comparison">
+                <div class="comparison-box">
+                    <h4><i class="fas fa-lock" style="color: #3498db;"></i> Fixação Rígida</h4>
+                    <p><strong>Indicações:</strong> Fraturas instáveis, artrodeses, infecções ósseas.</p>
+                    <p><strong>Mecanismo:</strong> Consolidação primária (contato direto ósseo).</p>
+                    <p><strong>Vantagens:</strong> Alta estabilidade, menor movimento no foco de fratura.</p>
+                    <p><strong>Riscos:</strong> Atrofia por estresse, "proteção excessiva" do osso.</p>
+                    <p><strong>Exemplo:</strong> Fixador monolateral com pinos grossos e barra próxima.</p>
+                </div>
+                <div class="comparison-box">
+                    <h4><i class="fas fa-sync-alt" style="color: #27ae60;"></i> Fixação Dinâmica (Elástica)</h4>
+                    <p><strong>Indicações:</strong> Alongamentos ósseos, pseudoartroses, consolidação secundária.</p>
+                    <p><strong>Mecanismo:</strong> Consolidação secundária (formação de calo).</p>
+                    <p><strong>Vantagens:</strong> Estimula formação de calo, adaptável durante tratamento.</p>
+                    <p><strong>Riscos:</strong> Controle mais complexo, maior acompanhamento necessário.</p>
+                    <p><strong>Exemplo:</strong> Sistema de Ilizarov com ajuste progressivo.</p>
+                </div>
+            </div>
+            
+            <div class="clinical-case">
+                <h4><i class="fas fa-stethoscope"></i> Caso Clínico 2: Análise Biomecânica</h4>
+                <p><strong>Cenário:</strong> Paciente com fixador externo unilateral na tíbia apresenta afrouxamento dos pinos proximais após 6 semanas. Ao examinar a radiografia, você nota que os pinos estão apenas 1 cm distantes um do outro no segmento proximal.</p>
+                <p><strong>Questão:</strong> Qual fator biomecânico provavelmente contribuiu para este afrouxamento precoce?</p>
+                
+                <div class="case-question">
+                    <p><strong>Analise as opções abaixo e selecione a resposta mais provável:</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) Diâmetro excessivo dos pinos</div>
+                        <div class="quiz-option">B) Distância muito grande entre barra e osso</div>
+                        <div class="quiz-option" data-correct="true">C) Espaçamento insuficiente entre pinos no mesmo segmento</div>
+                        <div class="quiz-option">D) Número excessivo de pinos</div>
+                    </div>
+                    <button class="show-answer">Mostrar Resposta</button>
+                    <div class="case-answer">
+                        <p><strong>Resposta Correta: C)</strong> O espaçamento insuficiente entre pinos (apenas 1 cm) cria concentração de stress no osso, levando a microfraturas e afrouxamento precoce. O espaçamento ideal é de pelo menos 2-3 cm entre pinos no mesmo segmento ósseo.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>A "Lei do Cubo": Compreendendo a Importância da Distância</h3>
+            <div class="highlight-box">
+                <h4><i class="fas fa-calculator"></i> A Matemática da Estabilidade: Lei do Cubo</h4>
+                <p>A relação entre distância da barra e rigidez segue uma <strong>lei cúbica inversa</strong>:</p>
+                <p><strong>Fórmula:</strong> Rigidez ∝ 1 / d³ (onde d = distância barra-osso)</p>
+                <p><strong>Exemplo prático:</strong> Se você dobrar a distância da barra (de 2 cm para 4 cm), a rigidez não cai pela metade - ela cai para 1/8 (12.5%) do valor original!</p>
+                <p><strong>Implicação clínica:</strong> Manter a barra próxima ao membro (2-3 cm) é crítico para a estabilidade do sistema.</p>
+            </div>
+            
+            <div class="checklist">
+                <h4>Checklist para Otimização Biomecânica</h4>
+                <div class="checklist-item">Pinos com diâmetro adequado (20-30% do diâmetro ósseo)</div>
+                <div class="checklist-item">Barra posicionada a 2-3 cm da superfície cutânea</div>
+                <div class="checklist-item">Mínimo de 2 pinos por segmento ósseo (ideal 3 para maior estabilidade)</div>
+                <div class="checklist-item">Espaçamento entre pinos de pelo menos 2-3 cm no mesmo segmento</div>
+                <div class="checklist-item">Pinos distribuídos em diferentes planos quando possível (configuração biplanar)</div>
+                <div class="checklist-item">Verificação do aperto periódico (torque de 4-6 Nm)</div>
+            </div>
+            
+            <h3>Transferência de Carga: Como o Fixador "Divide o Trabalho" com o Osso</h3>
+            <p>Um conceito fundamental é que o fixador externo <strong>não substitui completamente o osso</strong>, mas sim <strong>compartilha a carga</strong> com ele. Esta transferência de carga evolui durante o tratamento:</p>
+            
+            <div class="anatomy-grid">
+                <div class="anatomy-item">
+                    <div class="anatomy-icon"><i class="fas fa-weight-hanging"></i></div>
+                    <h4>Fase 1 (0-4 semanas)</h4>
+                    <p><strong>Fixador:</strong> Suporta 90-100% da carga</p>
+                    <p><strong>Osso:</strong> Suporta 0-10% da carga</p>
+                    <p><strong>Objetivo:</strong> Estabilidade absoluta para formação de calo inicial</p>
+                </div>
+                <div class="anatomy-item">
+                    <div class="anatomy-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4>Fase 2 (4-8 semanas)</h4>
+                    <p><strong>Fixador:</strong> Suporta 50-70% da carga</p>
+                    <p><strong>Osso:</strong> Suporta 30-50% da carga</p>
+                    <p><strong>Objetivo:</strong> Estímulo mecânico progressivo para consolidação</p>
+                </div>
+                <div class="anatomy-item">
+                    <div class="anatomy-icon"><i class="fas fa-bone"></i></div>
+                    <h4>Fase 3 (8+ semanas)</h4>
+                    <p><strong>Fixador:</strong> Suporta 10-30% da carga</p>
+                    <p><strong>Osso:</strong> Suporta 70-90% da carga</p>
+                    <p><strong>Objetivo:</strong> Consolidação óssea com mínimo suporte externo</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tipos" class="section animated-section">
+            <h2><i class="fas fa-th"></i> Tipos de Fixadores Externos e Suas Aplicações</h2>
+            
+            <div class="learning-objectives">
+                <h4><i class="fas fa-bullseye"></i> Objetivos de Aprendizagem</h4>
+                <p>Ao final desta seção, você será capaz de:</p>
+                <ul>
+                    <li>Identificar e diferenciar os principais tipos de fixadores externos</li>
+                    <li>Selecionar o tipo apropriado para diferentes situações clínicas</li>
+                    <li>Compreender as vantagens e limitações de cada sistema</li>
+                    <li>Aplicar critérios para escolha do dispositivo ideal</li>
+                </ul>
+            </div>
+            
+            <p>A diversidade de fixadores externos disponíveis reflete a variedade de situações clínicas que enfrentamos. Cada tipo foi desenvolvido para atender necessidades específicas, e a escolha adequada é fundamental para o sucesso do tratamento.</p>
+            
+            <div class="image-container">
+                <div class="image-caption">Figura 3: Classificação dos principais tipos de fixadores externos</div>
+                <div class="svg-container">
+                    <svg class="svg-diagram" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="type1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="type2Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="type3Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="type4Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="type5Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <rect width="600" height="600" fill="#f8f9fa"/>
+                        
+                        <!-- Título -->
+                        <text x="300" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a2980">Classificação dos Fixadores Externos</text>
+                        
+                        <!-- Mapa conceitual -->
+                        <!-- Tipo 1: Unilateral -->
+                        <g transform="translate(150, 120)">
+                            <!-- Círculo principal -->
+                            <circle cx="0" cy="0" r="50" fill="url(#type1Gradient)" opacity="0.9"/>
+                            <text x="0" y="0" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Unilateral</text>
+                            <text x="0" y="15" text-anchor="middle" fill="white" font-size="11">(Monolateral)</text>
+                            
+                            <!-- Representação simplificada -->
+                            <g transform="translate(0, 40)">
+                                <rect x="-10" y="-15" width="20" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+                                <rect x="10" y="-20" width="5" height="40" fill="#7f8c8d" rx="2"/>
+                                <line x1="10" y1="-10" x2="0" y2="-10" stroke="white" stroke-width="3"/>
+                                <line x1="10" y1="10" x2="0" y2="10" stroke="white" stroke-width="3"/>
+                            </g>
+                            
+                            <!-- Características -->
+                            <text x="0" y="90" text-anchor="middle" font-size="11" fill="#3498db" font-weight="bold">Simples • Uniplano</text>
+                            <text x="0" y="105" text-anchor="middle" font-size="10" fill="#666">Fácil aplicação</text>
+                        </g>
+                        
+                        <!-- Tipo 2: Bilateral -->
+                        <g transform="translate(450, 120)">
+                            <!-- Círculo principal -->
+                            <circle cx="0" cy="0" r="50" fill="url(#type2Gradient)" opacity="0.9"/>
+                            <text x="0" y="0" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Bilateral</text>
+                            <text x="0" y="15" text-anchor="middle" fill="white" font-size="11">(Biplano)</text>
+                            
+                            <!-- Representação simplificada -->
+                            <g transform="translate(0, 40)">
+                                <rect x="-10" y="-15" width="20" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+                                <rect x="10" y="-20" width="4" height="40" fill="#7f8c8d" rx="1"/>
+                                <rect x="-14" y="-20" width="4" height="40" fill="#7f8c8d" rx="1"/>
+                                <line x1="10" y1="-10" x2="0" y2="-10" stroke="white" stroke-width="2"/>
+                                <line x1="-14" y1="0" x2="0" y2="0" stroke="white" stroke-width="2"/>
+                                <line x1="10" y1="10" x2="0" y2="10" stroke="white" stroke-width="2"/>
+                            </g>
+                            
+                            <!-- Características -->
+                            <text x="0" y="90" text-anchor="middle" font-size="11" fill="#2c3e50" font-weight="bold">Maior estabilidade</text>
+                            <text x="0" y="105" text-anchor="middle" font-size="10" fill="#666">Controle biplanar</text>
+                        </g>
+                        
+                        <!-- Tipo 3: Circular (Ilizarov) -->
+                        <g transform="translate(150, 300)">
+                            <!-- Círculo principal -->
+                            <circle cx="0" cy="0" r="50" fill="url(#type3Gradient)" opacity="0.9"/>
+                            <text x="0" y="0" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Circular</text>
+                            <text x="0" y="15" text-anchor="middle" fill="white" font-size="11">(Ilizarov)</text>
+                            
+                            <!-- Representação simplificada -->
+                            <g transform="translate(0, 40)">
+                                <rect x="-5" y="-10" width="10" height="20" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+                                <circle cx="0" cy="-5" r="25" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="0" cy="5" r="25" fill="none" stroke="white" stroke-width="2"/>
+                                <line x1="-20" y1="-5" x2="-5" y2="-5" stroke="white" stroke-width="1"/>
+                                <line x1="20" y1="-5" x2="5" y2="-5" stroke="white" stroke-width="1"/>
+                                <line x1="0" y1="-30" x2="0" y2="-15" stroke="white" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Características -->
+                            <text x="0" y="90" text-anchor="middle" font-size="11" fill="#9b59b6" font-weight="bold">Máxima estabilidade</text>
+                            <text x="0" y="105" text-anchor="middle" font-size="10" fill="#666">Correção 3D</text>
+                        </g>
+                        
+                        <!-- Tipo 4: Híbrido -->
+                        <g transform="translate(450, 300)">
+                            <!-- Círculo principal -->
+                            <circle cx="0" cy="0" r="50" fill="url(#type4Gradient)" opacity="0.9"/>
+                            <text x="0" y="0" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Híbrido</text>
+                            <text x="0" y="15" text-anchor="middle" fill="white" font-size="11">(Misto)</text>
+                            
+                            <!-- Representação simplificada -->
+                            <g transform="translate(0, 40)">
+                                <rect x="-10" y="-15" width="20" height="30" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+                                <rect x="10" y="-20" width="4" height="40" fill="#7f8c8d" rx="1"/>
+                                <circle cx="-15" cy="0" r="20" fill="none" stroke="white" stroke-width="2"/>
+                                <line x1="10" y1="-10" x2="0" y2="-10" stroke="white" stroke-width="2"/>
+                                <line x1="10" y1="10" x2="0" y2="10" stroke="white" stroke-width="2"/>
+                                <line x1="-30" y1="0" x2="-20" y2="0" stroke="white" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Características -->
+                            <text x="0" y="90" text-anchor="middle" font-size="11" fill="#e67e22" font-weight="bold">Versátil</text>
+                            <text x="0" y="105" text-anchor="middle" font-size="10" fill="#666">Combina sistemas</text>
+                        </g>
+                        
+                        <!-- Tipo 5: Dinâmico/Axial -->
+                        <g transform="translate(300, 450)">
+                            <!-- Círculo principal -->
+                            <circle cx="0" cy="0" r="50" fill="url(#type5Gradient)" opacity="0.9"/>
+                            <text x="0" y="0" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Dinâmico</text>
+                            <text x="0" y="15" text-anchor="middle" fill="white" font-size="11">(Alongamento)</text>
+                            
+                            <!-- Representação simplificada -->
+                            <g transform="translate(0, 40)">
+                                <rect x="-10" y="-20" width="20" height="20" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+                                <rect x="-10" y="10" width="20" height="20" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+                                <rect x="-5" y="0" width="10" height="10" fill="#f1c40f" opacity="0.7"/>
+                                <rect x="10" y="-25" width="5" height="50" fill="#7f8c8d" rx="2"/>
+                                <rect x="10" y="-5" width="10" height="10" fill="#e74c3c" rx="2"/>
+                                <line x1="10" y1="-15" x2="0" y2="-15" stroke="white" stroke-width="2"/>
+                                <line x1="10" y1="15" x2="0" y2="15" stroke="white" stroke-width="2"/>
+                            </g>
+                            
+                            <!-- Características -->
+                            <text x="0" y="90" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">Alongamento ósseo</text>
+                            <text x="0" y="105" text-anchor="middle" font-size="10" fill="#666">Distração osteogênica</text>
+                        </g>
+                        
+                        <!-- Linhas conectando os tipos -->
+                        <line x1="150" y1="170" x2="300" y2="400" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="5,5"/>
+                        <line x1="450" y1="170" x2="300" y2="400" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="5,5"/>
+                        <line x1="150" y1="350" x2="300" y2="400" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="5,5"/>
+                        <line x1="450" y1="350" x2="300" y2="400" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <!-- Centro do diagrama -->
+                        <circle cx="300" cy="400" r="30" fill="#1a2980" opacity="0.8"/>
+                        <text x="300" y="400" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Fixadores</text>
+                        <text x="300" y="415" text-anchor="middle" fill="white" font-size="11">Externos</text>
+                        
+                        <!-- Legenda de cores -->
+                        <g transform="translate(300, 550)">
+                            <text x="0" y="-20" text-anchor="middle" font-size="14" fill="#1a2980" font-weight="bold">Sistemas Comerciais Representativos</text>
+                            
+                            <g transform="translate(-120, 0)">
+                                <rect x="-15" y="-8" width="10" height="10" fill="url(#type1Gradient)"/>
+                                <text x="5" y="5" font-size="12" fill="#2c3e50">Orthofix, Dynafix</text>
+                            </g>
+                            
+                            <g transform="translate(60, 0)">
+                                <rect x="-15" y="-8" width="10" height="10" fill="url(#type3Gradient)"/>
+                                <text x="5" y="5" font-size="12" fill="#2c3e50">Ilizarov, Taylor Spatial Frame</text>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="key-concept">
+                <h4><i class="fas fa-lightbulb"></i> Conceito-Chave: Não Existe "Melhor" Tipo Universal</h4>
+                <p>Cada tipo de fixador tem <strong>indicações específicas</strong>. A escolha ideal depende de múltiplos fatores: localização da lesão, tipo de fratura, condições dos tecidos moles, experiência do cirurgião, e objetivos do tratamento.</p>
+            </div>
+            
+            <h3>Guia Prático de Seleção: Qual Tipo Escolher?</h3>
+            
+            <div class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Melhores Indicações</th>
+                        <th>Vantagens</th>
+                        <th>Desvantagens</th>
+                        <th>Dica de Aplicação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Unilateral</strong></td>
+                        <td>Fraturas diafisárias de fêmur/tíbia, fraturas expostas Grau I/II</td>
+                        <td>Fácil aplicação, permite carga precoce, menor custo</td>
+                        <td>Estabilidade limitada em fraturas muito instáveis</td>
+                        <td>Ideal para iniciantes, use pinos de pelo menos 5mm</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bilateral</strong></td>
+                        <td>Fraturas articulares complexas, pseudoartroses infectadas</td>
+                        <td>Alta estabilidade, controle multiplanar, versátil</td>
+                        <td>Mais invasivo, maior risco neurovascular</td>
+                        <td>Use em fraturas periarticulares com bom planejamento</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Circular</strong></td>
+                        <td>Alongamentos ósseos, correções angulares complexas</td>
+                        <td>Correção 3D, mínima invasão articular, máxima estabilidade</td>
+                        <td>Aplicação técnica complexa, curva de aprendizado longa</td>
+                        <td>Exige treinamento especializado, ideal para deformidades</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Híbrido</strong></td>
+                        <td>Fraturas periarticulares, reconstruções com defeitos ósseos</td>
+                        <td>Versatilidade, combina vantagens de diferentes sistemas</td>
+                        <td>Pode combinar desvantagens, mais complexo</td>
+                        <td>Use para fraturas com componente intra-articular</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dinâmico</strong></td>
+                        <td>Alongamento de membros, transporte ósseo, distração</td>
+                        <td>Permite ajuste progressivo, estimula formação óssea</td>
+                        <td>Exige acompanhamento frequente, maior tempo tratamento</td>
+                        <td>Paciente deve ser comprometido com protocolo</td>
+                    </tr>
+                </tbody>
+            </div>
+            
+            <div class="practical-tip">
+                <h4>Dica Prática: Algoritmo de Decisão Rápida</h4>
+                <p>Para escolha rápida do tipo de fixador, faça estas perguntas:</p>
+                <ol>
+                    <li><strong>É uma fratura exposta?</strong> Sim → Considere unilateral ou bilateral simples</li>
+                    <li><strong>Há deformidade angular a corrigir?</strong> Sim → Considere circular ou híbrido</li>
+                    <li><strong>É necessário alongamento ósseo?</strong> Sim → Use sistema dinâmico/circular</li>
+                    <li><strong>É uma fratura intra-articular?</strong> Sim → Considere híbrido (hastes + fios)</li>
+                    <li><strong>É um caso de "damage control"?</strong> Sim → Use unilateral simples e rápido</li>
+                </ol>
+            </div>
+            
+            <h3>Sistemas Comerciais: Conhecendo as Opções Disponíveis</h3>
+            
+            <div class="treatment-steps">
+                <div class="step">
+                    <h4><i class="fab fa-connectdevelop" style="color: #3498db;"></i> Sistema de Hoffmann</h4>
+                    <p><strong>Origem:</strong> Desenvolvido por Raoul Hoffmann (Suíça, 1938)</p>
+                    <p><strong>Características:</strong> Sistema modular que permite montagens monolaterais, bilaterais e triangulares</p>
+                    <p><strong>Vantagens:</strong> Versatilidade extrema, componentes intercambiáveis</p>
+                    <p><strong>Indicações preferenciais:</strong> Trauma geral, fraturas complexas, casos que exigem adaptação</p>
+                </div>
+                <div class="step">
+                    <h4><i class="fas fa-circle-notch" style="color: #9b59b6;"></i> Sistema Ilizarov</h4>
+                    <p><strong>Origem:</strong> Desenvolvido por Gavriil Ilizarov (Rússia, 1950)</p>
+                    <p><strong>Características:</strong> Sistema circular baseado em anéis e fios de tensão</p>
+                    <p><strong>Vantagens:</strong> Correção tridimensional precisa, alongamento ósseo controlado</p>
+                    <p><strong>Indicações preferenciais:</strong> Deformidades complexas, alongamentos, pseudoartroses</p>
+                </div>
+                <div class="step">
+                    <h4><i class="fas fa-cube" style="color: #e67e22;"></i> Sistema Orthofix</h4>
+                    <p><strong>Origem:</strong> Desenvolvido na Itália (década de 1980)</p>
+                    <p><strong>Características:</strong> Sistema monolateral dinâmico com mecanismo de ajuste</p>
+                    <p><strong>Vantagens:</strong> Permite ajuste de rigidez, carga progressiva controlada</p>
+                    <p><strong>Indicações preferenciais:</strong> Alongamentos, fraturas diafisárias, consolidação dirigida</p>
+                </div>
+                <div class="step">
+                    <h4><i class="fas fa-link" style="color: #27ae60;"></i> Sistema Taylor Spatial Frame</h4>
+                    <p><strong>Origem:</strong> Desenvolvido por J. Charles Taylor (EUA, 1994)</p>
+                    <p><strong>Características:</strong> Sistema circular hexapodal computadorizado</p>
+                    <p><strong>Vantagens:</strong> Correção 6D precisa via software, ajuste pós-operatório</p>
+                    <p><strong>Indicações preferenciais:</strong> Deformidades complexas 3D, correções precisas</p>
+                </div>
+            </div>
+            
+            <div class="clinical-case">
+                <h4><i class="fas fa-stethoscope"></i> Caso Clínico 3: Seleção do Tipo Adequado</h4>
+                <p><strong>Paciente:</strong> Mulher, 28 anos, acidente automobilístico, fratura fechada cominutiva do terço distal da tíbia com encurtamento de 2cm e angulação de 15° em varo.</p>
+                <p><strong>Questão:</strong> Qual tipo de fixador externo seria MAIS apropriado para este caso e por quê?</p>
+                
+                <div class="case-question">
+                    <p><strong>Analise as opções abaixo e selecione a resposta mais adequada:</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) Fixador unilateral simples - pela facilidade de aplicação</div>
+                        <div class="quiz-option" data-correct="true">B) Fixador circular (Ilizarov) - permite correção do encurtamento e angulação</div>
+                        <div class="quiz-option">C) Fixador bilateral - por oferecer maior estabilidade</div>
+                        <div class="quiz-option">D) Fixador dinâmico - por permitir carga imediata</div>
+                    </div>
+                    <button class="show-answer">Mostrar Resposta</button>
+                    <div class="case-answer">
+                        <p><strong>Resposta Correta: B)</strong> O fixador circular (Ilizarov) é o mais apropriado porque permite correção tridimensional simultânea do encurtamento (alongamento) e da angulação (correção do varo). Sistemas unilaterais ou bilaterais não permitem correção do encurtamento de forma controlada.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Tendências Atuais e Inovações Tecnológicas</h3>
+            <div class="highlight-box">
+                <h4><i class="fas fa-microchip"></i> O Futuro da Fixação Externa: Tecnologia e Personalização</h4>
+                <p>As inovações recentes estão transformando o campo dos fixadores externos:</p>
+                <ul>
+                    <li><strong>Fixadores "inteligentes":</strong> Com sensores de carga e microprocessadores que monitoram a consolidação</li>
+                    <li><strong>Impressão 3D:</strong> Componentes personalizados para anatomia específica do paciente</li>
+                    <li><strong>Materiais avançados:</strong> Compósitos de carbono, titânio poroso para melhor integração</li>
+                    <li><strong>Revestimentos ativos:</strong> Pinos com liberação controlada de antibióticos ou fatores de crescimento</li>
+                    <li><strong>Realidade aumentada:</strong> Guias de inserção de pinos com overlay anatômico em tempo real</li>
+                    <li><strong>Telemedicina integrada:</strong> Monitoramento remoto do paciente e ajuste do fixador</li>
+                </ul>
+            </div>
+            
+            <div class="checklist">
+                <h4>Checklist para Seleção do Tipo de Fixador</h4>
+                <div class="checklist-item">Avaliar completamente o paciente (idade, comorbidades, expectativas)</div>
+                <div class="checklist-item">Analisar características da lesão (localização, tipo, grau de cominuição)</div>
+                <div class="checklist-item">Considerar condições dos tecidos moles (fratura exposta, qualidade da pele)</div>
+                <div class="checklist-item">Definir objetivos do tratamento (estabilização temporária vs. definitiva)</div>
+                <div class="checklist-item">Avaliar recursos disponíveis (equipamento, experiência da equipe)</div>
+                <div class="checklist-item">Considerar fatores psicossociais (aceitação do dispositivo, adesão)</div>
+                <div class="checklist-item">Planejar conversão futura (se o fixador for temporário)</div>
+            </div>
+        </section>
+        
+        <section id="quiz" class="section animated-section">
+            <h2><i class="fas fa-question-circle"></i> Quiz Interativo: Teste Seu Conhecimento</h2>
+            
+            <p>Responda as perguntas abaixo para testar seu entendimento sobre fixadores externos. Após responder todas as questões, você receberá um "certificado virtual" de conclusão do curso.</p>
+            
+            <div class="quiz-container">
+                <h3>Questionário de Avaliação (10 questões)</h3>
+                
+                <div class="quiz-question">
+                    <p><strong>1. Qual é a principal vantagem dos fixadores externos em fraturas expostas?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">A) Permitem acesso para cuidados com o ferimento</div>
+                        <div class="quiz-option">B) São mais baratos que outros métodos</div>
+                        <div class="quiz-option">C) Eliminam completamente o risco de infecção</div>
+                        <div class="quiz-option">D) Não requerem acompanhamento pós-operatório</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>2. Segundo a "Lei do Cubo", o que acontece com a rigidez se dobrarmos a distância entre a barra e o osso?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) A rigidez dobra</div>
+                        <div class="quiz-option">B) A rigidez reduz pela metade</div>
+                        <div class="quiz-option" data-correct="true">C) A rigidez reduz para 1/8 do original</div>
+                        <div class="quiz-option">D) A rigidez não se altera</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>3. Qual tipo de fixador é mais apropriado para alongamento ósseo e correção de deformidades complexas?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) Fixador unilateral</div>
+                        <div class="quiz-option">B) Fixador bilateral</div>
+                        <div class="quiz-option" data-correct="true">C) Fixador circular (Ilizarov)</div>
+                        <div class="quiz-option">D) Fixador híbrido</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>4. Qual é o diâmetro ideal dos pinos em relação ao diâmetro do osso?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) 5-10%</div>
+                        <div class="quiz-option" data-correct="true">B) 20-30%</div>
+                        <div class="quiz-option">C) 50-60%</div>
+                        <div class="quiz-option">D) 70-80%</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>5. Qual é a complicação mais comum associada aos fixadores externos?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) Fratura do osso durante a remoção</div>
+                        <div class="quiz-option">B) Lesão neurovascular</div>
+                        <div class="quiz-option" data-correct="true">C) Infecção nos pontos de entrada dos pinos</div>
+                        <div class="quiz-option">D) Reação alérgica ao material</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>6. Para que serve a tenotomia percutânea do tendão de Aquiles no método de Ponseti?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) Correção do cavo do pé</div>
+                        <div class="quiz-option">B) Correção da adução do antepé</div>
+                        <div class="quiz-option" data-correct="true">C) Correção do equino (flexão plantar)</div>
+                        <div class="quiz-option">D) Prevenção de recidiva</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>7. Qual é o espaçamento mínimo recomendado entre pinos no mesmo segmento ósseo?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) 0.5 cm</div>
+                        <div class="quiz-option">B) 1 cm</div>
+                        <div class="quiz-option" data-correct="true">C) 2-3 cm</div>
+                        <div class="quiz-option">D) 5 cm</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>8. Em que situação um fixador externo é preferível à fixação interna com placa e parafusos?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) Fraturas fechadas simples em pacientes jovens</div>
+                        <div class="quiz-option" data-correct="true">B) Fraturas expostas com comprometimento de tecidos moles</div>
+                        <div class="quiz-option">C) Fraturas intra-articulares deslocadas</div>
+                        <div class="quiz-option">D) Fraturas de stress em atletas</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>9. Qual é o torque recomendado para apertar as conexões do fixador externo?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) 1-2 Nm</div>
+                        <div class="quiz-option" data-correct="true">B) 4-6 Nm</div>
+                        <div class="quiz-option">C) 10-12 Nm</div>
+                        <div class="quiz-option">D) 15-20 Nm</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <div class="quiz-question">
+                    <p><strong>10. Durante quanto tempo a órtese de abdução deve ser usada após o tratamento com método de Ponseti?</strong></p>
+                    <div class="quiz-options">
+                        <div class="quiz-option">A) 1-2 semanas</div>
+                        <div class="quiz-option">B) 1-2 meses</div>
+                        <div class="quiz-option">C) 6-12 meses</div>
+                        <div class="quiz-option" data-correct="true">D) 3-4 anos</div>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                
+                <button class="quiz-submit">Submeter Respostas</button>
+                
+                <div class="quiz-results">
+                    <h3>Resultado do Quiz</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p id="score-text">Sua pontuação: <span id="score">0</span>/10</p>
+                    <p id="feedback-text"></p>
+                    <div id="certificate" style="display:none; margin-top: 20px; padding: 20px; border: 2px solid #1a2980; border-radius: 10px; background-color: #f8f9fa;">
+                        <h3 style="color: #1a2980; text-align: center;">Certificado de Conclusão</h3>
+                        <p style="text-align: center;">Este certificado atesta que o participante completou com sucesso o curso <strong>"Fixadores Externos em Ortopedia: Teoria e Prática"</strong>.</p>
+                        <p style="text-align: center; margin-top: 15px;">Data: <span id="certificate-date"></span></p>
+                        <p style="text-align: center;">Pontuação: <strong><span id="certificate-score"></span>/10</strong></p>
+                        <p style="text-align: center; font-style: italic; margin-top: 20px;">Material educativo - Para fins de aprendizado</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="success-box">
+                <h4><i class="fas fa-graduation-cap"></i> Parabéns por Completar o Curso!</h4>
+                <p>Você agora possui conhecimentos fundamentais sobre fixadores externos em ortopedia. Continue seu aprendizado através de:</p>
+                <ul>
+                    <li><strong>Prática supervisionada:</strong> Busque oportunidades para aplicar estes conhecimentos com orientação especializada</li>
+                    <li><strong>Educação continuada:</strong> Participe de cursos práticos e workshops em técnicas específicas</li>
+                    <li><strong>Literatura atualizada:</strong> Mantenha-se informado sobre as últimas pesquisas e inovações</li>
+                    <li><strong>Discussão de casos:</strong> Participe de reuniões clínicas e discussões de casos complexos</li>
+                </ul>
+                <p>Lembre-se: O conhecimento teórico é o primeiro passo. A maestria vem com a prática reflexiva e experiência clínica acumulada.</p>
+            </div>
+        </section>
+        
+        <section id="referencias" class="section animated-section">
+            <h2><i class="fas fa-bookmark"></i> Referências e Recursos para Aprofundamento</h2>
+            
+            <p>Este curso foi elaborado com base nas melhores evidências científicas disponíveis e referências especializadas. Abaixo estão as principais fontes e recursos recomendados para aprofundar seu conhecimento.</p>
+            
+            <div class="reference-item">
+                <div class="reference-title">1. Green, S. A., & Harris, N. L. (2019). The Ilizarov Method: History and Applications.</div>
+                <p>Journal of Orthopaedic Trauma, 33(Suppl 8), S1-S5. <em>Revisão histórica abrangente e atualização das aplicações do método de Ilizarov.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">2. Fragomen, A. T., & Rozbruch, S. R. (2017). The Mechanics of External Fixation.</div>
+                <p>Clinical Orthopaedics and Related Research, 475(12), 2979-2996. <em>Análise biomecânica detalhada dos princípios fundamentais da fixação externa.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">3. Watson, M. A., Mathias, K. J., & Maffulli, N. (2015). External Fixation in Trauma: A Clinical Guide.</div>
+                <p>Springer International Publishing. <em>Guia clínico prático para aplicação de fixadores externos em cenários de trauma.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">4. Rodriguez-Merchan, E. C., & Forriol, F. (2014). Complications of External Fixation.</div>
+                <p>Journal of Bone and Joint Surgery Reviews, 2(5), e1. <em>Revisão sistemática e classificação das complicações associadas aos fixadores externos.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">5. Hrutkay, J. M., & Ertl, J. P. (2018). Pin Site Care in External Fixation.</div>
+                <p>Journal of the American Academy of Orthopaedic Surgeons, 26(21), e463-e471. <em>Protocolos baseados em evidências para cuidados com os pontos de entrada dos pinos.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">6. Gubin, A. V., Borzunov, D. Y., & Malkova, T. A. (2016). The Ilizarov Paradigm: Thirty Years with the Ilizarov Method.</div>
+                <p>Clinical Orthopaedics and Related Research, 474(11), 2555-2563. <em>Análise da evolução e impacto do método Ilizarov ao longo de três décadas.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">7. Slater, R., & Castañeda, P. (2020). Hybrid and Circular External Fixation in Periarticular Fractures.</div>
+                <p>Journal of Orthopaedic Surgery and Research, 15(1), 123. <em>Aplicação de fixadores híbridos e circulares no tratamento de fraturas periarticulares complexas.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">8. Moroni, A., et al. (2017). Pin Tract Infection: Classification, Prevention, and Treatment.</div>
+                <p>Journal of Orthopaedics and Traumatology, 18(Suppl 1), S1-S8. <em>Sistema de classificação e protocolos para prevenção e tratamento de infecções nos pontos de entrada.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">9. Paley, D. (2015). Principles of Deformity Correction.</div>
+                <p>Springer-Verlag Berlin Heidelberg. <em>Obra clássica e referência definitiva sobre correção de deformidades com fixadores externos.</em></p>
+            </div>
+            
+            <div class="reference-item">
+                <div class="reference-title">10. Canadian Orthopaedic Association. (2021). Clinical Practice Guidelines: External Fixation in Orthopaedic Trauma.</div>
+                <p>Canadian Journal of Surgery, 64(3), E312-E319. <em>Diretrizes clínicas baseadas em evidências para uso de fixadores externos em trauma ortopédico.</em></p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4><i class="fas fa-globe"></i> Recursos Online e Organizações Especializadas</h4>
+                <ul>
+                    <li><a href="https://www.ao-foundation.org" target="_blank">AO Foundation</a> - Organização internacional líder em educação em trauma ortopédico, com cursos presenciais e online sobre fixação externa</li>
+                    <li><a href="https://www.orthofix.com" target="_blank">Orthofix Medical Inc.</a> - Fabricante de sistemas de fixação externa com recursos educacionais e técnicos</li>
+                    <li><a href="https://www.asami-international.org" target="_blank">ASAMI International</a> - Associação para estudo e aplicação do método Ilizarov e técnicas relacionadas</li>
+                    <li><a href="https://www.ota.org" target="_blank">Orthopaedic Trauma Association</a> - Associação especializada em trauma ortopédico com diretrizes e protocolos atualizados</li>
+                    <li><a href="https://www.efort.org" target="_blank">EFORT</a> - Federação Europeia de Associações Nacionais de Ortopedia e Traumatologia</li>
+                    <li><a href="https://www.sbto.org.br" target="_blank">SBTO - Sociedade Brasileira de Trauma Ortopédico</a> - Referência nacional em trauma ortopédico no Brasil</li>
+                </ul>
+            </div>
+            
+            <div class="key-concept">
+                <h4><i class="fas fa-chalkboard-teacher"></i> Sugestões para Educação Continuada</h4>
+                <p>Para aprofundar seu conhecimento prático, considere:</p>
+                <ol>
+                    <li><strong>Cursos práticos "hands-on":</strong> Oferecidos por sociedades especializadas (AO, ASAMI)</li>
+                    <li><strong>Estágios em centros de referência:</strong> Experiência prática supervisionada em serviços com alto volume de casos</li>
+                    <li><strong>Simulação cirúrgica:</strong> Uso de modelos sintéticos e cadavéricos para prática de técnicas</li>
+                    <li><strong>Mentorias:</strong> Acompanhamento por cirurgiões experientes em casos reais</li>
+                    <li><strong>Publicação e pesquisa:</strong> Participação em estudos clínicos e publicações científicas</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p><strong>Curso Completo: Fixadores Externos em Ortopedia - Teoria e Prática</strong></p>
+            <p>Material educativo desenvolvido para profissionais de saúde. © 2023 - Todos os direitos reservados.</p>
+            <p>Este conteúdo tem caráter exclusivamente educativo. Para procedimentos clínicos, siga os protocolos institucionais e consulte especialistas.</p>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">
+                <i class="fas fa-heart" style="color: #e74c3c;"></i> Desenvolvido com fins educacionais | 
+                <i class="fas fa-revision"></i> Última atualização: Novembro 2023 |
+                <i class="fas fa-code"></i> Todos os diagramas SVG são originais
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling para navegação interna
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Atualizar navegação ativa
+                    document.querySelectorAll('.nav-list a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Destacar seção ativa durante a rolagem
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-list a');
+        
+        function highlightNavLink() {
+            let current = '';
+            let closestDistance = Infinity;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const distanceFromTop = Math.abs(window.pageYOffset - (sectionTop - 150));
+                
+                if(distanceFromTop < closestDistance) {
+                    closestDistance = distanceFromTop;
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', highlightNavLink);
+        window.addEventListener('load', highlightNavLink);
+        
+        // Animar elementos ao entrarem na viewport
+        const animatedSections = document.querySelectorAll('.animated-section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animatedSections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Animação das estatísticas
+        const statValues = document.querySelectorAll('.stat-value');
+        
+        function animateStats() {
+            statValues.forEach(stat => {
+                const originalText = stat.textContent;
+                
+                // Verificar se é um número (removendo caracteres não numéricos)
+                const numericValue = parseInt(originalText.replace(/[^0-9]/g, ''));
+                
+                if(!isNaN(numericValue) && numericValue > 0) {
+                    stat.textContent = '0';
+                    
+                    setTimeout(() => {
+                        let count = 0;
+                        const target = numericValue;
+                        const increment = target / 40; // 40 frames
+                        
+                        const updateCount = () => {
+                            if (count < target) {
+                                count += increment;
+                                stat.textContent = Math.floor(count).toString();
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                stat.textContent = originalText;
+                            }
+                        };
+                        
+                        requestAnimationFrame(updateCount);
+                    }, 300);
+                }
+            });
+        }
+        
+        // Executar animação quando as estatísticas entrarem na viewport
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    animateStats();
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observar o primeiro container de estatísticas
+        const firstStatBox = document.querySelector('.stat-box');
+        if(firstStatBox) {
+            statObserver.observe(firstStatBox);
+        }
+        
+        // Sistema de casos clínicos (mostrar respostas)
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', function() {
+                const answerDiv = this.nextElementSibling;
+                if(answerDiv.style.display === 'block') {
+                    answerDiv.style.display = 'none';
+                    this.textContent = 'Mostrar Resposta';
+                } else {
+                    answerDiv.style.display = 'block';
+                    this.textContent = 'Ocultar Resposta';
+                }
+            });
+        });
+        
+        // Sistema de quiz interativo
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remover seleção de outras opções na mesma pergunta
+                const parentQuestion = this.closest('.quiz-question');
+                parentQuestion.querySelectorAll('.quiz-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Selecionar esta opção
+                this.classList.add('selected');
+                
+                // Mostrar feedback imediato
+                const isCorrect = this.getAttribute('data-correct') === 'true';
+                const feedbackDiv = parentQuestion.querySelector('.quiz-feedback');
+                
+                if(isCorrect) {
+                    feedbackDiv.textContent = '✓ Correto!';
+                    feedbackDiv.className = 'quiz-feedback correct';
+                } else {
+                    feedbackDiv.textContent = '✗ Incorreto. Tente novamente.';
+                    feedbackDiv.className = 'quiz-feedback incorrect';
+                }
+                
+                feedbackDiv.style.display = 'block';
+            });
+        });
+        
+        // Submissão do quiz
+        document.querySelector('.quiz-submit').addEventListener('click', function() {
+            let score = 0;
+            const totalQuestions = document.querySelectorAll('.quiz-question').length;
+            
+            // Verificar respostas
+            document.querySelectorAll('.quiz-question').forEach(question => {
+                const selectedOption = question.querySelector('.quiz-option.selected');
+                
+                if(selectedOption && selectedOption.getAttribute('data-correct') === 'true') {
+                    score++;
+                    selectedOption.classList.add('correct');
+                } else if(selectedOption) {
+                    selectedOption.classList.add('incorrect');
+                    // Mostrar a opção correta
+                    question.querySelector('.quiz-option[data-correct="true"]').classList.add('correct');
+                }
+            });
+            
+            // Mostrar resultados
+            const resultsDiv = document.querySelector('.quiz-results');
+            const scoreElement = document.getElementById('score');
+            const feedbackElement = document.getElementById('feedback-text');
+            const progressFill = document.querySelector('.progress-fill');
+            const certificate = document.getElementById('certificate');
+            const certificateScore = document.getElementById('certificate-score');
+            const certificateDate = document.getElementById('certificate-date');
+            
+            scoreElement.textContent = score;
+            const percentage = (score / totalQuestions) * 100;
+            
+            // Atualizar barra de progresso
+            setTimeout(() => {
+                progressFill.style.width = percentage + '%';
+            }, 100);
+            
+            // Feedback personalizado
+            if(percentage >= 90) {
+                feedbackElement.textContent = 'Excelente! Você demonstrou domínio completo do conteúdo.';
+                feedbackElement.style.color = '#27ae60';
+            } else if(percentage >= 70) {
+                feedbackElement.textContent = 'Muito bom! Você tem um bom entendimento dos conceitos principais.';
+                feedbackElement.style.color = '#3498db';
+            } else if(percentage >= 50) {
+                feedbackElement.textContent = 'Bom! Revise alguns conceitos para solidificar seu conhecimento.';
+                feedbackElement.style.color = '#f39c12';
+            } else {
+                feedbackElement.textContent = 'Recomenda-se revisar o material antes de prosseguir.';
+                feedbackElement.style.color = '#e74c3c';
+            }
+            
+            // Mostrar certificado se aprovado
+            if(percentage >= 70) {
+                certificateScore.textContent = score;
+                certificateDate.textContent = new Date().toLocaleDateString('pt-BR');
+                certificate.style.display = 'block';
+            }
+            
+            resultsDiv.style.display = 'block';
+            
+            // Rolar para os resultados
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Interatividade com SVGs
+        document.querySelectorAll('.svg-container').forEach(container => {
+            // Efeito de zoom ao passar o mouse
+            container.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 12px 25px rgba(0,0,0,0.15)';
+            });
+            
+            container.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 10px rgba(0,0,0,0.05)';
+            });
+            
+            // Permitir zoom com roda do mouse (apenas em desktop)
+            let scale = 1;
+            container.addEventListener('wheel', function(e) {
+                if (window.innerWidth > 768) { // Apenas em desktop
+                    e.preventDefault();
+                    
+                    // Determinar direção do zoom
+                    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+                    scale += delta;
+                    
+                    // Limitar zoom entre 1x e 2.5x
+                    scale = Math.min(Math.max(1, scale), 2.5);
+                    
+                    // Aplicar transformação
+                    this.style.transform = `translateY(-5px) scale(${scale})`;
+                    this.style.transition = 'transform 0.3s ease';
+                }
+            });
+            
+            // Resetar zoom ao clicar fora
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.svg-container')) {
+                    container.style.transform = 'translateY(0) scale(1)';
+                    scale = 1;
+                }
+            });
+        });
+        
+        // Adicionar tooltips para termos técnicos
+        const medicalTerms = document.querySelectorAll('strong');
+        medicalTerms.forEach(term => {
+            if (term.textContent.match(/Ilizarov|Schanz|pseudoartrose|osteogênica|biomecânica|Gustilo/i)) {
+                term.style.cursor = 'help';
+                term.style.borderBottom = '1px dotted #1a2980';
+                term.style.position = 'relative';
+                
+                // Adicionar tooltip simples
+                term.addEventListener('mouseenter', function(e) {
+                    let tooltipText = '';
+                    const termText = this.textContent.toLowerCase();
+                    
+                    if (termText.includes('ilizarov')) {
+                        tooltipText = 'Método de fixação circular desenvolvido pelo cirurgião russo Gavriil Ilizarov';
+                    } else if (termText.includes('schanz')) {
+                        tooltipText = 'Tipo de pino de fixação externa com ponta cortante autorroscante';
+                    } else if (termText.includes('pseudoartrose')) {
+                        tooltipText = 'Falha na consolidação óssea após fratura, formando uma falsa articulação';
+                    } else if (termText.includes('osteogênica')) {
+                        tooltipText = 'Capacidade de estimular a formação de novo tecido ósseo';
+                    } else if (termText.includes('biomecânica')) {
+                        tooltipText = 'Estudo das forças mecânicas e seus efeitos em sistemas biológicos';
+                    } else if (termText.includes('gustilo')) {
+                        tooltipText = 'Classificação de fraturas expostas baseada no grau de comprometimento de tecidos moles';
+                    }
+                    
+                    if (tooltipText) {
+                        const tooltip = document.createElement('div');
+                        tooltip.className = 'medical-tooltip';
+                        tooltip.textContent = tooltipText;
+                        tooltip.style.position = 'absolute';
+                        tooltip.style.backgroundColor = '#1a2980';
+                        tooltip.style.color = 'white';
+                        tooltip.style.padding = '10px 15px';
+                        tooltip.style.borderRadius = '8px';
+                        tooltip.style.fontSize = '0.9rem';
+                        tooltip.style.zIndex = '10000';
+                        tooltip.style.maxWidth = '300px';
+                        tooltip.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+                        tooltip.style.pointerEvents = 'none';
+                        tooltip.style.bottom = '100%';
+                        tooltip.style.left = '50%';
+                        tooltip.style.transform = 'translateX(-50%)';
+                        tooltip.style.marginBottom = '10px';
+                        
+                        // Seta do tooltip
+                        tooltip.style.position = 'absolute';
+                        tooltip.style.bottom = '100%';
+                        tooltip.style.left = '50%';
+                        tooltip.style.transform = 'translateX(-50%)';
+                        tooltip.style.marginBottom = '10px';
+                        
+                        // Adicionar seta
+                        tooltip.innerHTML += '<div style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #1a2980;"></div>';
+                        
+                        document.body.appendChild(tooltip);
+                        
+                        // Posicionar
+                        const rect = this.getBoundingClientRect();
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        
+                        tooltip.style.left = (rect.left + rect.width / 2) + 'px';
+                        tooltip.style.bottom = (window.innerHeight - rect.top + scrollTop + 10) + 'px';
+                        
+                        this._tooltip = tooltip;
+                    }
+                });
+                
+                term.addEventListener('mouseleave', function() {
+                    if (this._tooltip) {
+                        this._tooltip.remove();
+                        delete this._tooltip;
+                    }
+                });
+            }
+        });
+        
+        // Inicializar animações
+        window.addEventListener('load', function() {
+            // Animar elementos iniciais
+            document.querySelectorAll('.stat').forEach((stat, index) => {
+                stat.style.animationDelay = (index * 0.2) + 's';
+            });
+            
+            // Destacar seção atual
+            highlightNavLink();
+        });
+    </script>
+</body>
+</html>
