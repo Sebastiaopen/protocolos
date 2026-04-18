@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Compacto R1 - Reumatologia/Ortopedia (Angola)</title>
+    <style>
+        :root {
+            --primary: #004e64;
+            --secondary: #00a896;
+            --danger: #d00000;
+            --warning: #f59f00;
+            --purple: #5f3dc4;
+            --brown: #795548;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 1.4rem; }
+        header p { margin: 5px 0 0; font-size: 0.85rem; opacity: 0.9; }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container { grid-template-columns: 1fr 1fr; }
+        }
+
+        .card {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 3px solid transparent;
+            position: relative;
+        }
+
+        .card.alert { border-left-color: var(--danger); }
+        .card.common { border-left-color: var(--secondary); }
+        .card.tip { border-left-color: var(--warning); background-color: #fffbf0; }
+        .card.infect { border-left-color: var(--purple); }
+        .card.mech { border-left-color: var(--brown); }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.95rem;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #eee;
+            color: #555;
+            white-space: nowrap;
+        }
+        .badge.red { background: #ffe3e3; color: #c92a2a; }
+        .badge.blue { background: #e7f5ff; color: #1c7ed6; }
+        .badge.brown { background: #efebe9; color: #5d4037; }
+
+        ul { margin: 0; padding-left: 18px; }
+        li { margin-bottom: 4px; }
+
+        .gold-standard {
+            background-color: #f1f3f5;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            border: 1px dashed #ced4da;
+        }
+
+        .criteria-box {
+            background-color: #efebe9;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #3e2723;
+        }
+
+        .value { color: #0ca678; font-weight: bold; font-family: monospace; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: var(--primary); color: white; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Reumatologia</h1>
+        <p>Resumo das principais Patologias</p>
+    </header>
+
+    <h2>1. Urgências "Não Perca Tempo"</h2>
+    <div class="grid-container">
+        
+        <div class="card alert">
+            <h3>Artrite Séptica <span class="badge red">Emergência</span></h3>
+            <ul>
+                <li><strong>Suspeita:</strong> Joelho quente, bloqueado, febre.</li>
+                <li><strong>Germes:</strong> <em>S. aureus</em> (Geral), <em>Salmonella</em> (Falciformes).</li>
+            </ul>
+            <div class="gold-standard">
+                <strong>🧪 Padrão Ouro (Líquido):</strong><br>
+                Leucócitos <span class="value">> 50.000</span> (PMN >90%)<br>
+                Glicose baixa (< 50% da sérica)
+            </div>
+        </div>
+
+        <div class="card alert">
+            <h3>Artrite Gonocócica <span class="badge red">Jovem</span></h3>
+            <ul>
+                <li><strong>Tríade Clássica:</strong> Poliartrite migratória + Tenossinovite + Pústulas na pele.</li>
+                <li><strong>Dica:</strong> Jovem com dor articular e febre? Examine a pele e genitais!</li>
+            </ul>
+            <div class="gold-standard">
+                <strong>🧪 Diagnóstico:</strong><br>
+                Cultura Thayer-Martin (Secreção uretral/cervical) ou PCR.
+            </div>
+        </div>
+
+        <div class="card alert">
+            <h3>Febre Reumática <span class="badge red">Pediatria</span></h3>
+            <ul>
+                <li><strong>Contexto:</strong> Criança/Adolescente, história de faringite. Artrite migratória.</li>
+                <li><strong>Perigo:</strong> Cardite Reumática.</li>
+            </ul>
+            <div class="gold-standard">
+                <strong>Critérios de Jones:</strong> 2 Maiores ou 1 Maior + 2 Menores + <span class="value">ASLO Elevado</span>.
+            </div>
+        </div>
+    </div>
+
+    <h2>2. Reumatologia Tropical (O dia-a-dia)</h2>
+    <div class="grid-container">
+
+        <div class="card common">
+            <h3>Drepanocitose (Falciforme)</h3>
+            <ul>
+                <li><strong>Crise Vaso-oclusiva:</strong> Dor difusa, melhora c/ hidratação.</li>
+                <li><strong>Osteonecrose:</strong> Dor mecânica no quadril.</li>
+            </ul>
+            <div class="gold-standard">
+                Eletroforese: <span class="value">HbS > 80%</span>.<br>
+                Rx: Sinal do Crescente (Necrose).
+            </div>
+        </div>
+
+        <div class="card infect">
+            <h3>Piomiosite Tropical <span class="badge blue">Endêmico</span></h3>
+            <ul>
+                <li><strong>O que é:</strong> Abcesso muscular profundo ("Pus no músculo").</li>
+                <li><strong>Confusão:</strong> Mimetiza Artrite Séptica, mas a articulação mexe.</li>
+            </ul>
+            <div class="gold-standard">
+                Ecografia: Coleção muscular.<br>
+                Punção: <span class="value">Pus franco (S. aureus)</span>.
+            </div>
+        </div>
+
+        <div class="card infect">
+            <h3>Brucelose (Febre de Malta)</h3>
+            <ul>
+                <li><strong>Contexto:</strong> Consumo de leite cru/gado.</li>
+                <li><strong>Clínica:</strong> Febre ondulante + Sacroileíte (dor na nádega).</li>
+            </ul>
+            <div class="gold-standard">
+                Soroaglutinação (Wright) <span class="value">> 1:160</span>
+            </div>
+        </div>
+
+        <div class="card common">
+            <h3>Tuberculose (Mal de Pott)</h3>
+            <ul>
+                <li><strong>Suspeita:</strong> Dor lombar crônica, sudorese noturna, perda de peso.</li>
+                <li><strong>Sinal:</strong> Giba (deformidade nas costas).</li>
+            </ul>
+            <div class="gold-standard">
+                GeneXpert no tecido: <span class="value">Positivo</span>.<br>
+                Rx: Destruição do DISCO ("Kissing vertebrae").
+            </div>
+        </div>
+    </div>
+
+    <h2>3. Artrose: Tipos e Critérios (ACR)</h2>
+    <div class="grid-container">
+        
+        <div class="card mech">
+            <h3>Gonartrose (Joelho) <span class="badge brown">Mais Comum</span></h3>
+            <div class="criteria-box">
+                <strong>Critérios ACR:</strong> Dor + Osteófitos RX <strong>E</strong> 1 de:
+                <ol style="margin-top:3px; padding-left:15px; margin-bottom:0;">
+                    <li>Idade > 50 anos</li>
+                    <li>Rigidez matinal < 30 min</li>
+                    <li>Crepitação óssea</li>
+                </ol>
+            </div>
+            <div class="gold-standard" style="margin-top:5px;">
+                <strong>Rx (Kellgren-Lawrence):</strong><br>
+                Grau 2: Osteófito definido.<br>
+                Grau 4: Contato osso-osso (Ponte).
+            </div>
+        </div>
+
+        <div class="card mech">
+            <h3>Coxartrose (Quadril) <span class="badge brown">Incapacitante</span></h3>
+            <div class="criteria-box">
+                <strong>Critérios ACR:</strong> Dor Quadril <strong>E</strong> 2 de:
+                <ol style="margin-top:3px; padding-left:15px; margin-bottom:0;">
+                    <li>VHS < 20 mm/h</li>
+                    <li>Osteófitos no RX</li>
+                    <li>Redução do espaço articular</li>
+                </ol>
+            </div>
+            <div class="gold-standard" style="margin-top:5px;">
+                <strong>Exame Físico:</strong> Rotação Interna limitada (< 15°) é o sinal mais precoce.
+            </div>
+        </div>
+
+        <div class="card mech">
+            <h3>Espondiloartrose (Coluna) <span class="badge brown">Degenerativo</span></h3>
+            <p style="font-size: 0.8rem; margin:0;">Discopatia + Facetária (Bicos de Papagaio).</p>
+            <div class="criteria-box">
+                <strong>Sinais Clínicos:</strong>
+                <ul>
+                    <li><strong>Mecânica:</strong> Dor piora em pé/movimento, melhora deitado.</li>
+                    <li><strong>Estenose (Canal Estreito):</strong> Dor nas pernas ao andar, melhora ao sentar ou inclinar para frente (Sinal do Carrinho de Compras).</li>
+                </ul>
+            </div>
+            <div class="gold-standard" style="margin-top:5px;">
+                <strong>Alerta Angola:</strong> Se houver febre, perda de peso ou dor noturna intensa, pense em <span class="value">TB (Pott)</span>, não Artrose!
+            </div>
+        </div>
+
+        <div class="card mech">
+            <h3>Artrose de Mãos <span class="badge brown">Genético</span></h3>
+            <div class="criteria-box">
+                <strong>Sinais Clínicos Clássicos:</strong>
+                <ul>
+                    <li><strong>Nódulos de Heberden:</strong> Interfalangiana Distal.</li>
+                    <li><strong>Nódulos de Bouchard:</strong> Interfalangiana Proximal.</li>
+                    <li><em>Diferente da AR que poupa a ponta (distal)!</em></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>4. Metabólico e Autoimune</h2>
+    <div class="grid-container">
+
+        <div class="card tip">
+            <h3>Gota (Ácido Úrico)</h3>
+            <ul>
+                <li><strong>Local:</strong> Hálux (Podagra), joelho.</li>
+            </ul>
+            <div class="gold-standard">
+                Punção: Cristais <span class="value">Birrefringência Negativa</span>.
+            </div>
+        </div>
+
+        <div class="card tip">
+            <h3>Lúpus (LES)</h3>
+            <ul>
+                <li><strong>Raça Negra:</strong> Maior risco de nefrite lúpica grave.</li>
+            </ul>
+            <div class="gold-standard">
+                Triagem: FAN <span class="value">> 1:80</span>.<br>
+                Específico: Anti-Sm e Anti-DNA.
+            </div>
+        </div>
+    </div>
+
+    <h2>5. Dicas de Ouro para o Plantão</h2>
+    <div class="grid-container">
+        
+        <div class="card tip">
+            <h3>⛔ Corticoide: O Grande Perigo</h3>
+            <p style="font-size: 0.85rem; margin-top:0;">
+                Jamais infiltre corticoide se houver dúvida de infecção (ex: TB, Séptica). Isso pode destruir a articulação em dias.
+            </p>
+        </div>
+
+        <div class="card tip">
+            <h3>👶 Criança a Coxear (Kocher)</h3>
+            <p style="font-size: 0.85rem; margin-top:0;"><strong>Critérios p/ Artrite Séptica Quadril:</strong></p>
+            <ol style="margin-top:5px; padding-left:15px; font-size:0.8rem;">
+                <li>Febre > 38.5°C</li>
+                <li>Não apoia o pé</li>
+                <li>VHS > 40 mm/h</li>
+                <li>Leucócitos > 12.000</li>
+            </ol>
+            <p style="font-size: 0.8rem;"><em>4 critérios = 99% Artrite Séptica.</em></p>
+        </div>
+
+        <div class="card tip">
+            <h3>🦠 HIV e Reumatismo</h3>
+            <p style="font-size: 0.85rem; margin-top:0;">
+                O HIV em Angola mimetiza Espondilite e Artrite Reativa.
+                Se vir <strong>artrite + psoríase grave</strong>, peça o teste de HIV.
+            </p>
+        </div>
+    </div>
+
+    <h2>6. Resumo de Valores (Decore!)</h2>
+    <table>
+        <tr>
+            <th>Suspeita</th>
+            <th>Exame Chave</th>
+            <th>Valor Ref.</th>
+        </tr>
+        <tr>
+            <td>Artrite Séptica</td>
+            <td>Líquido Sinovial</td>
+            <td><span class="value">Leuc > 50.000</span></td>
+        </tr>
+        <tr>
+            <td>Febre Reumática</td>
+            <td>ASLO (Antiestreptolisina O)</td>
+            <td><span class="value">Elevado / Curva</span></td>
+        </tr>
+        <tr>
+            <td>Brucelose</td>
+            <td>Soroaglutinação</td>
+            <td><span class="value">> 1:160</span></td>
+        </tr>
+        <tr>
+            <td>Artrite Reumatoide</td>
+            <td>Anti-CCP</td>
+            <td><span class="value">Positivo (>20)</span></td>
+        </tr>
+        <tr>
+            <td>Artrose (Coxartrose)</td>
+            <td>Rotação Interna</td>
+            <td><span class="value">Limitada (<15°)</span></td>
+        </tr>
+    </table>
+        <style>
+            :root {
+                /* Mantenha as cores originais de cada arquivo aqui */
+                --primary: #004e64;
+                --secondary: #00a896;
+                --danger: #d00000;
+                --warning: #f59f00;
+                --purple: #5f3dc4;
+                --brown: #795548;
+                --light-bg: #f8f9fa;
+                --white: #ffffff;
+            }
+
+            /* ESSENCIAL: Resolve o problema do botão "vazar" a tela */
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 13px;
+                line-height: 1.5;
+                color: #333;
+                background-color: #e9ecef;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                /* Garante que o conteúdo não ultrapasse a largura container */
+                width: 100%;
+            }
+
+            /* Imagens responsivas (não quebram o layout) */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* TABELAS: Removemos o 'display: block' que causava o erro.
+           Agora usamos ajustes suaves para mobile. */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            /* ... Mantenha o restante do CSS de cabeçalhos e listas original ... */
+
+            /* ESTILO DO BOTÃO VOLTAR */
+            .btn-voltar-container {
+                text-align: center;
+                margin: 40px 0 20px 0;
+                width: 100%;
+            }
+
+            .btn-voltar {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--secondary);
+                color: white;
+                padding: 12px 30px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+                max-width: 100%;
+            }
+
+            .btn-voltar:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+                filter: brightness(1.1);
+            }
+
+            .btn-voltar:active {
+                transform: scale(0.98);
+            }
+
+            /* AJUSTES PARA TELEMÓVEL */
+            @media (max-width: 600px) {
+                .btn-voltar-container {
+                    margin: 25px auto 40px auto;
+                    padding: 0 10px;
+                }
+
+                .btn-voltar {
+                    font-size: 14px;
+                    padding: 15px;
+                    width: 100%;
+                }
+
+                /* AJUSTE SEGURO PARA TABELAS EM MOBILE:
+               Reduz a fonte e o espaçamento para caber mais conteúdo,
+               mas mantendo a estrutura de linhas e colunas intacta. */
+                th,
+                td {
+                    padding: 4px 2px;
+                    /* Reduz padding lateral */
+                    font-size: 11px;
+                    /* Fonte ligeiramente menor */
+                    word-wrap: break-word;
+                    /* Quebra palavras longas se necessário */
+                }
+            }
+        </style>
+
+        <div class="btn-voltar-container">
+            <a href="index.html" onclick="sessionStorage.setItem('openProtocols', 'true')" class="btn-voltar">
+                <span style="margin-right: 8px; font-size: 1.4em; line-height: 1;">↩</span>
+                Voltar
+            </a>
+        </div>
+    <div class="footer-sig">
+        Omni Dev / Dr. Sebastião - 01/2026<br>
+        <span style="font-size:0.7rem; font-style:italic;">Material de Apoio à Residência Médica em Ortotraumatologia</span>
+    </div>
+</div>
+
+</body>
+</html>
